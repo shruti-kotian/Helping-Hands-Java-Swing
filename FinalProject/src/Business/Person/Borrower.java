@@ -5,6 +5,8 @@
  */
 package Business.Person;
 
+import Business.Finance.AccountManagement;
+
 
 /**
  *
@@ -16,6 +18,8 @@ public class Borrower extends Person {
     private int dOb ;
     private String emailId ;
     private String contactNo ;
+    private AccountManagement accountManagement ;
+    
     
     public Borrower() {
     //no need to instantiate accountManagement or loan here    
@@ -61,6 +65,14 @@ public class Borrower extends Person {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public AccountManagement getAccountManagement() {
+        return accountManagement;
+    }
+
+    public void setAccountManagement(AccountManagement accountManagement) {
+        this.accountManagement = accountManagement;
     }
 
     @Override

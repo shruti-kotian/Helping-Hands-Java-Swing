@@ -5,6 +5,9 @@
  */
 package Business.Person;
 
+import Business.Finance.AccountManagement;
+import Business.Finance.MoneyBasket;
+
 
 /**
  *
@@ -13,6 +16,8 @@ package Business.Person;
 public class Lender extends Person{
     private String email ;
     private String phone ;
+    private AccountManagement accountManagement ;
+    private MoneyBasket moneyBasket ;
  
 
     public Lender() {
@@ -33,6 +38,22 @@ public class Lender extends Person{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public AccountManagement getAccountManagement() {
+        return accountManagement;
+    }
+
+    public void setAccountManagement(AccountManagement accountManagement) {
+        this.accountManagement = accountManagement;
+    }
+
+    public MoneyBasket getMoneyBasket() {
+        return moneyBasket;
+    }
+
+    public void setMoneyBasket(MoneyBasket moneyBasket) {
+        this.moneyBasket = moneyBasket;
     }
 
     
