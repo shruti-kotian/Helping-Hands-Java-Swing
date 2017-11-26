@@ -14,12 +14,18 @@ import java.util.ArrayList;
 public class EnterpriseDirectory {
 
     private ArrayList<Enterprise> enterpriseList;
-
-    public EnterpriseDirectory() {
+    
+    public EnterpriseDirectory(){
         enterpriseList = new ArrayList<>();
     }
-
+    
     // Add enterprise
+    public Enterprise createAndAddEnterprise(String name){
+        HelpingHandsEnterprise helpingHandsEnterprise = new HelpingHandsEnterprise(name, Enterprise.EnterpriseType.HelpingHands);
+        enterpriseList.add(helpingHandsEnterprise);
+        return helpingHandsEnterprise;
+    }
+    
     public ArrayList<Enterprise> getEnterpriseList() {
         return enterpriseList;
     }
