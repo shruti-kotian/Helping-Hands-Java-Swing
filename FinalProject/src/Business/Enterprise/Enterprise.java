@@ -7,10 +7,12 @@ package Business.Enterprise;
 
 import Business.Organization.RepresentativeOrganization;
 import Business.Organization.BorrowerOrganization;
+
 import Business.Organization.LenderOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.TrusteeOrganization;
+import Business.Person.FieldPartnerContact;
 
 /**
  *
@@ -123,4 +125,6 @@ public abstract class Enterprise extends Organization {
     public void setEnterpriseType(EnterpriseType enterpriseType) {
         this.enterpriseType = enterpriseType;
     }
+    
+    
 }

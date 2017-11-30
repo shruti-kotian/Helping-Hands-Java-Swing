@@ -5,6 +5,7 @@
  */
 package UserInterface.LenderRole;
 
+import Business.Loan.Loan;
 import javax.swing.JPanel;
 
 /**
@@ -17,7 +18,7 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewBorrowerLoanCaseJPanel
      */
-    public ViewBorrowerLoanCaseJPanel() {
+    public ViewBorrowerLoanCaseJPanel(JPanel userProcessContainer,Loan loan) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;

@@ -56,5 +56,21 @@ public class Lender extends Person{
         this.moneyBasket = moneyBasket;
     }
 
+    public MoneyBasket getCurrentBasket(){
+        if (moneyBasket == null){
+            this.moneyBasket = new MoneyBasket();
+            return moneyBasket;
+        }else{
+            return moneyBasket ;
+        }
+    }
+
+    public void subtractCredit(int amount) {
+        this.getAccountManagement().setAvailableCredit(this.getAccountManagement().getAvailableCredit() - amount);
+    }
+    
+    public void addCredit(int amount) {
+        this.getAccountManagement().setAvailableCredit(this.getAccountManagement().getAvailableCredit() + amount);
+    }    
     
 }

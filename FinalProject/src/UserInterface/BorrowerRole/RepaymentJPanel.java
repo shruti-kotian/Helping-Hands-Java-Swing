@@ -7,6 +7,8 @@ package UserInterface.BorrowerRole;
 
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.HelpingHandsEnterprise;
+import Business.Loan.Loan;
+import Business.Loan.RepaymentInstance;
 import Business.Person.Borrower;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;

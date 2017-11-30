@@ -6,6 +6,9 @@
 package UserInterface.BorrowerRole;
 
 import Business.Enterprise.HelpingHandsEnterprise;
+import Business.Loan.LendingInstance;
+import Business.Loan.Loan;
+import Business.Loan.RepaymentInstance;
 import static Business.Organization.Organization.Type.Borrower;
 import Business.Person.Borrower;
 import static Business.Role.Role.RoleType.Borrower;
@@ -67,10 +70,10 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     int no = loan.getLendingInstanceList().size();
     lblLenderNo.setText("Loan powered by " + no + " lenders");
     
-    if(loan.getLoanStatus() == Loan.LoanStatus.FundingRequired){
+    if(loan.getLoanStatus() == Loan.LoanStatus.FundingNeeded){
     lblPercent.setText("Loan 0% funded");
     lblFRStatus.setText("$0 funded. $" + loan.getLoanCase().getLoanAmount() + " to go.");}
-    else if(loan.getLoanStatus() == Loan.LoanStatus.PartiallyFunded){
+    else if(loan.getLoanStatus() == Loan.LoanStatus.PartlyFunded){
     int percent = (int) ((int)(((double)loan.totalLentAmount())/((double)loan.getLoanCase().getLoanAmount()))*100);
     lblPercent.setText("Loan "+ percent +"% funded"); 
     lblFRStatus.setText("$" + lentAmt + " funded. $" + (loanAmt-lentAmt) + " to go.");
@@ -79,7 +82,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     lblPercent.setText("Loan fully funded"); 
     lblFRStatus.setText("$0 repayed. $" + (lentAmt) + " to go.");    
     
-    }else if(loan.getLoanStatus() == Loan.LoanStatus.PartiallyRepayed){
+    }else if(loan.getLoanStatus() == Loan.LoanStatus.PartlyRepayed){
     int percent = (int) ((int)(((double)loan.totalRepayedAmount())/((double)loan.totalLentAmount()))*100);
     lblPercent.setText("Loan "+ percent +"% repayed");  
     lblFRStatus.setText("$" + repAmt + " repayed. $" + (lentAmt-repAmt) + " to go.");      

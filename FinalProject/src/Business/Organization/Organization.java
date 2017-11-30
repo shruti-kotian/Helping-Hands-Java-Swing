@@ -27,7 +27,7 @@ public abstract class Organization {
     private Type type ;
     
     public enum Type{
-        Trustee("Trustee Organization"), Representative("Representative Organization"), Lender("Lender Organization"),
+        Trustee("Trustee Organization"), Analyst("Analyst Organization"),Representative("Representative Organization"), Lender("Lender Organization"),
         Borrower("Borrower Organization"), FieldPartner("Field Partner"), Admin("Admin Organization");
         
         private String value;

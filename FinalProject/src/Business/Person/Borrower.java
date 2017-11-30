@@ -12,11 +12,13 @@ import Business.Finance.AccountManagement;
  *
  * @author shwetatatiya
  */
-public class Borrower extends Person {
+public class Borrower extends ExternalPlayer {
     private String occupation ;
+    private int dateOfBirth ;
     private int yearlyIncome ;
     private int dOb ;
     private String emailId ;
+    private String phoneNo ;
     private String contactNo ;
     private AccountManagement accountManagement ;
     
@@ -33,6 +35,16 @@ public class Borrower extends Person {
         this.occupation = occupation;
     }
 
+    public int getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(int dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    
+    
     public int getYearlyIncome() {
         return yearlyIncome;
     }
@@ -67,6 +79,16 @@ public class Borrower extends Person {
         this.emailId = emailId;
     }
 
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    
+    
     public AccountManagement getAccountManagement() {
         return accountManagement;
     }
