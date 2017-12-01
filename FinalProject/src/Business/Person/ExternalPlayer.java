@@ -9,7 +9,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author kunal
+ * @author Shrutik
  */
 public class ExternalPlayer extends Person{
     

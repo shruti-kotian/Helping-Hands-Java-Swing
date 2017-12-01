@@ -6,7 +6,6 @@
 package Business.Loan;
 
 import Business.Person.Borrower;
-import Business.Person.FieldPartnerContact;
 import java.util.ArrayList;
 
 /**
@@ -56,19 +55,4 @@ public class LoanDirectory {
         return loanList;
     }
 
-    public ArrayList<Loan> getLoanByFieldPartnerContact(FieldPartnerContact fieldPartnerContact) {
-        
-        ArrayList<Loan> loanList = new ArrayList<Loan>();
-        for(Loan loan : this.getLoanList()){
-            if(loan.getLoanStatus() != Loan.LoanStatus.FullyRepayed &&
-               loan.getFieldPartnerContact() == fieldPartnerContact){
-                loanList.add(loan);
-            }
-        }
-        
-        return loanList;
-    }
-    
-    
- 
 }

@@ -12,7 +12,7 @@ import Business.Loan.LoanCase;
 
 /**
  *
- * @author kunal
+ * @author Shrutik
  */
 public class NewLoanCaseWorkRequest extends WorkRequest{
     

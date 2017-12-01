@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nishant
+ * @author Shrutik
  */
 public class ViewLoanCaseJPanel extends javax.swing.JPanel {
 
@@ -75,7 +75,7 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(153, 153, 0));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         txtStory.setEditable(false);
         txtStory.setColumns(20);

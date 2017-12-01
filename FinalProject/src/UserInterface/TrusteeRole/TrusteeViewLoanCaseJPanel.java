@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nishant
+ * @author Shrutik
  */
 public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
 
@@ -93,7 +93,7 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
         btnReject = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(153, 153, 0));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

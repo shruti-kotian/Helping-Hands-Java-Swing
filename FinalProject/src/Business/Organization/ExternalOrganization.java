@@ -7,7 +7,7 @@ package Business.Organization;
 
 /**
  *
- * @author kunal
+ * @author Shrutik
  */
 public abstract class ExternalOrganization extends Organization{
     

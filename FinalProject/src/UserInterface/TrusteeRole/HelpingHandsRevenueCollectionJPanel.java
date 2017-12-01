@@ -27,7 +27,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author karandutt
+ * @author Shrutik
  */
 public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
 
@@ -58,10 +58,11 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(153, 153, 0));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
 
+        jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("  HELPING HANDS REVENUE COLLECTION  ");

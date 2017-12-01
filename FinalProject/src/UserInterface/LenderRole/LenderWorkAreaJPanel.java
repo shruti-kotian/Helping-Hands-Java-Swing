@@ -225,7 +225,7 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));

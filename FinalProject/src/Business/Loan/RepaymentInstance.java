@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Nishant
+ * @author Shrutik
  */
 public class RepaymentInstance {
     

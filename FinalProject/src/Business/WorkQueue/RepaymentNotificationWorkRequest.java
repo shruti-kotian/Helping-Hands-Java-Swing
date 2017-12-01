@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author kunal
+ * @author Shrutik
  */
 public class RepaymentNotificationWorkRequest extends WorkRequest{
 

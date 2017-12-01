@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author kunal
+ * @author Shrutik
  */
 public class LendingInstance {
     

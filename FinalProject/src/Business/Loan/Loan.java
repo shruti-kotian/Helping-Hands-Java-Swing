@@ -6,7 +6,6 @@
 package Business.Loan;
 
 import Business.Person.Borrower;
-import Business.Person.FieldPartnerContact;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -21,7 +20,6 @@ public class Loan {
     private LoanCase loanCase ;
     private Borrower borrower ;
     private LoanStatus loanStatus ;
-    private FieldPartnerContact fieldPartnerContact ;
     private ArrayList<LendingInstance> lendingInstanceList ;
     private ArrayList<RepaymentInstance> repaymentInstanceList ;
 
@@ -146,14 +144,7 @@ public class Loan {
         this.loanStatus = loanStatus;
     }
 
-    public FieldPartnerContact getFieldPartnerContact() {
-        return fieldPartnerContact;
-    }
-
-    public void setFieldPartnerContact(FieldPartnerContact fieldPartnerContact) {
-        this.fieldPartnerContact = fieldPartnerContact;
-    }
-
+    
     public int totalLentAmount(){
         int total = 0;
         for(LendingInstance lendingInstance : lendingInstanceList){
