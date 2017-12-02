@@ -27,8 +27,8 @@ public class NewLoanCaseWorkRequest extends WorkRequest{
     
     public enum Status{
         NewLoanCase("New Loan Case"),
-        AnalystApproved("Analyst Approved"),
-        AnalystRejected("Analyst Rejected"),        
+        RepresentativeApproved("Representative Approved"),
+        RepresentativeRejected("Representative Rejected"),        
         TrusteeApproved("Trustee Approved"),
         TrusteeRejected("Trustee Rejected"),
         Complete("Complete") ;

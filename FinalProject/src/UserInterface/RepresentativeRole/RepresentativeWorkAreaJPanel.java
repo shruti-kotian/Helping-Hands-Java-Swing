@@ -7,8 +7,8 @@ package UserInterface.RepresentativeRole;
 
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
-import Business.Organization.AnalystOrganization;
 import Business.Organization.Organization;
+import Business.Organization.RepresentativeOrganization;
 import Business.Organization.TrusteeOrganization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.NewLoanCaseWorkRequest;
@@ -31,31 +31,31 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer ;
     private Enterprise business ;
     private UserAccount userAccount ;
-    private Employee analyst ;
+    private Employee representative ;
     
-    public RepresentativeWorkAreaJPanel(JPanel userProcessContainer, Enterprise business, UserAccount userAccount, Employee analyst) {
+    public RepresentativeWorkAreaJPanel(JPanel userProcessContainer, Enterprise business, UserAccount userAccount, Employee representative) {
         initComponents();
          this.userProcessContainer = userProcessContainer ;
         this.business = business;
         this.userAccount = userAccount ;
-        this.analyst = analyst ;
-        populateTblAnalystOrganizationWorkQueue();
+        this.representative = representative ;
+        populateTblRepresentativeOrganizationWorkQueue();
     }
 
-    public void populateTblAnalystOrganizationWorkQueue(){
+    public void populateTblRepresentativeOrganizationWorkQueue(){
         
-        DefaultTableModel model = (DefaultTableModel) tblAnalystOrgWorkQueue.getModel() ;
+        DefaultTableModel model = (DefaultTableModel) tblRepOrgWorkQueue.getModel() ;
         model.setRowCount(0);
-        AnalystOrganization analystOrganization = null;
+        RepresentativeOrganization repOrganization = null;
         
         for(Organization organization : business.getOrganizationDirectory().getOrganizationList()){
-            if(organization instanceof AnalystOrganization){
-                analystOrganization = (AnalystOrganization) organization ;
+            if(organization instanceof RepresentativeOrganization){
+                repOrganization = (RepresentativeOrganization) organization ;
             }
         }
         
         Object[] row = new Object[5] ;
-        for(WorkRequest workRequest : analystOrganization.getWorkQueue().getWorkRequestList()){
+        for(WorkRequest workRequest : repOrganization.getWorkQueue().getWorkRequestList()){
            if(!(workRequest.getStatus().equals(NewLoanCaseWorkRequest.Status.Complete.getValue()))){
             
             row[0] = workRequest ;
@@ -65,8 +65,8 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
             row[3] = workRequest.getTrustee().getName();
             else
             row[3] = "";
-            if(workRequest.getAnalyst() != null)
-            row[4] = workRequest.getAnalyst().getName();
+            if(workRequest.getRepresentative()!= null)
+            row[4] = workRequest.getRepresentative().getName();
             else
             row[4] = "";
             model.addRow(row);
@@ -83,16 +83,16 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblAnalystOrgWorkQueue = new javax.swing.JTable();
+        tblRepOrgWorkQueue = new javax.swing.JTable();
         btnAssign = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
 
-        tblAnalystOrgWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
+        tblRepOrgWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Organization / Borrower", "Message", "Status", "Trustee", "Analyst"
+                "Organization / Borrower", "Message", "Status", "Trustee", "Representative"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -103,7 +103,7 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblAnalystOrgWorkQueue);
+        jScrollPane1.setViewportView(tblRepOrgWorkQueue);
 
         btnAssign.setBackground(new java.awt.Color(0, 0, 0));
         btnAssign.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -161,43 +161,43 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
         // TODO add your handling code here:
         // Get the selected row from the table and the work request in it.
-        int selectedRow = tblAnalystOrgWorkQueue.getSelectedRow();
+        int selectedRow = tblRepOrgWorkQueue.getSelectedRow();
 
         if(selectedRow < 0) {
             JOptionPane.showMessageDialog(null,  "Please select a work request first","Information", JOptionPane.INFORMATION_MESSAGE);
             return ;}
 
         WorkRequest workRequest ;
-        workRequest = (WorkRequest) tblAnalystOrgWorkQueue.getValueAt(selectedRow, 0);
+        workRequest = (WorkRequest) tblRepOrgWorkQueue.getValueAt(selectedRow, 0);
         // Check if it is already assigned
-        if(workRequest.getAnalyst() != null){
-            JOptionPane.showMessageDialog(null, "Analyst already assigned", "Information", JOptionPane.INFORMATION_MESSAGE);
+        if(workRequest.getRepresentative()!= null){
+            JOptionPane.showMessageDialog(null, "Representative already assigned", "Information", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        // Assign the current analyst to this work request
-        workRequest.setAnalyst(analyst);
-        JOptionPane.showMessageDialog(null,  "Analyst assigned successfully","Information", JOptionPane.INFORMATION_MESSAGE);
+        // Assign the current representative to this work request
+        workRequest.setRepresentative(representative);
+        JOptionPane.showMessageDialog(null,  "Representative assigned successfully","Information", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_btnAssignActionPerformed
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) tblAnalystOrgWorkQueue.getModel();
-        int selectedRow = tblAnalystOrgWorkQueue.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) tblRepOrgWorkQueue.getModel();
+        int selectedRow = tblRepOrgWorkQueue.getSelectedRow();
         if(selectedRow < 0){
             JOptionPane.showMessageDialog(null, "Please select a row first","Information",  JOptionPane.INFORMATION_MESSAGE);
             return ;
         }
         TrusteeOrganization trusteeOrganization = business.getTrusteeOrganization();
-        WorkRequest workRequest = (WorkRequest) tblAnalystOrgWorkQueue.getValueAt(selectedRow, 0);
-        if(workRequest.getAnalyst() != analyst){
+        WorkRequest workRequest = (WorkRequest) tblRepOrgWorkQueue.getValueAt(selectedRow, 0);
+        if(workRequest.getRepresentative()!= representative){
             JOptionPane.showMessageDialog(null, "Please assign to yourself first", "Information", JOptionPane.INFORMATION_MESSAGE);
             return ;
         }
         if(workRequest instanceof NewLoanCaseWorkRequest){
             RepresentativeLoanCaseJPanel analyseLoanCaseJPanel =
             new RepresentativeLoanCaseJPanel(userProcessContainer, business, (NewLoanCaseWorkRequest) workRequest,
-                trusteeOrganization, analyst);
+                trusteeOrganization, representative);
             userProcessContainer.add("analyseLoanCaseJPanel",analyseLoanCaseJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -209,6 +209,6 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAssign;
     private javax.swing.JButton btnProcess;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblAnalystOrgWorkQueue;
+    private javax.swing.JTable tblRepOrgWorkQueue;
     // End of variables declaration//GEN-END:variables
 }

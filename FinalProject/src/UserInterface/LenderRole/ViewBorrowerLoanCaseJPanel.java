@@ -39,7 +39,7 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
         labelFullName.setText(loan.getBorrower().getName());
         labelAddress.setText(loan.getBorrower().getAddress());
         labelOccupation.setText(loan.getBorrower().getOccupation());
-        labelFiledPartnerName.setText(loan.getFieldPartnerContact().getName());
+        
        
     }
 
@@ -83,9 +83,7 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
         labelRepaymentMonthlyInstalment = new javax.swing.JLabel();
         labelRepaymentSrtmont = new javax.swing.JLabel();
         labelRepaymntStartyr = new javax.swing.JLabel();
-        labelFiledPartnerName = new javax.swing.JLabel();
         labelLoanAnmount = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -243,19 +241,8 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
         labelRepaymntStartyr.setText("repaymnt start yr");
         add(labelRepaymntStartyr, new org.netbeans.lib.awtextra.AbsoluteConstraints(869, 396, -1, -1));
 
-        labelFiledPartnerName.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        labelFiledPartnerName.setForeground(new java.awt.Color(255, 255, 255));
-        labelFiledPartnerName.setText("filed partner name");
-        add(labelFiledPartnerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 438, -1, 16));
-
         labelLoanAnmount.setText("loan amount");
         add(labelLoanAnmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(949, 522, -1, -1));
-
-        jLabel33.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("  FIELD PARTNER RISK RATING  ");
-        jLabel33.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 605, 308, 44));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -270,7 +257,6 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -281,7 +267,6 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel labelAddress;
     private javax.swing.JLabel labelAge;
     private javax.swing.JLabel labelCategory;
-    private javax.swing.JLabel labelFiledPartnerName;
     private javax.swing.JLabel labelFullName;
     private javax.swing.JLabel labelLoanAnmount;
     private javax.swing.JLabel labelLoanLength;

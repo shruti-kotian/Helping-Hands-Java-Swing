@@ -188,7 +188,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 row[1] = nlcwr.getLoan().getLoanCase().getCategory();
                 row[2] = nlcwr.getLoan().getLoanCase().getLoanAmount();
                 row[3] = nlcwr.getLoan().getLoanCase().getLoanLength();
-                row[4] = nlcwr.getAnalyst().getName();
+                row[4] = nlcwr.getRepresentative().getName();
                 if(nlcwr.getTrustee() != null)
                 row[5] = nlcwr.getTrustee().getName();
                 else

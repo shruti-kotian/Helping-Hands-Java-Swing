@@ -28,7 +28,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     private HelpingHandsEnterprise business;
     private NewLoanCaseWorkRequest newLoanCaseWorkRequest ;
     private TrusteeOrganization trusteeOrganization ;
-    private Employee analyst ;    
+    private Employee representative ;    
     /**
      * Creates new form AnalyseLoanCaseJPanel
      */
@@ -36,13 +36,13 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         initComponents();
     }
     
-    RepresentativeLoanCaseJPanel(JPanel userProcessContainer, Enterprise business, NewLoanCaseWorkRequest newLoanCaseWorkRequest, TrusteeOrganization trusteeOrganization, Employee analyst) {
+    RepresentativeLoanCaseJPanel(JPanel userProcessContainer, Enterprise business, NewLoanCaseWorkRequest newLoanCaseWorkRequest, TrusteeOrganization trusteeOrganization, Employee representative) {
         initComponents();
         this.userProcessContainer = userProcessContainer ;
         this.business = (HelpingHandsEnterprise) business;
         this.newLoanCaseWorkRequest = newLoanCaseWorkRequest ;
         this.trusteeOrganization = trusteeOrganization ;
-        this.analyst = analyst ;
+        this.representative = representative ;
         populateScreenData();
     }
     
@@ -57,7 +57,6 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     lblAmount.setText(String.valueOf(loanCase.getLoanAmount()));
     lblBorrower.setText(borrower.getName());
     lblCategory.setText(String.valueOf(loanCase.getCategory().getValue()));
-    lblFieldPartner.setText(String.valueOf(loan.getFieldPartnerContact()));
     lblFullName.setText(borrower.getName());
     lblLength.setText(String.valueOf(loanCase.getLoanLength()));
     lblMonthlyInstallment.setText(String.valueOf(loanCase.getInstallment()));
@@ -138,8 +137,6 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         tblBorrowerHistory = new javax.swing.JTable();
         btnView = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        lblFieldPartner = new javax.swing.JLabel();
         lblBorrowerHistory1 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txtFeedback = new javax.swing.JTextField();
@@ -341,17 +338,6 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel15.setText("FIELD PARTNER CONTACT ");
-        jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-
-        lblFieldPartner.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        lblFieldPartner.setForeground(new java.awt.Color(255, 255, 255));
-        lblFieldPartner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFieldPartner.setText("label");
-
         lblBorrowerHistory1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblBorrowerHistory1.setForeground(new java.awt.Color(255, 255, 255));
         lblBorrowerHistory1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -452,18 +438,20 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel6)
                                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblLength, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblBorrower, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblMonthlyInstallment, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblStartMonth, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblStartYear, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblFieldPartner, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(lblAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(lblLength, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(lblBorrower, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(lblCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(lblMonthlyInstallment, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(lblStartMonth, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(lblStartYear, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(lblBorrowerHistory1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -496,7 +484,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -522,11 +510,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblStartYear, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFieldPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -534,7 +518,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -577,7 +561,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                     .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSendToTrustee, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -605,11 +589,11 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
             return;
         }
         newLoanCaseWorkRequest.getLoan().getLoanCase().setSpeciality(feedback);
-        newLoanCaseWorkRequest.getLoan().getLoanCase().setSpecialityAdder(analyst);
+        newLoanCaseWorkRequest.getLoan().getLoanCase().setSpecialityAdder(representative);
         
-        newLoanCaseWorkRequest.setAnalyst(analyst);
+        newLoanCaseWorkRequest.setRepresentative(representative);
         newLoanCaseWorkRequest.setMessage("Please review this aplication for new Loan");
-        newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.AnalystApproved);
+        newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.RepresentativeApproved);
         trusteeOrganization.getWorkQueue().addWorkRequest(newLoanCaseWorkRequest);
         
         JOptionPane.showMessageDialog(null,  "Work Request sent to Trustee Organization","Information", JOptionPane.INFORMATION_MESSAGE);        
@@ -617,9 +601,9 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
 
     private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
         // TODO add your handling code here:
-        newLoanCaseWorkRequest.setAnalyst(analyst);
+        newLoanCaseWorkRequest.setRepresentative(representative);
         newLoanCaseWorkRequest.setMessage("");
-        newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.AnalystRejected);
+        newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.RepresentativeRejected);
         
         JOptionPane.showMessageDialog(null,  "Work Request rejected and sent to Borrower","Information", JOptionPane.INFORMATION_MESSAGE);        
     }//GEN-LAST:event_btnRejectActionPerformed
@@ -629,7 +613,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
         RepresentativeWorkAreaJPanel awajp = (RepresentativeWorkAreaJPanel) userProcessContainer.getComponent(length-1);
-        awajp.populateTblAnalystOrganizationWorkQueue();
+        awajp.populateTblRepresentativeOrganizationWorkQueue();
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);        
@@ -663,7 +647,6 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -686,7 +669,6 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblBorrowerHistory;
     private javax.swing.JLabel lblBorrowerHistory1;
     private javax.swing.JLabel lblCategory;
-    private javax.swing.JLabel lblFieldPartner;
     private javax.swing.JLabel lblFullName;
     private javax.swing.JLabel lblLength;
     private javax.swing.JLabel lblMonthlyInstallment;

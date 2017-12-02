@@ -17,7 +17,7 @@ public abstract class WorkRequest {
     private String messageHistory;
     private Employee representative;
     private Employee trustee;
-    private Employee analyst;
+    
 
     public WorkRequest() {
 
@@ -62,17 +62,7 @@ public abstract class WorkRequest {
         this.trustee = trustee;
     }
 
-    public Employee getAnalyst() {
-        return analyst;
-    }
-
-    public void setAnalyst(Employee analyst) {
-        this.analyst = analyst;
-    }
-    
-    
-
-    public abstract String getNameOfRelevantOrg();
+   public abstract String getNameOfRelevantOrg();
 
     public abstract String getStatus();
 

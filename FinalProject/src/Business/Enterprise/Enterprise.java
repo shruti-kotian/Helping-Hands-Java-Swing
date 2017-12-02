@@ -12,7 +12,7 @@ import Business.Organization.LenderOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.TrusteeOrganization;
-import Business.Person.FieldPartnerContact;
+
 
 /**
  *
@@ -99,7 +99,7 @@ public abstract class Enterprise extends Organization {
 
     }
 
-    public RepresentativeOrganization getAnalystOrganization() {
+    public RepresentativeOrganization getRepresentativeOrganization() {
         for (Organization organization : organizationDirectory.getOrganizationList()) {
             if (organization instanceof RepresentativeOrganization) {
                 return (RepresentativeOrganization) organization;
