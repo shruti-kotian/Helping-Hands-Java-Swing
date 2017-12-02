@@ -35,7 +35,6 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
      lblAmount.setText(String.valueOf(loan.totalLentAmount()));
     lblBorrower.setText(loan.getBorrower().getName());
      lblCategory.setText(loan.getLoanCase().getCategory().getValue());
-     lblFieldPartner.setText(loan.getFieldPartnerContact().getName());
      lblLength.setText(String.valueOf(loan.getLoanCase().getLoanLength()));
      lblMonthlyInstallment.setText(String.valueOf(loan.getLoanCase().getInstallment()));
      lblStartMonth.setText(loan.getLoanCase().getRepaymentStartMonth());
