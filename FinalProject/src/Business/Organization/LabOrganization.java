@@ -3,37 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.MoneyBasket;
+package Business.Organization;
 
-import Business.Enterprise.Enterprise;
-import Business.Enterprise.HelpingHandsEnterprise;
-import Business.Person.Lender;
-import Business.UserAccount.UserAccount;
-import javax.swing.JPanel;
+import Business.Role.Role;
+import java.util.ArrayList;
 
 /**
  *
  * @author Shrutik
  */
-
-   
-
-public class MoneyBasketJPanel extends javax.swing.JPanel {
+public class LabOrganization extends Organization {
 
     /**
-     * Creates new form MoneyBasketJPanel
+     * Creates new form LabOrganization
      */
-    
-     private JPanel userProcessContainer ;
-    private HelpingHandsEnterprise business ;
-   private Lender lender;
-   
-    public MoneyBasketJPanel(JPanel userProcessContainer,Enterprise business,Lender lender) {
-        initComponents();
-        this.userProcessContainer = userProcessContainer ;
-        this.business = (HelpingHandsEnterprise) business ;
-        
-        this.lender = lender ;
+    public LabOrganization() {
+        super(Organization.Type.Lab.getValue());
+    }
+
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new LabAssistantRole());
+        return roles;
     }
 
     /**
@@ -56,6 +48,11 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

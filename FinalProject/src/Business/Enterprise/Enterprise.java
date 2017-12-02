@@ -33,7 +33,8 @@ public abstract class Enterprise extends Organization {
     private OrganizationDirectory organizationDirectory;
 
     public enum EnterpriseType {
-        HelpingHands("HelpingHands");
+        HelpingHands("HelpingHands"),Hospital("Hospital");
+        
 
         private String value;
 
