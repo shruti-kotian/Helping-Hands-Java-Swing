@@ -7,6 +7,8 @@ package UserInterface.BorrowerRole;
 
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.HelpingHandsEnterprise;
+import Business.Loan.Loan;
+import Business.Loan.RepaymentInstance;
 import Business.Person.Borrower;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -17,12 +19,10 @@ import javax.swing.JPanel;
  * @author Leo
  */
 public class RepaymentJPanel extends javax.swing.JPanel {
-
     private JPanel userProcessContainer ;
     private HelpingHandsEnterprise business ;
     private Borrower borrower ;
     private Loan loan ;
-    
     /**
      * Creates new form RepaymentJPanel
      */
@@ -30,14 +30,14 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-     public RepaymentJPanel(JPanel userProcessContainer, HelpingHandsEnterprise business, Borrower borrower) {
+    public RepaymentJPanel(JPanel userProcessContainer, HelpingHandsEnterprise business, Borrower borrower) {
         initComponents();
         this.userProcessContainer = userProcessContainer ;
         this.business = business;
         this.borrower = borrower ;
         loan = business.getLoanDirectory().getBorrowerCurrentLoan(borrower);
     }
-     
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,6 +47,7 @@ public class RepaymentJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -57,10 +58,13 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         btnPay = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         lblPercent = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1011, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -72,17 +76,17 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("  AMOUNT");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 184, 158, 46));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 180, 158, 46));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("  AMOUNT DUE  ");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 387, -1, 46));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 383, -1, 46));
 
         txtAmount.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         txtAmount.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 182, 272, 50));
+        add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 178, 272, 50));
 
         txtAmountDue.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         txtAmountDue.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -91,19 +95,19 @@ public class RepaymentJPanel extends javax.swing.JPanel {
                 txtAmountDueActionPerformed(evt);
             }
         });
-        add(txtAmountDue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 386, 272, 49));
+        add(txtAmountDue, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 382, 272, 49));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("  $");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 181, 58, 52));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 177, 58, 52));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("  $ ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 386, -1, 49));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 382, -1, 49));
 
         btnPay.setBackground(new java.awt.Color(0, 0, 0));
         btnPay.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -115,7 +119,7 @@ public class RepaymentJPanel extends javax.swing.JPanel {
                 btnPayActionPerformed(evt);
             }
         });
-        add(btnPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 262, 272, 53));
+        add(btnPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 258, 272, 53));
 
         btnBack.setBackground(new java.awt.Color(0, 0, 0));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -127,24 +131,23 @@ public class RepaymentJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 653, 182, 58));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 26, 182, 58));
 
         lblPercent.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblPercent.setForeground(new java.awt.Color(255, 255, 255));
         lblPercent.setText("  LOAN REPAYMENT PERCENTAGE  ");
         lblPercent.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(lblPercent, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 573, -1, -1));
+        add(lblPercent, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 569, -1, -1));
+
+        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(952, 34, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("  LOAN REPAYMENT STATUS  ");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 501, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 497, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtAmountDueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountDueActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAmountDueActionPerformed
 
     private void btnPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPayActionPerformed
         // TODO add your handling code here:
@@ -153,7 +156,7 @@ public class RepaymentJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter only digits for amount", "Information", JOptionPane.INFORMATION_MESSAGE);
             return ;
         }
-        amount = Integer.parseInt(txtAmount.getText());
+            amount = Integer.parseInt(txtAmount.getText());
         if(amount == 0){
             JOptionPane.showMessageDialog(null,  "Please enter an amount that you wish to pay", "Information",JOptionPane.INFORMATION_MESSAGE);
             return ;
@@ -163,7 +166,7 @@ public class RepaymentJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,  "Your Helping Hands account does not have enough credit","Information", JOptionPane.INFORMATION_MESSAGE);
             return ;
         }
-
+        
         // Check against amount due
         if((loan.totalLentAmount() - loan.totalRepayedAmount()) < amount){
             JOptionPane.showMessageDialog(null, "Amount entered is more than balance due ", "Information", JOptionPane.INFORMATION_MESSAGE);
@@ -174,15 +177,15 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         repaymentInstance.setRepaymentAmount(amount);
         repaymentInstance.setDateAsCurrentDate();
         loan.addRepaymentInstance(repaymentInstance);
-
+        
         //Pay
         txtAmountDue.setText(String.valueOf(loan.totalLentAmount() - loan.totalRepayedAmount()));
-
+        
         //Repayment percentage label
         double num = loan.totalRepayedAmount();
         double den = loan.totalLentAmount();
         int percent = (int)((num)/(den))*100;
-
+        
         lblPercent.setText(percent + "% of loan repayed!");
     }//GEN-LAST:event_btnPayActionPerformed
 
@@ -191,22 +194,28 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
         BorrowerWorkAreaJPanel awajp = (BorrowerWorkAreaJPanel) userProcessContainer.getComponent(length-1);
-        awajp.populateCreditComboBox();
-        awajp.populateCurrentBalance();
-
+        awajp.populateCreditComboBox();   
+        awajp.populateCurrentBalance();        
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtAmountDueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAmountDueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAmountDueActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnPay;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblPercent;
     private javax.swing.JTextField txtAmount;

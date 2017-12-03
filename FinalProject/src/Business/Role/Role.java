@@ -25,7 +25,8 @@ public abstract class Role {
         Borrower("Borrower"),
         FieldPartner("FieldPartner"),
         Admin("Admin"),
-        SystemAdmin("SystemAdmin");
+        SystemAdmin("SystemAdmin"),
+        Doctor("Doctor");
         
         private String value;
         private RoleType(String value){

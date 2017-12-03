@@ -5,6 +5,7 @@
  */
 package Business.Loan;
 
+import Business.Person.Borrower;
 import java.util.ArrayList;
 
 /**
@@ -30,6 +31,28 @@ public class LoanDirectory {
     {
         loanList.add(loan);
     }
+    
+    public Loan getBorrowerCurrentLoan(Borrower borrower){
+        for(Loan loan : loanList){
+            if(loan.getBorrower() == borrower){
+                if(!(loan.getLoanStatus().equals(Loan.LoanStatus.FullyRepayed))){
+                    return loan ;
+                }
+            }
+        }
+        return null ;
+    }
+    
+    public ArrayList<Loan> getBorrowerHistory(Borrower borrower){
+        ArrayList<Loan> loanList = new ArrayList<Loan>();
+        for(Loan loan : this.getLoanList()){
+            if(loan.getBorrower() == borrower){
+                if(loan.getLoanStatus() == Loan.LoanStatus.FullyRepayed){
+                loanList.add(loan);
+                }
+            }
+        }
+        return loanList;
+    }
 
- 
 }

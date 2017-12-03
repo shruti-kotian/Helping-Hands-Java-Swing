@@ -30,7 +30,7 @@ public class OrganizationDirectory {
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Type.Representative.getValue())){
-            organization = new RepresentativeOrganization("Analyst Organization", Type.Representative);
+            organization = new RepresentativeOrganization("Representative Organization", Type.Representative);
             organizationList.add(organization);
         }
         else if (type.getValue().equals(Type.Borrower.getValue())){

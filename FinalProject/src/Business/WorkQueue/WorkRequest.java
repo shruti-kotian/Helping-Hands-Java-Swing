@@ -7,6 +7,7 @@ package Business.WorkQueue;
 
 import Business.Employee.Employee;
 import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
 
 /**
  *
@@ -17,6 +18,8 @@ public abstract class WorkRequest {
     private String messageHistory;
     private Employee representative;
     private Employee trustee;
+    private UserAccount sender;
+    
 
     public WorkRequest() {
 
@@ -61,10 +64,20 @@ public abstract class WorkRequest {
         this.trustee = trustee;
     }
 
-    public abstract String getNameOfRelevantOrg();
+   public abstract String getNameOfRelevantOrg();
 
     public abstract String getStatus();
 
+    public UserAccount getSender() {
+        return sender;
+    }
+
+    public void setSender(UserAccount sender) {
+        this.sender = sender;
+    }
+
+    
+    
     @Override
     public String toString() {
         return this.getNameOfRelevantOrg();

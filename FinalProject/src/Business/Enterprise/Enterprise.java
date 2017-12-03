@@ -7,10 +7,12 @@ package Business.Enterprise;
 
 import Business.Organization.RepresentativeOrganization;
 import Business.Organization.BorrowerOrganization;
+
 import Business.Organization.LenderOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.TrusteeOrganization;
+
 
 /**
  *
@@ -31,7 +33,8 @@ public abstract class Enterprise extends Organization {
     private OrganizationDirectory organizationDirectory;
 
     public enum EnterpriseType {
-        HelpingHands("HelpingHands");
+        HelpingHands("HelpingHands"),Hospital("Hospital");
+        
 
         private String value;
 
@@ -97,7 +100,7 @@ public abstract class Enterprise extends Organization {
 
     }
 
-    public RepresentativeOrganization getAnalystOrganization() {
+    public RepresentativeOrganization getRepresentativeOrganization() {
         for (Organization organization : organizationDirectory.getOrganizationList()) {
             if (organization instanceof RepresentativeOrganization) {
                 return (RepresentativeOrganization) organization;
@@ -123,4 +126,6 @@ public abstract class Enterprise extends Organization {
     public void setEnterpriseType(EnterpriseType enterpriseType) {
         this.enterpriseType = enterpriseType;
     }
+    
+    
 }

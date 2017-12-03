@@ -5,10 +5,13 @@
  */
 package UserInterface.BorrowerRole;
 
+
 import Business.Enterprise.HelpingHandsEnterprise;
-import static Business.Organization.Organization.Type.Borrower;
+import Business.Loan.LendingInstance;
+import Business.Loan.Loan;
+import Business.Loan.RepaymentInstance;
 import Business.Person.Borrower;
-import static Business.Role.Role.RoleType.Borrower;
+
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -18,11 +21,11 @@ import javax.swing.table.DefaultTableModel;
  * @author Leo
  */
 public class LoanCaseStatusJPanel extends javax.swing.JPanel {
- private JPanel userProcessContainer ;
+
+    private JPanel userProcessContainer ;
     private HelpingHandsEnterprise business ;
     private Borrower borrower ;
     private Loan loan ;
-    
     /**
      * Creates new form LoanCaseStatusJPanel
      */
@@ -30,7 +33,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-     LoanCaseStatusJPanel(JPanel userProcessContainer, HelpingHandsEnterprise business, Borrower borrower) {
+    LoanCaseStatusJPanel(JPanel userProcessContainer, HelpingHandsEnterprise business, Borrower borrower) {
         initComponents();
         this.userProcessContainer = userProcessContainer ;
         this.business = business;
@@ -67,10 +70,10 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     int no = loan.getLendingInstanceList().size();
     lblLenderNo.setText("Loan powered by " + no + " lenders");
     
-    if(loan.getLoanStatus() == Loan.LoanStatus.FundingRequired){
+    if(loan.getLoanStatus() == Loan.LoanStatus.FundingNeeded){
     lblPercent.setText("Loan 0% funded");
     lblFRStatus.setText("$0 funded. $" + loan.getLoanCase().getLoanAmount() + " to go.");}
-    else if(loan.getLoanStatus() == Loan.LoanStatus.PartiallyFunded){
+    else if(loan.getLoanStatus() == Loan.LoanStatus.PartlyFunded){
     int percent = (int) ((int)(((double)loan.totalLentAmount())/((double)loan.getLoanCase().getLoanAmount()))*100);
     lblPercent.setText("Loan "+ percent +"% funded"); 
     lblFRStatus.setText("$" + lentAmt + " funded. $" + (loanAmt-lentAmt) + " to go.");
@@ -79,7 +82,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     lblPercent.setText("Loan fully funded"); 
     lblFRStatus.setText("$0 repayed. $" + (lentAmt) + " to go.");    
     
-    }else if(loan.getLoanStatus() == Loan.LoanStatus.PartiallyRepayed){
+    }else if(loan.getLoanStatus() == Loan.LoanStatus.PartlyRepayed){
     int percent = (int) ((int)(((double)loan.totalRepayedAmount())/((double)loan.totalLentAmount()))*100);
     lblPercent.setText("Loan "+ percent +"% repayed");  
     lblFRStatus.setText("$" + repAmt + " repayed. $" + (lentAmt-repAmt) + " to go.");      
@@ -102,8 +105,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }        
     }    
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,9 +115,8 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblLenderList = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
@@ -125,29 +126,19 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
         lblLenderNo = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblRepaymentList = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Lending Instances");
-        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 359, 344, 29));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1129, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("  LOAN CASE STATUS  ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 24, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Repayment Instances");
-        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 359, 377, 29));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 24, -1, -1));
 
         tblLenderList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -166,8 +157,12 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(tblLenderList);
+        if (tblLenderList.getColumnModel().getColumnCount() > 0) {
+            tblLenderList.getColumnModel().getColumn(0).setResizable(false);
+            tblLenderList.getColumnModel().getColumn(1).setResizable(false);
+        }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 406, 503, 111));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 402, 503, 111));
 
         btnBack.setBackground(new java.awt.Color(0, 0, 0));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -179,31 +174,31 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 610, 160, 53));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 6, 160, 53));
 
         lblStatus.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStatus.setText("Loan status");
-        add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 106, 544, 40));
+        add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 102, 544, 40));
 
         lblPercent.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblPercent.setForeground(new java.awt.Color(255, 255, 255));
         lblPercent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPercent.setText("Percent funded");
-        add(lblPercent, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 164, 544, 40));
+        add(lblPercent, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 160, 544, 40));
 
         lblFRStatus.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblFRStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblFRStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFRStatus.setText("Funding / Repayment status");
-        add(lblFRStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 222, 544, 40));
+        add(lblFRStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 218, 544, 40));
 
         lblLenderNo.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblLenderNo.setForeground(new java.awt.Color(255, 255, 255));
         lblLenderNo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLenderNo.setText("Powered by lenders");
-        add(lblLenderNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 280, 544, 40));
+        add(lblLenderNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 276, 544, 40));
 
         tblRepaymentList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -222,16 +217,35 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane2.setViewportView(tblRepaymentList);
+        if (tblRepaymentList.getColumnModel().getColumnCount() > 0) {
+            tblRepaymentList.getColumnModel().getColumn(0).setResizable(false);
+            tblRepaymentList.getColumnModel().getColumn(1).setResizable(false);
+        }
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 406, 503, 111));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 402, 503, 111));
+
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Lending Instances");
+        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 355, 344, 29));
+
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Repayment Instances");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 355, 377, 29));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 24, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
+                userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
         BorrowerWorkAreaJPanel awajp = (BorrowerWorkAreaJPanel) userProcessContainer.getComponent(length-1);
-        awajp.populateCreditComboBox();
+        awajp.populateCreditComboBox();   
         awajp.populateCurrentBalance();
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -241,9 +255,11 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblFRStatus;
@@ -253,4 +269,6 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblLenderList;
     private javax.swing.JTable tblRepaymentList;
     // End of variables declaration//GEN-END:variables
+
+
 }
