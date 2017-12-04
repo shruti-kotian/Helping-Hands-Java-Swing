@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author shwetatatiya
  */
 public class LoanDirectory {
+    
     private ArrayList<Loan> loanList ;
 
     public LoanDirectory() {
@@ -55,4 +56,6 @@ public class LoanDirectory {
         return loanList;
     }
 
+  
+    
 }

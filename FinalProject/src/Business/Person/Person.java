@@ -12,6 +12,7 @@ import Business.UserAccount.UserAccount;
  * @author shwetatatiya
  */
 public class Person {
+    
     private String name;
     private int id;
     private static int count = 1;  
@@ -46,5 +47,7 @@ public class Person {
     public void setUserAccount(UserAccount userAccount) {
         this.userAccount = userAccount;
     }
+    
+    
     
 }

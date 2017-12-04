@@ -9,14 +9,13 @@ import Business.Person.Borrower;
 import java.util.ArrayList;
 import java.util.Date;
 
-
-
 /**
  *
  * @author shwetatatiya
  */
 public class Loan {
-   
+    
+    
     private LoanCase loanCase ;
     private Borrower borrower ;
     private LoanStatus loanStatus ;
@@ -62,6 +61,32 @@ public class Loan {
         this.lendingInstanceList = lendingInstanceList;
     }
 
+    public LoanCase getLoanCase() {
+        return loanCase;
+    }
+
+    public void setLoanCase(LoanCase loanCase) {
+        this.loanCase = loanCase;
+    }
+
+    public Borrower getBorrower() {
+        return borrower;
+    }
+
+    public void setBorrower(Borrower borrower) {
+        this.borrower = borrower;
+    }
+
+    
+
+    public LoanStatus getLoanStatus() {
+        return loanStatus;
+    }
+
+    public void setLoanStatus(LoanStatus loanStatus) {
+        this.loanStatus = loanStatus;
+    }
+
     public ArrayList<RepaymentInstance> getRepaymentInstanceList() {
         return repaymentInstanceList;
     }
@@ -69,7 +94,6 @@ public class Loan {
     public void setRepaymentInstanceList(ArrayList<RepaymentInstance> repaymentInstanceList) {
         this.repaymentInstanceList = repaymentInstanceList;
     }
-
     
     public void addLendingInstance(LendingInstance lendingInstance) {
         this.getLendingInstanceList().add(lendingInstance) ;
@@ -93,7 +117,7 @@ public class Loan {
         }else if(this.totalLentAmount() > this.totalRepayedAmount()){
             this.setLoanStatus(LoanStatus.PartlyRepayed);
         }
-    }  
+    }    
     
     public void sendAmountAndNotification(int amt, Date date){
         
@@ -118,32 +142,10 @@ public class Loan {
         
     }
     
-    public LoanCase getLoanCase() {
-        return loanCase;
+    @Override
+    public String toString(){
+        return borrower.getName();
     }
-
-    public void setLoanCase(LoanCase loanCase) {
-        this.loanCase = loanCase;
-    }
-
-    public Borrower getBorrower() {
-        return borrower;
-    }
-
-    public void setBorrower(Borrower borrower) {
-        this.borrower = borrower;
-    }
-
-  
-
-    public LoanStatus getLoanStatus() {
-        return loanStatus;
-    }
-
-    public void setLoanStatus(LoanStatus loanStatus) {
-        this.loanStatus = loanStatus;
-    }
-
     
     public int totalLentAmount(){
         int total = 0;
@@ -160,15 +162,7 @@ public class Loan {
         }
         return total ;
     }    
-     
     
-
     
-    @Override
-    public String toString(){
-        return borrower.getName();
-    }
-    
-     
     
 }

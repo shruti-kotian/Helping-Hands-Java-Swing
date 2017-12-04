@@ -5,11 +5,10 @@
  */
 package Business.Person;
 
-import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author Shrutik
+ * @author shwetatatiya
  */
 public class ExternalPlayer extends Person{
     
