@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -58,6 +61,7 @@ public abstract class Role {
     }
     
     
+<<<<<<< HEAD
 }
 =======
 /*
@@ -120,5 +124,8 @@ public abstract class Role {
         this.roleType = roleType;
     }
     
+}
+>>>>>>> master
+=======
 }
 >>>>>>> master

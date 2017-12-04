@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 package Business.DB4OUtil;
 
 import Business.ConfigureASystem;
@@ -73,6 +76,7 @@ public class DB4OUtil {
         return system;
     }
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -153,4 +157,6 @@ public class DB4OUtil {
         return system;
     }
 }
+>>>>>>> master
+=======
 >>>>>>> master

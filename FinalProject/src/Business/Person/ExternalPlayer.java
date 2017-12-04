@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,6 +30,7 @@ public class ExternalPlayer extends Person{
     }
     
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -57,4 +61,6 @@ public class ExternalPlayer extends Person{
     }
     
 }
+>>>>>>> master
+=======
 >>>>>>> master

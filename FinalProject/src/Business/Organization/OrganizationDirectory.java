@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -46,6 +49,7 @@ public class OrganizationDirectory {
             
         return organization;
     }
+<<<<<<< HEAD
 }
 =======
 /*
@@ -89,5 +93,8 @@ public class OrganizationDirectory {
         }       
         return organization;
     }
+}
+>>>>>>> master
+=======
 }
 >>>>>>> master

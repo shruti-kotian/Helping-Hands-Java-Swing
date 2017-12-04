@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,6 +29,7 @@ public class RepaymentNotificationWorkRequest extends WorkRequest {
 ;
 
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -47,4 +51,6 @@ public class RepaymentNotificationWorkRequest extends WorkRequest{
     public String getStatus() {return null;};
     
 }
+>>>>>>> master
+=======
 >>>>>>> master

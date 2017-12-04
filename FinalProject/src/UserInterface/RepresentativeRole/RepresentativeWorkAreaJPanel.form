@@ -2,11 +2,17 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="cc" red="cc" type="rgb"/>
     </Property>
   </Properties>
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 >>>>>>> master
   <AuxValues>
@@ -21,6 +27,7 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="false"/>
@@ -63,6 +70,10 @@
       </Group>
     </DimensionLayout>
 >>>>>>> master
+=======
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+>>>>>>> master
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -70,11 +81,17 @@
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="98" y="139" width="703" height="223"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
@@ -151,11 +168,17 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignActionPerformed"/>
       </Events>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="98" y="395" width="343" height="65"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 >>>>>>> master
     </Component>
@@ -183,11 +206,17 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProcessActionPerformed"/>
       </Events>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="459" y="395" width="342" height="65"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 >>>>>>> master
     </Component>

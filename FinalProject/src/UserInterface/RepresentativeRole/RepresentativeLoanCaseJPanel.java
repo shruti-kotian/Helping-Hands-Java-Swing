@@ -6,8 +6,11 @@
 package UserInterface.RepresentativeRole;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Business.Enterprise.HelpingHandsEnterprise;
+>>>>>>> master
+=======
 >>>>>>> master
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
@@ -25,10 +28,14 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /**
  *
  * @author Shrutik
  */
+<<<<<<< HEAD
 public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -41,20 +48,28 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
      * Creates new form RepresentativeLoanCaseJPanel
 =======
 
+=======
+>>>>>>> master
 public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer ;
+    private JPanel userProcessContainer;
     private HelpingHandsEnterprise business;
-    private NewLoanCaseWorkRequest newLoanCaseWorkRequest ;
-    private TrusteeOrganization trusteeOrganization ;
-    private Employee representative ;    
+    private NewLoanCaseWorkRequest newLoanCaseWorkRequest;
+    private TrusteeOrganization trusteeOrganization;
+    private Employee representative;
+
     /**
+<<<<<<< HEAD
      * Creates new form AnalyseLoanCaseJPanel
+>>>>>>> master
+=======
+     * Creates new form RepresentativeLoanCaseJPanel
 >>>>>>> master
      */
     public RepresentativeLoanCaseJPanel() {
         initComponents();
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     RepresentativeLoanCaseJPanel(JPanel userProcessContainer, Enterprise business, NewLoanCaseWorkRequest newLoanCaseWorkRequest, TrusteeOrganization trusteeOrganization, Employee representative) {
@@ -114,39 +129,43 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
 
 =======
     
+=======
+
+>>>>>>> master
     RepresentativeLoanCaseJPanel(JPanel userProcessContainer, Enterprise business, NewLoanCaseWorkRequest newLoanCaseWorkRequest, TrusteeOrganization trusteeOrganization, Employee representative) {
         initComponents();
-        this.userProcessContainer = userProcessContainer ;
+        this.userProcessContainer = userProcessContainer;
         this.business = (HelpingHandsEnterprise) business;
-        this.newLoanCaseWorkRequest = newLoanCaseWorkRequest ;
-        this.trusteeOrganization = trusteeOrganization ;
-        this.representative = representative ;
+        this.newLoanCaseWorkRequest = newLoanCaseWorkRequest;
+        this.trusteeOrganization = trusteeOrganization;
+        this.representative = representative;
         populateScreenData();
     }
-    
-    public void populateScreenData(){
-     
-        Borrower borrower = newLoanCaseWorkRequest.getBorrower() ;
-        Loan loan = newLoanCaseWorkRequest.getLoan() ;
+
+    public void populateScreenData() {
+
+        Borrower borrower = newLoanCaseWorkRequest.getBorrower();
+        Loan loan = newLoanCaseWorkRequest.getLoan();
         LoanCase loanCase = loan.getLoanCase();
-        
-    lblAddress.setText(borrower.getAddress());
-    lblAge.setText(String.valueOf(borrower.getDateOfBirth()));
-    lblAmount.setText(String.valueOf(loanCase.getLoanAmount()));
-    lblBorrower.setText(borrower.getName());
-    lblCategory.setText(String.valueOf(loanCase.getCategory().getValue()));
-    lblFullName.setText(borrower.getName());
-    lblLength.setText(String.valueOf(loanCase.getLoanLength()));
-    lblMonthlyInstallment.setText(String.valueOf(loanCase.getInstallment()));
-    lblOccupation.setText(borrower.getOccupation());
-    lblStartMonth.setText(loanCase.getRepaymentStartMonth());
-    lblStartYear.setText(loanCase.getRepaymentStartYear());
-    lblYearlyIncome.setText(String.valueOf(borrower.getYearlyIncome()));
-    txtStory.setText(loanCase.getCaseDescripton());        
-    populateTblBorrowerHistory();
+
+        lblAddress.setText(borrower.getAddress());
+        lblAge.setText(String.valueOf(borrower.getDateOfBirth()));
+        lblAmount.setText(String.valueOf(loanCase.getLoanAmount()));
+        lblBorrower.setText(borrower.getName());
+        lblCategory.setText(String.valueOf(loanCase.getCategory().getValue()));
+        lblFullName.setText(borrower.getName());
+        lblLength.setText(String.valueOf(loanCase.getLoanLength()));
+        lblMonthlyInstallment.setText(String.valueOf(loanCase.getInstallment()));
+        lblOccupation.setText(borrower.getOccupation());
+        lblStartMonth.setText(loanCase.getRepaymentStartMonth());
+        lblStartYear.setText(loanCase.getRepaymentStartYear());
+        lblYearlyIncome.setText(String.valueOf(borrower.getYearlyIncome()));
+        txtStory.setText(loanCase.getCaseDescripton());
+        populateTblBorrowerHistory();
     }
 
     public void populateTblBorrowerHistory() {
+<<<<<<< HEAD
        DefaultTableModel model = (DefaultTableModel) tblBorrowerHistory.getModel();
        model.setRowCount(0);
        
@@ -173,6 +192,30 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         
     }    
     
+>>>>>>> master
+=======
+        DefaultTableModel model = (DefaultTableModel) tblBorrowerHistory.getModel();
+        model.setRowCount(0);
+
+        ArrayList<Loan> loanList = business.getLoanDirectory().getBorrowerHistory(newLoanCaseWorkRequest.getLoan().getBorrower());
+
+        for (Loan loan : loanList) {
+            Object[] row = new Object[4];
+            row[0] = loan;
+            row[1] = loan.totalLentAmount();
+
+            int length = loan.getLendingInstanceList().size();
+            String date = loan.getLendingInstanceList().get(length - 1).getDate();
+            row[2] = date;
+
+            int length1 = loan.getRepaymentInstanceList().size();
+            Date date1 = loan.getRepaymentInstanceList().get(length1 - 1).getDate();
+            row[3] = date1;
+
+        }
+
+    }
+
 >>>>>>> master
     /**
      * This method is called from within the constructor to initialize the form.
@@ -225,16 +268,23 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblAmount = new javax.swing.JLabel();
         btnReject = new javax.swing.JButton();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         jLabel18 = new javax.swing.JLabel();
+>>>>>>> master
+=======
 >>>>>>> master
 
         setForeground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 =======
+>>>>>>> master
+=======
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 >>>>>>> master
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -243,8 +293,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel3.setText("LOAN CASE DETAILS -");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 45, 250, 36));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 45, 250, 36));
 >>>>>>> master
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -253,8 +307,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel1.setText("STORY");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 93, 68, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 93, 68, 24));
 >>>>>>> master
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -263,8 +321,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel2.setText("LOAN LENGTH ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 100, 191, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 100, 191, 24));
 >>>>>>> master
 
         lblLength.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -272,8 +334,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblLength.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLength.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 99, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 99, 123, 24));
 >>>>>>> master
 
         txtStory.setEditable(false);
@@ -283,9 +349,14 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(txtStory);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 129, 355, 211));
 
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 129, 355, 211));
+
 >>>>>>> master
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -293,8 +364,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel4.setText("BORROWER ");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 131, 191, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 131, 191, 24));
 >>>>>>> master
 
         lblBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -302,8 +377,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblBorrower.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBorrower.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 130, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 130, 123, 24));
 >>>>>>> master
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -312,8 +391,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel5.setText("CATEGORY ");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 162, 191, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 162, 191, 24));
 >>>>>>> master
 
         lblCategory.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -321,8 +404,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblCategory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCategory.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 161, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 161, 123, 24));
 >>>>>>> master
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -331,8 +418,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel6.setText(" REPAYMENT MONTHLY INSTALLEMNT ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 193, -1, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 193, -1, 24));
 >>>>>>> master
 
         lblMonthlyInstallment.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -340,8 +431,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblMonthlyInstallment.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMonthlyInstallment.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 192, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 192, 123, 24));
 >>>>>>> master
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -350,8 +445,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel7.setText("REPAYMENT START MONTH ");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 224, 292, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 224, 292, 24));
 >>>>>>> master
 
         lblStartMonth.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -359,8 +458,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblStartMonth.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartMonth.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 223, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 223, 123, 24));
 >>>>>>> master
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -369,8 +472,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel8.setText("REPAYMENT START YEAR ");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 255, 292, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 255, 292, 24));
 >>>>>>> master
 
         lblStartYear.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -378,8 +485,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblStartYear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartYear.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 254, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 254, 123, 24));
 >>>>>>> master
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -388,8 +499,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel9.setText("BORROWER DETAILS -");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 625, 250, 37));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 625, 250, 37));
 >>>>>>> master
 
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -398,8 +513,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel10.setText(" FULL NAME ");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 675, 137, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 675, 137, 24));
 >>>>>>> master
 
         lblFullName.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -407,8 +526,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblFullName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFullName.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 674, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblFullName, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 674, 123, 24));
 >>>>>>> master
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -417,8 +540,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel11.setText(" ADDRESS ");
         jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 706, 137, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 706, 137, 24));
 >>>>>>> master
 
         jLabel12.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -427,8 +554,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel12.setText("AGE ");
         jLabel12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 737, 137, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 737, 137, 24));
 >>>>>>> master
 
         lblAddress.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -436,8 +567,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblAddress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddress.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 705, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 705, 123, 24));
 >>>>>>> master
 
         lblAge.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -445,8 +580,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAge.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 736, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 736, 123, 24));
 >>>>>>> master
 
         jLabel13.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -455,8 +594,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel13.setText("OCCUPATION ");
         jLabel13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 768, 137, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 768, 137, 24));
 >>>>>>> master
 
         lblOccupation.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -464,8 +607,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblOccupation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOccupation.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblOccupation, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 767, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblOccupation, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 767, 123, 24));
 >>>>>>> master
 
         jLabel14.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -474,8 +621,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel14.setText("YEARLY INCOME ");
         jLabel14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 799, 137, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 799, 137, 24));
 >>>>>>> master
 
         lblYearlyIncome.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -483,8 +634,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblYearlyIncome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblYearlyIncome.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblYearlyIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 798, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblYearlyIncome, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 798, 123, 24));
 >>>>>>> master
 
         lblBorrowerHistory.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -493,8 +648,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblBorrowerHistory.setText("BORROWER HISTORY");
         lblBorrowerHistory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblBorrowerHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(677, 841, 213, 30));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblBorrowerHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(677, 841, 213, 30));
 >>>>>>> master
 
         tblBorrowerHistory.setModel(new javax.swing.table.DefaultTableModel(
@@ -523,9 +682,14 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 883, 729, 168));
 
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 883, 729, 168));
+
 >>>>>>> master
         btnView.setBackground(new java.awt.Color(0, 0, 0));
         btnView.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -538,8 +702,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(677, 1063, 213, 42));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(677, 1063, 213, 42));
 >>>>>>> master
 
         lblBorrowerHistory1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -548,8 +716,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblBorrowerHistory1.setText("ANALYST FEEDBACK -");
         lblBorrowerHistory1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblBorrowerHistory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 1098, 250, 32));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblBorrowerHistory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 1098, 250, 32));
 >>>>>>> master
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
@@ -557,13 +729,19 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel16.setText("THIS LOAN IS SPECIAL BECAUSE...");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 1142, 256, 24));
 
         txtFeedback.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jPanel1.add(txtFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 1172, 903, 43));
+<<<<<<< HEAD
 =======
 
         txtFeedback.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+>>>>>>> master
+=======
 >>>>>>> master
 
         btnSendToTrustee.setBackground(new java.awt.Color(0, 0, 0));
@@ -577,8 +755,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(btnSendToTrustee, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 1227, -1, 42));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(btnSendToTrustee, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 1227, -1, 42));
 >>>>>>> master
 
         btnBack.setBackground(new java.awt.Color(0, 0, 0));
@@ -592,8 +774,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 1227, 157, 42));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 1227, 157, 42));
 >>>>>>> master
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -602,8 +788,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         jLabel17.setText("LOAN AMOUNT ");
         jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 292, 292, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 292, 292, 24));
 >>>>>>> master
 
         lblAmount.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -611,8 +801,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         lblAmount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAmount.setText("label");
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 291, 123, 24));
 =======
+>>>>>>> master
+=======
+        jPanel1.add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1003, 291, 123, 24));
 >>>>>>> master
 
         btnReject.setBackground(new java.awt.Color(0, 0, 0));
@@ -625,6 +819,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                 btnRejectActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
         jPanel1.add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 1227, 249, 42));
 =======
@@ -798,6 +993,9 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
                 .addContainerGap(149, Short.MAX_VALUE))
         );
 >>>>>>> master
+=======
+        jPanel1.add(btnReject, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 1227, 249, 42));
+>>>>>>> master
 
         jScrollPane2.setViewportView(jPanel1);
 
@@ -820,31 +1018,45 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         String feedback = txtFeedback.getText().trim();
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (feedback == "") {
             JOptionPane.showMessageDialog(null, "Please enter a feedback", "Information", JOptionPane.INFORMATION_MESSAGE);
 =======
         if(feedback == ""){
             JOptionPane.showMessageDialog(null,  "Please enter a feedback","Information", JOptionPane.INFORMATION_MESSAGE);
 >>>>>>> master
+=======
+        if (feedback == "") {
+            JOptionPane.showMessageDialog(null, "Please enter a feedback", "Information", JOptionPane.INFORMATION_MESSAGE);
+>>>>>>> master
             return;
         }
         newLoanCaseWorkRequest.getLoan().getLoanCase().setSpeciality(feedback);
         newLoanCaseWorkRequest.getLoan().getLoanCase().setSpecialityAdder(representative);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
+>>>>>>> master
+=======
+
 >>>>>>> master
         newLoanCaseWorkRequest.setRepresentative(representative);
         newLoanCaseWorkRequest.setMessage("Please review this aplication for new Loan");
         newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.RepresentativeApproved);
         trusteeOrganization.getWorkQueue().addWorkRequest(newLoanCaseWorkRequest);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         JOptionPane.showMessageDialog(null, "Work Request sent to Trustee Organization", "Information", JOptionPane.INFORMATION_MESSAGE);
 =======
         
         JOptionPane.showMessageDialog(null,  "Work Request sent to Trustee Organization","Information", JOptionPane.INFORMATION_MESSAGE);        
+>>>>>>> master
+=======
+
+        JOptionPane.showMessageDialog(null, "Work Request sent to Trustee Organization", "Information", JOptionPane.INFORMATION_MESSAGE);
 >>>>>>> master
     }//GEN-LAST:event_btnSendToTrusteeActionPerformed
 
@@ -854,11 +1066,16 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         newLoanCaseWorkRequest.setMessage("");
         newLoanCaseWorkRequest.setStatus(NewLoanCaseWorkRequest.Status.RepresentativeRejected);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         JOptionPane.showMessageDialog(null, "Work Request rejected and sent to Borrower", "Information", JOptionPane.INFORMATION_MESSAGE);
 =======
         
         JOptionPane.showMessageDialog(null,  "Work Request rejected and sent to Borrower","Information", JOptionPane.INFORMATION_MESSAGE);        
+>>>>>>> master
+=======
+
+        JOptionPane.showMessageDialog(null, "Work Request rejected and sent to Borrower", "Information", JOptionPane.INFORMATION_MESSAGE);
 >>>>>>> master
     }//GEN-LAST:event_btnRejectActionPerformed
 
@@ -867,6 +1084,7 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
 <<<<<<< HEAD
+<<<<<<< HEAD
         RepresentativeWorkAreaJPanel awajp = (RepresentativeWorkAreaJPanel) userProcessContainer.getComponent(length - 1);
         awajp.populateTblRepresentativeOrganizationWorkQueue();
 
@@ -874,10 +1092,17 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
 =======
         RepresentativeWorkAreaJPanel awajp = (RepresentativeWorkAreaJPanel) userProcessContainer.getComponent(length-1);
+=======
+        RepresentativeWorkAreaJPanel awajp = (RepresentativeWorkAreaJPanel) userProcessContainer.getComponent(length - 1);
+>>>>>>> master
         awajp.populateTblRepresentativeOrganizationWorkQueue();
-        
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+<<<<<<< HEAD
         layout.previous(userProcessContainer);        
+>>>>>>> master
+=======
+        layout.previous(userProcessContainer);
 >>>>>>> master
     }//GEN-LAST:event_btnBackActionPerformed
 
@@ -885,12 +1110,16 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedRow = tblBorrowerHistory.getSelectedRow();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please select a row first", "Information", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
 
+<<<<<<< HEAD
         Loan loan = (Loan) tblBorrowerHistory.getValueAt(selectedRow, 0);
         ViewLoanCaseJPanel vlcjp = new ViewLoanCaseJPanel(userProcessContainer, loan);
         userProcessContainer.add("ViewLoanCaseJPanel", vlcjp);
@@ -910,6 +1139,14 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);        
         
 >>>>>>> master
+=======
+        Loan loan = (Loan) tblBorrowerHistory.getValueAt(selectedRow, 0);
+        ViewLoanCaseJPanel vlcjp = new ViewLoanCaseJPanel(userProcessContainer, loan);
+        userProcessContainer.add("ViewLoanCaseJPanel", vlcjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+>>>>>>> master
     }//GEN-LAST:event_btnViewActionPerformed
 
 
@@ -927,8 +1164,11 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     private javax.swing.JLabel jLabel18;
+>>>>>>> master
+=======
 >>>>>>> master
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -962,9 +1202,12 @@ public class RepresentativeLoanCaseJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 
+>>>>>>> master
+=======
 >>>>>>> master
 }

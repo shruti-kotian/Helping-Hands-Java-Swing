@@ -6,8 +6,11 @@
 package UserInterface.TrusteeRole;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Business.Enterprise.Enterprise;
+>>>>>>> master
+=======
 >>>>>>> master
 import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Loan.Loan;
@@ -29,6 +32,7 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
      * Creates new form TrusteeViewLoanCase
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private JPanel userProcessContainer;
     private HelpingHandsEnterprise business;
     private NewLoanCaseWorkRequest nlcwr;
@@ -44,10 +48,18 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
     public TrusteeViewLoanCaseJPanel(JPanel userProcessContainer,HelpingHandsEnterprise business,NewLoanCaseWorkRequest nlcwr)
     {
 >>>>>>> master
+=======
+    private JPanel userProcessContainer;
+    private HelpingHandsEnterprise business;
+    private NewLoanCaseWorkRequest nlcwr;
+
+    public TrusteeViewLoanCaseJPanel(JPanel userProcessContainer, HelpingHandsEnterprise business, NewLoanCaseWorkRequest nlcwr) {
+>>>>>>> master
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
         this.nlcwr = nlcwr;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         populateData();
@@ -62,6 +74,13 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
     public void populateData()
     {
 >>>>>>> master
+=======
+
+        populateData();
+    }
+
+    public void populateData() {
+>>>>>>> master
         Borrower borrower = nlcwr.getBorrower();
         LoanCase loanCase = nlcwr.getLoan().getLoanCase();
         txtStory.setText(loanCase.getCaseDescripton());
@@ -72,10 +91,14 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
         lblStartMonth.setText(loanCase.getRepaymentStartMonth());
         lblStartYear.setText(loanCase.getRepaymentStartYear());
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
         
+>>>>>>> master
+=======
+
 >>>>>>> master
     }
 
@@ -86,12 +109,17 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
      */
     @SuppressWarnings("unchecked")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
     
     
     
+>>>>>>> master
+=======
+
+
 >>>>>>> master
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -354,29 +382,40 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         // TODO add your handling code here:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
+>>>>>>> master
+=======
+
 >>>>>>> master
         nlcwr.setStatus(NewLoanCaseWorkRequest.Status.TrusteeApproved);
         Loan loan = nlcwr.getLoan();
         LoanDirectory loanDirectory = business.getLoanDirectory();
         loanDirectory.addLoan(loan);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 
         JOptionPane.showMessageDialog(null, "Loan case added to the system successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
 
 
+<<<<<<< HEAD
 =======
         
         JOptionPane.showMessageDialog(null,  "Loan case added to the system successfully","Information", JOptionPane.INFORMATION_MESSAGE);
         
         
 >>>>>>> master
+=======
+>>>>>>> master
     }//GEN-LAST:event_btnApproveActionPerformed
 
     private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         nlcwr.setStatus(NewLoanCaseWorkRequest.Status.TrusteeRejected);
@@ -390,12 +429,20 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null,  "Loan case rejected by the Trustee","Information", JOptionPane.INFORMATION_MESSAGE);
         
 >>>>>>> master
+=======
+
+        nlcwr.setStatus(NewLoanCaseWorkRequest.Status.TrusteeRejected);
+
+        JOptionPane.showMessageDialog(null, "Loan case rejected by the Trustee", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+>>>>>>> master
     }//GEN-LAST:event_btnRejectActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
+<<<<<<< HEAD
 <<<<<<< HEAD
         TrusteeWorkAreaJPanel awajp = (TrusteeWorkAreaJPanel) userProcessContainer.getComponent(length - 1);
         awajp.populateBorrowerWorkTable();
@@ -406,6 +453,12 @@ public class TrusteeViewLoanCaseJPanel extends javax.swing.JPanel {
         awajp.populateBorrowerWorkTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);        
+>>>>>>> master
+=======
+        TrusteeWorkAreaJPanel awajp = (TrusteeWorkAreaJPanel) userProcessContainer.getComponent(length - 1);
+        awajp.populateBorrowerWorkTable();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
 >>>>>>> master
     }//GEN-LAST:event_btnBackActionPerformed
 

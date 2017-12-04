@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -132,6 +135,7 @@ public abstract class Organization {
     
     
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -266,4 +270,6 @@ public abstract class Organization {
     }
     
 }
+>>>>>>> master
+=======
 >>>>>>> master

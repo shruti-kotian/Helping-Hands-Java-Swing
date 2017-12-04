@@ -61,18 +61,28 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         btnViewHelpingHandsRevenue = new javax.swing.JButton();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
 =======
+>>>>>>> master
+=======
+        setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
 >>>>>>> master
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("  TRUSTEE WORK AREA  ");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 6, -1, -1));
 =======
+>>>>>>> master
+=======
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 6, -1, -1));
 >>>>>>> master
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -80,8 +90,12 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setText("  BORROWER WORK CASE  ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 115, -1, -1));
 =======
+>>>>>>> master
+=======
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 115, -1, -1));
 >>>>>>> master
 
         tblBorrowerWorkCase.setModel(new javax.swing.table.DefaultTableModel(
@@ -103,9 +117,14 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblBorrowerWorkCase);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 188, 667, 128));
 
 =======
+>>>>>>> master
+=======
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 188, 667, 128));
+
 >>>>>>> master
         btnViewDetails.setBackground(new java.awt.Color(0, 0, 0));
         btnViewDetails.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -118,8 +137,12 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 360, 312, 50));
 =======
+>>>>>>> master
+=======
+        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 360, 312, 50));
 >>>>>>> master
 
         btnBorrowerAssignToMe.setBackground(new java.awt.Color(0, 0, 0));
@@ -133,8 +156,12 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(btnBorrowerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 360, 337, 50));
 =======
+>>>>>>> master
+=======
+        add(btnBorrowerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 360, 337, 50));
 >>>>>>> master
 
         btnViewHelpingHandsRevenue.setBackground(new java.awt.Color(0, 0, 0));
@@ -147,6 +174,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewHelpingHandsRevenueActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
         add(btnViewHelpingHandsRevenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 508, 667, 72));
 =======
@@ -195,6 +223,9 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(491, Short.MAX_VALUE)))
         );
+>>>>>>> master
+=======
+        add(btnViewHelpingHandsRevenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 508, 667, 72));
 >>>>>>> master
     }// </editor-fold>//GEN-END:initComponents
 
@@ -292,12 +323,16 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
     private void btnViewHelpingHandsRevenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHelpingHandsRevenueActionPerformed
         // TODO add your handling code here:
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
         HelpingHandsRevenueCollectionJPanel krcjp = new HelpingHandsRevenueCollectionJPanel(this.userProcessContainer, this.business);
         userProcessContainer.add("KivaRevenueCollectionJPanel", krcjp);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
+>>>>>>> master
+=======
+       
 >>>>>>> master
     }//GEN-LAST:event_btnViewHelpingHandsRevenueActionPerformed
 

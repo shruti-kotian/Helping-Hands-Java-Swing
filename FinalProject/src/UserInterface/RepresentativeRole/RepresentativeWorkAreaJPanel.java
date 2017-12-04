@@ -88,10 +88,16 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
         btnProcess = new javax.swing.JButton();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
 =======
+>>>>>>> master
+=======
+        setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
 >>>>>>> master
         tblRepOrgWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,9 +118,14 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblRepOrgWorkQueue);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 139, 703, 223));
 
 =======
+>>>>>>> master
+=======
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 139, 703, 223));
+
 >>>>>>> master
         btnAssign.setBackground(new java.awt.Color(0, 0, 0));
         btnAssign.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -127,8 +138,12 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 395, 343, 65));
 =======
+>>>>>>> master
+=======
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 395, 343, 65));
 >>>>>>> master
 
         btnProcess.setBackground(new java.awt.Color(0, 0, 0));
@@ -141,6 +156,7 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
                 btnProcessActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
         add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 395, 342, 65));
 =======
@@ -174,6 +190,9 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(btnProcess, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap(140, Short.MAX_VALUE)))
         );
+>>>>>>> master
+=======
+        add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 395, 342, 65));
 >>>>>>> master
     }// </editor-fold>//GEN-END:initComponents
 

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -135,6 +138,7 @@ public abstract class Enterprise extends Organization{
     
     
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -267,4 +271,6 @@ public abstract class Enterprise extends Organization {
     
     
 }
+>>>>>>> master
+=======
 >>>>>>> master

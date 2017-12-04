@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -314,6 +317,7 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JTextArea txtStory;
     // End of variables declaration//GEN-END:variables
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -630,4 +634,6 @@ public class ViewBorrowerLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JTextArea txtStory;
     // End of variables declaration//GEN-END:variables
 }
+>>>>>>> master
+=======
 >>>>>>> master
