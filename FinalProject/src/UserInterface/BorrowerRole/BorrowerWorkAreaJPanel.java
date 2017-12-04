@@ -6,31 +6,49 @@
 package UserInterface.BorrowerRole;
 
 import Business.Enterprise.Enterprise;
+import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Person.Borrower;
-import static Business.Role.Role.RoleType.Borrower;
 import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
  *
- * @author shwetatatiya
+ * @author Leo
  */
 public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
+
+    private JPanel userProcessContainer;
+    private Enterprise business;
+    private UserAccount userAccount;
+    private Borrower borrower;
 
     /**
      * Creates new form BorrowerWorkAreaJPanel
      */
-    private JPanel userProcessContainer ;
-    private Enterprise business ;
-    private UserAccount userAccount ;
-    private Borrower borrower ;
+    public BorrowerWorkAreaJPanel() {
+        initComponents();
+    }
+
     public BorrowerWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, UserAccount account, Borrower borrower) {
         initComponents();
-        this.userProcessContainer = userProcessContainer ;
-        this.business = enterprise ;
-        this.userAccount = account ;
-        this.borrower = borrower ;
-      
+        this.userProcessContainer = userProcessContainer;
+        this.business = enterprise;
+        this.userAccount = account;
+        this.borrower = borrower;
+        populateCreditComboBox();
+        populateCurrentBalance();
+        lblname.setText(borrower.getName());
+    }
+
+    public void populateCreditComboBox() {
+        int[] amount = {25, 50, 100, 150, 200, 500, 1000, 1500, 1750, 2000, 5000};
+
+        creditComboBox.removeAllItems();
+        for (int i = 0; i < amount.length; i++) {
+            creditComboBox.addItem(amount[i]);
+        }
     }
 
     /**
@@ -42,19 +60,123 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabel2 = new javax.swing.JLabel();
+        btnViewLoancaseStatus = new javax.swing.JButton();
+        btnRepayment = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        creditComboBox = new javax.swing.JComboBox();
+        btnAddCredit = new javax.swing.JButton();
+        txtCurrentBalance = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        lblname = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("  BORROWER DASHBOARD  ");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        btnViewLoancaseStatus.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewLoancaseStatus.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        btnViewLoancaseStatus.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewLoancaseStatus.setText("VIEW LOAN CASE STATUS >>");
+        btnViewLoancaseStatus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        btnViewLoancaseStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewLoancaseStatusActionPerformed(evt);
+            }
+        });
+        add(btnViewLoancaseStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(339, 166, 320, 67));
+
+        btnRepayment.setBackground(new java.awt.Color(0, 0, 0));
+        btnRepayment.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        btnRepayment.setForeground(new java.awt.Color(255, 255, 255));
+        btnRepayment.setText("REPAYMENT >> ");
+        btnRepayment.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        btnRepayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRepaymentActionPerformed(evt);
+            }
+        });
+        add(btnRepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 320, 61));
+
+        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("  ADD CREDIT TO YOUR ACCOUNT");
+        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 330, 50));
+
+        creditComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(creditComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 182, -1));
+
+        btnAddCredit.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddCredit.setText("ADD >>");
+        btnAddCredit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        btnAddCredit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddCreditActionPerformed(evt);
+            }
+        });
+        add(btnAddCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 500, 94, 30));
+
+        txtCurrentBalance.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        txtCurrentBalance.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        add(txtCurrentBalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 620, 320, 60));
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" CURRENT BALANCE AVAILABLE -");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 550, 320, 40));
+
+        lblname.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblname.setForeground(new java.awt.Color(255, 255, 255));
+        lblname.setText("name");
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnViewLoancaseStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLoancaseStatusActionPerformed
+        // TODO add your handling code here:
+        LoanCaseStatusJPanel loanCaseStatusJPanel = new LoanCaseStatusJPanel(userProcessContainer, (HelpingHandsEnterprise) business, borrower);
+        userProcessContainer.add("loanCaseStatusJPanel", loanCaseStatusJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnViewLoancaseStatusActionPerformed
+
+    private void btnRepaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepaymentActionPerformed
+        // TODO add your handling code here:
+        RepaymentJPanel repaymentJPanel = new RepaymentJPanel(userProcessContainer, (HelpingHandsEnterprise) business, borrower);
+        userProcessContainer.add("RepaymentJPanel", repaymentJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnRepaymentActionPerformed
+
+    private void btnAddCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCreditActionPerformed
+        // TODO add your handling code here:
+        int amount = (int) creditComboBox.getSelectedItem();
+        borrower.getAccountManagement().setAvailableCredit(borrower.getAccountManagement().getAvailableCredit() + amount);
+        txtCurrentBalance.setText(String.valueOf(borrower.getAccountManagement().getAvailableCredit()));
+        JOptionPane.showMessageDialog(null, "Credit added successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_btnAddCreditActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddCredit;
+    private javax.swing.JButton btnRepayment;
+    private javax.swing.JButton btnViewLoancaseStatus;
+    private javax.swing.JComboBox creditComboBox;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lblname;
+    private javax.swing.JTextField txtCurrentBalance;
     // End of variables declaration//GEN-END:variables
+
+    public void populateCurrentBalance() {
+        txtCurrentBalance.setText(String.valueOf(borrower.getAccountManagement().getAvailableCredit()));
+    }
 }

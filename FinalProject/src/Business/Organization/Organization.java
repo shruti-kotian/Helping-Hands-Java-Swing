@@ -1,10 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package Business.Organization;
-
 
 import Business.Person.Person;
 import Business.Person.PersonDirectory;
@@ -18,6 +16,7 @@ import java.util.ArrayList;
  * @author shwetatatiya
  */
 public abstract class Organization {
+
     private String name;
     private WorkQueue workQueue;
     private UserAccountDirectory userAccountDirectory;
@@ -28,7 +27,7 @@ public abstract class Organization {
     
     public enum Type{
         Trustee("Trustee Organization"), Representative("Representative Organization"), Lender("Lender Organization"),
-        Borrower("Borrower Organization"), FieldPartner("Field Partner"), Admin("Admin Organization");
+        Borrower("Borrower Organization"), Admin("Admin Organization");
         
         private String value;
         private Type(String value) {
@@ -129,5 +128,6 @@ public abstract class Organization {
     public String toString() {
         return name;
     }
+    
     
 }

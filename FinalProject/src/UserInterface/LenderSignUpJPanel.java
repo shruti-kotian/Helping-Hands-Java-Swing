@@ -89,6 +89,7 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         btnSignUp = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N

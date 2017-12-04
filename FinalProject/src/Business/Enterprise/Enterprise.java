@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Business.Enterprise;
-
 import Business.Organization.RepresentativeOrganization;
 import Business.Organization.BorrowerOrganization;
 import Business.Organization.LenderOrganization;
@@ -12,28 +11,30 @@ import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.TrusteeOrganization;
 
+
 /**
  *
  * @author shwetatatiya
  */
-public abstract class Enterprise extends Organization {
+public abstract class Enterprise extends Organization{
 
     public static boolean containsOnlyDigits(String text) {
-        try {
-            long num = Long.parseLong(text.trim());
-        } catch (Exception e) {
-            return false;
+        try{
+        long num = Long.parseLong(text.trim());           
+        }
+        catch(Exception e){
+            return false ;
         }
         return true;
     }
-
-    private EnterpriseType enterpriseType;
-    private OrganizationDirectory organizationDirectory;
-
+    
+    private EnterpriseType enterpriseType ;
+    private OrganizationDirectory organizationDirectory ;
+    
     public enum EnterpriseType {
         HelpingHands("HelpingHands");
-
-        private String value;
+        
+        private String value ;
 
         public String getValue() {
             return value;
@@ -42,71 +43,76 @@ public abstract class Enterprise extends Organization {
         public void setValue(String value) {
             this.value = value;
         }
-
-        private EnterpriseType(String value) {
-            this.value = value;
+        
+        private EnterpriseType(String value){
+            this.value = value ;
         }
-
+        
         @Override
-        public String toString() {
-            return value;
+        public String toString(){
+            return value ;
         }
     }
-
-    public Enterprise(String name, EnterpriseType enterpriseType) {
+    
+    public Enterprise(String name, EnterpriseType enterpriseType){
         super(name);
-        this.enterpriseType = enterpriseType;
+        this.enterpriseType = enterpriseType ;
         this.organizationDirectory = new OrganizationDirectory();
     }
 
     public Enterprise() {
         super();
-        this.organizationDirectory = new OrganizationDirectory();
+        this.organizationDirectory = new OrganizationDirectory();        
     }
-
-    public BorrowerOrganization getBorrowerOrganization() {
-        for (Organization organization : organizationDirectory.getOrganizationList()) {
-            if (organization instanceof BorrowerOrganization) {
-                return (BorrowerOrganization) organization;
-            }
-        }
-
+    
+    public BorrowerOrganization getBorrowerOrganization()
+    {
+       for(Organization organization :organizationDirectory.getOrganizationList())
+       {
+           if(organization instanceof BorrowerOrganization)
+           return (BorrowerOrganization)organization;
+       }
+        
         return null;
-
+        
     }
-
-    public LenderOrganization getLenderOrganization() {
-        for (Organization organization : organizationDirectory.getOrganizationList()) {
-            if (organization instanceof LenderOrganization) {
-                return (LenderOrganization) organization;
-            }
-        }
-
+    public LenderOrganization getLenderOrganization()
+    {
+       for(Organization organization :organizationDirectory.getOrganizationList())
+       {
+           if(organization instanceof LenderOrganization)
+           return (LenderOrganization)organization;
+       }
+        
         return null;
-
+        
     }
-
-    public TrusteeOrganization getTrusteeOrganization() {
-        for (Organization organization : organizationDirectory.getOrganizationList()) {
-            if (organization instanceof TrusteeOrganization) {
-                return (TrusteeOrganization) organization;
-            }
-        }
-
+   
+    public TrusteeOrganization getTrusteeOrganization()
+    {
+       for(Organization organization :organizationDirectory.getOrganizationList())
+       {
+           if(organization instanceof TrusteeOrganization)
+           return (TrusteeOrganization)organization;
+       }
+        
         return null;
-
+        
     }
-
-    public RepresentativeOrganization getAnalystOrganization() {
-        for (Organization organization : organizationDirectory.getOrganizationList()) {
-            if (organization instanceof RepresentativeOrganization) {
-                return (RepresentativeOrganization) organization;
-            }
-        }
-
+    public RepresentativeOrganization getRepresentativeOrganization()
+    {
+       for(Organization organization :organizationDirectory.getOrganizationList())
+       {
+           if(organization instanceof RepresentativeOrganization)
+           return (RepresentativeOrganization)organization;
+       }
+        
         return null;
-
+        
     }
+    
+    
+    
 
     public OrganizationDirectory getOrganizationDirectory() {
         return organizationDirectory;
@@ -123,4 +129,8 @@ public abstract class Enterprise extends Organization {
     public void setEnterpriseType(EnterpriseType enterpriseType) {
         this.enterpriseType = enterpriseType;
     }
+    
+   
+    
+    
 }

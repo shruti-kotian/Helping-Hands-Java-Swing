@@ -1,18 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package Business.WorkQueue;
 
-import Business.Employee.Employee;
 import Business.Organization.Organization;
+import Business.Employee.Employee;
 
 /**
  *
  * @author shwetatatiya
  */
 public abstract class WorkRequest {
+
     private String message;
     private String messageHistory;
     private Employee representative;
@@ -52,7 +52,6 @@ public abstract class WorkRequest {
         this.representative = representative;
     }
 
-
     public Employee getTrustee() {
         return trustee;
     }
@@ -69,4 +68,5 @@ public abstract class WorkRequest {
     public String toString() {
         return this.getNameOfRelevantOrg();
     }
+
 }

@@ -15,9 +15,9 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class HelpingHandsEnterprise extends Enterprise {
-
-   private LoanDirectory loanDirectory ;
+public class HelpingHandsEnterprise extends Enterprise{
+    
+    private LoanDirectory loanDirectory ;
 
     public HelpingHandsEnterprise(String name, EnterpriseType enterpriseType) {
         super(name, enterpriseType);
@@ -53,4 +53,6 @@ public class HelpingHandsEnterprise extends Enterprise {
         return null ;
     } 
 
+
+    
 }

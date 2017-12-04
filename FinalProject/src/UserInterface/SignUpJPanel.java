@@ -40,6 +40,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         btnSignUpLender = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnSignUpBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N

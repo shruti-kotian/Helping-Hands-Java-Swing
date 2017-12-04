@@ -6,21 +6,19 @@
 package Business.Person;
 
 import Business.Finance.AccountManagement;
-
-
 /**
  *
  * @author shwetatatiya
  */
-public class Borrower extends Person {
+public class Borrower extends ExternalPlayer{
+    
     private String occupation ;
     private int yearlyIncome ;
-    private int dOb ;
+    private int dateOfBirth ;
     private String emailId ;
-    private String contactNo ;
+    private String phoneNo ;
     private AccountManagement accountManagement ;
-    
-    
+
     public Borrower() {
     //no need to instantiate accountManagement or loan here    
     }
@@ -41,30 +39,12 @@ public class Borrower extends Person {
         this.yearlyIncome = yearlyIncome;
     }
 
-    public int getdOb() {
-        return dOb;
+    public int getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setdOb(int dOb) {
-        this.dOb = dOb;
-    }
-
-    public String getContactNo() {
-        return contactNo;
-    }
-
-    public void setContactNo(String contactNo) {
-        this.contactNo = contactNo;
-    }
-
-    
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setDateOfBirth(int dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public AccountManagement getAccountManagement() {
@@ -75,9 +55,27 @@ public class Borrower extends Person {
         this.accountManagement = accountManagement;
     }
 
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+    
     @Override
     public String toString(){
         return this.getName();
     }
+    
+    
     
 }

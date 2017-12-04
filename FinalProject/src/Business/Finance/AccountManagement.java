@@ -11,4 +11,19 @@ package Business.Finance;
  */
 public class AccountManagement {
     
+    private int availableCredit ;
+
+    public AccountManagement() {
+    }
+
+    public int getAvailableCredit() {
+        return availableCredit;
+    }
+
+    public void setAvailableCredit(int availableCredit) {
+        this.availableCredit = availableCredit;
+    }
+    
+    
+    
 }
