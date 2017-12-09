@@ -16,7 +16,7 @@ public class MoneyBasket {
     
     private ArrayList<LendingInstance> lendingInstanceList ;
     private int totalLoan ;
-    
+
     public MoneyBasket() {
         lendingInstanceList = new ArrayList<>() ;
     }

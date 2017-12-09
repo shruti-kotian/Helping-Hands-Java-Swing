@@ -9,17 +9,19 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Person.Lender;
+
 import Business.Person.Person;
-import static Business.Role.Role.RoleType.Lender;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
+import UserInterface.LenderRole.LenderWorkAreaJPanel;
 
 /**
  *
  * @author shwetatatiya
  */
-public class LenderRole extends Role {
-     @Override
+public class LenderRole extends Role{
+
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         Person p = null ;
         for(Person person : organization.getPersonDirectory().getPersonList()){
@@ -34,4 +36,5 @@ public class LenderRole extends Role {
     public LenderRole() {
         super(Role.RoleType.Lender);
     }
+    
 }

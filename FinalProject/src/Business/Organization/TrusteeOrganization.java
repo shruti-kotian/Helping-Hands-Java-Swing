@@ -13,7 +13,8 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class TrusteeOrganization  extends Organization{
+public class TrusteeOrganization extends InternalOrganization{
+
     public TrusteeOrganization(String name, Type type) {
         super(name, type);
     }
@@ -24,4 +25,5 @@ public class TrusteeOrganization  extends Organization{
         roleList.add(new TrusteeRole()) ;
         return roleList ;
     }
+    
 }

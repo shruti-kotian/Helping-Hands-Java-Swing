@@ -8,17 +8,16 @@ package Business.Person;
 import Business.Finance.AccountManagement;
 import Business.Finance.MoneyBasket;
 
-
 /**
  *
  * @author shwetatatiya
  */
-public class Lender extends Person{
+public class Lender extends ExternalPlayer{
+    
     private String email ;
     private String phone ;
     private AccountManagement accountManagement ;
     private MoneyBasket moneyBasket ;
- 
 
     public Lender() {
      //no need to instantiate accountManagement or basket here
@@ -56,6 +55,8 @@ public class Lender extends Person{
         this.moneyBasket = moneyBasket;
     }
 
+    
+    
     public MoneyBasket getCurrentBasket(){
         if (moneyBasket == null){
             this.moneyBasket = new MoneyBasket();
@@ -72,5 +73,6 @@ public class Lender extends Person{
     public void addCredit(int amount) {
         this.getAccountManagement().setAvailableCredit(this.getAccountManagement().getAvailableCredit() + amount);
     }    
+    
     
 }

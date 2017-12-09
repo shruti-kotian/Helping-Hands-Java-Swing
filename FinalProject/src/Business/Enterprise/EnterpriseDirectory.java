@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Business.Enterprise;
-
 import java.util.ArrayList;
 
 /**
@@ -12,12 +11,14 @@ import java.util.ArrayList;
  * @author shwetatatiya
  */
 public class EnterpriseDirectory {
-
-    private ArrayList<Enterprise> enterpriseList;
+    
+    private ArrayList<Enterprise> enterpriseList ;
     
     public EnterpriseDirectory(){
         enterpriseList = new ArrayList<>();
     }
+    
+    
     
     // Add enterprise
     public Enterprise createAndAddEnterprise(String name){

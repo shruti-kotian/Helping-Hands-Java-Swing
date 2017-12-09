@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class BorrowerOrganization extends Organization {
+public class BorrowerOrganization extends ExternalOrganization{
 
     public BorrowerOrganization(String name, Type type) {
         super(name, type);
@@ -21,8 +21,9 @@ public class BorrowerOrganization extends Organization {
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList = new ArrayList<Role>();
-        roleList.add(new BorrowerRole());
-        return roleList;
+        ArrayList<Role> roleList = new ArrayList<Role>() ;
+        roleList.add(new BorrowerRole()) ;
+        return roleList ;
     }
+    
 }
