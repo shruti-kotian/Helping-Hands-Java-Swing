@@ -17,14 +17,7 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Loan loan;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> master
-=======
-
->>>>>>> master
     /**
      * Creates new form PreviousLoanHistoryJPanel
      */
@@ -38,10 +31,6 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         this.loan = loan;
         populateDataOnScreen();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> master
 
     public void populateDataOnScreen() {
         lblAmount.setText(String.valueOf(loan.totalLentAmount()));
@@ -52,21 +41,6 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         lblStartMonth.setText(loan.getLoanCase().getRepaymentStartMonth());
         lblStartYear.setText(loan.getLoanCase().getRepaymentStartYear());
         txtStory.setText(loan.getLoanCase().getCaseDescripton());
-<<<<<<< HEAD
-=======
-    
-    public void populateDataOnScreen(){
-     lblAmount.setText(String.valueOf(loan.totalLentAmount()));
-    lblBorrower.setText(loan.getBorrower().getName());
-     lblCategory.setText(loan.getLoanCase().getCategory().getValue());
-     lblLength.setText(String.valueOf(loan.getLoanCase().getLoanLength()));
-     lblMonthlyInstallment.setText(String.valueOf(loan.getLoanCase().getInstallment()));
-     lblStartMonth.setText(loan.getLoanCase().getRepaymentStartMonth());
-     lblStartYear.setText(loan.getLoanCase().getRepaymentStartYear());
-     txtStory.setText(loan.getLoanCase().getCaseDescripton());        
->>>>>>> master
-=======
->>>>>>> master
     }
 
     /**
@@ -86,13 +60,6 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         lblMonthlyInstallment = new javax.swing.JLabel();
         lblStartMonth = new javax.swing.JLabel();
         lblStartYear = new javax.swing.JLabel();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        lblFieldPartner = new javax.swing.JLabel();
->>>>>>> master
-=======
->>>>>>> master
         lblAmount = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -101,28 +68,12 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-<<<<<<< HEAD
-<<<<<<< HEAD
         jLabel17 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-=======
-        jLabel15 = new javax.swing.JLabel();
-=======
->>>>>>> master
-        jLabel17 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-
-        setBackground(new java.awt.Color(204, 204, 255));
-<<<<<<< HEAD
->>>>>>> master
-=======
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
->>>>>>> master
 
         txtStory.setEditable(false);
         txtStory.setColumns(20);
@@ -130,111 +81,49 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         txtStory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
         jScrollPane1.setViewportView(txtStory);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 83, 370, 234));
 
-=======
->>>>>>> master
-=======
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 83, 370, 234));
-
->>>>>>> master
         lblLength.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblLength.setForeground(new java.awt.Color(255, 255, 255));
         lblLength.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLength.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 83, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 83, 123, 24));
->>>>>>> master
 
         lblBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblBorrower.setForeground(new java.awt.Color(255, 255, 255));
         lblBorrower.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBorrower.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 113, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 113, 123, 24));
->>>>>>> master
 
         lblCategory.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblCategory.setForeground(new java.awt.Color(255, 255, 255));
         lblCategory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCategory.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 143, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 143, 123, 24));
->>>>>>> master
 
         lblMonthlyInstallment.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblMonthlyInstallment.setForeground(new java.awt.Color(255, 255, 255));
         lblMonthlyInstallment.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMonthlyInstallment.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 173, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 173, 123, 24));
->>>>>>> master
 
         lblStartMonth.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblStartMonth.setForeground(new java.awt.Color(255, 255, 255));
         lblStartMonth.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartMonth.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 203, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 203, 123, 24));
->>>>>>> master
 
         lblStartYear.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblStartYear.setForeground(new java.awt.Color(255, 255, 255));
         lblStartYear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartYear.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 233, 123, 24));
-=======
-
-        lblFieldPartner.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        lblFieldPartner.setForeground(new java.awt.Color(255, 255, 255));
-        lblFieldPartner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFieldPartner.setText("label");
->>>>>>> master
-=======
-        add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 233, 123, 24));
->>>>>>> master
 
         lblAmount.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblAmount.setForeground(new java.awt.Color(255, 255, 255));
         lblAmount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAmount.setText("label");
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 123, 24));
-=======
->>>>>>> master
-=======
-        add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 123, 24));
->>>>>>> master
 
         btnBack.setBackground(new java.awt.Color(0, 0, 0));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -246,285 +135,88 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 481, 193, 69));
-=======
->>>>>>> master
-=======
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 481, 193, 69));
->>>>>>> master
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("LOAN LENGTH ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 83, 191, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 83, 191, 24));
->>>>>>> master
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("BORROWER ");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 113, 191, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 113, 191, 24));
->>>>>>> master
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel5.setText("CATEGORY ");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 143, 191, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 143, 191, 24));
->>>>>>> master
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setText(" REPAYMENT MONTHLY INSTALLEMNT ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 173, -1, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 173, -1, 24));
->>>>>>> master
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel7.setText("REPAYMENT START MONTH ");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 203, 292, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 203, 292, 24));
->>>>>>> master
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("REPAYMENT START YEAR ");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 233, 292, 24));
-=======
-
-        jLabel15.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel15.setText("FIELD PARTNER CONTACT ");
-        jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
->>>>>>> master
-=======
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 233, 292, 24));
->>>>>>> master
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel17.setText("LOAN AMOUNT ");
         jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 292, 24));
-=======
->>>>>>> master
-=======
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 292, 24));
->>>>>>> master
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("LOAN CASE DETAILS -");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 6, 250, 36));
-=======
->>>>>>> master
-=======
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 6, 250, 36));
->>>>>>> master
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("STORY");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-<<<<<<< HEAD
-<<<<<<< HEAD
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 54, 68, 24));
-=======
-
-        jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel9))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(101, 101, 101)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblLength, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblBorrower, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblCategory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblMonthlyInstallment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblStartMonth, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblStartYear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblFieldPartner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(325, 325, 325)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblLength, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblBorrower, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblMonthlyInstallment, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblStartMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblStartYear, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblFieldPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(lblAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(164, 164, 164)
-                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(335, 335, 335))
-        );
->>>>>>> master
-=======
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 54, 68, 24));
->>>>>>> master
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         int length = userProcessContainer.getComponentCount();
-<<<<<<< HEAD
-<<<<<<< HEAD
         RepresentativeLoanCaseJPanel awajp = (RepresentativeLoanCaseJPanel) userProcessContainer.getComponent(length - 1);
         awajp.populateScreenData();
         awajp.populateTblBorrowerHistory();
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-=======
-        RepresentativeLoanCaseJPanel awajp = (RepresentativeLoanCaseJPanel) userProcessContainer.getComponent(length-1);
-=======
-        RepresentativeLoanCaseJPanel awajp = (RepresentativeLoanCaseJPanel) userProcessContainer.getComponent(length - 1);
->>>>>>> master
-        awajp.populateScreenData();
-        awajp.populateTblBorrowerHistory();
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-<<<<<<< HEAD
-        layout.previous(userProcessContainer);        
->>>>>>> master
-=======
-        layout.previous(userProcessContainer);
->>>>>>> master
     }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel jLabel15;
->>>>>>> master
-=======
->>>>>>> master
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -533,24 +225,10 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel jLabel9;
->>>>>>> master
-=======
->>>>>>> master
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAmount;
     private javax.swing.JLabel lblBorrower;
     private javax.swing.JLabel lblCategory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel lblFieldPartner;
->>>>>>> master
-=======
->>>>>>> master
     private javax.swing.JLabel lblLength;
     private javax.swing.JLabel lblMonthlyInstallment;
     private javax.swing.JLabel lblStartMonth;
