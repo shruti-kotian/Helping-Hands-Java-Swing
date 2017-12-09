@@ -5,6 +5,7 @@
  */
 package Business.Organization;
 
+
 import Business.Role.LenderRole;
 import Business.Role.Role;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class LenderOrganization extends Organization {
+public class LenderOrganization extends ExternalOrganization{
 
     public LenderOrganization(String name, Type type) {
         super(name, type);
@@ -21,9 +22,9 @@ public class LenderOrganization extends Organization {
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList = new ArrayList<Role>();
-        roleList.add(new LenderRole());
-        return roleList;
+        ArrayList<Role> roleList = new ArrayList<Role>() ;
+        roleList.add(new LenderRole()) ;
+        return roleList ;
     }
-
+    
 }

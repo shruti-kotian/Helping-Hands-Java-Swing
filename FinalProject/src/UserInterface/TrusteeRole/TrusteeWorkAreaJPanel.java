@@ -60,15 +60,20 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         btnBorrowerAssignToMe = new javax.swing.JButton();
         btnViewHelpingHandsRevenue = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("  TRUSTEE WORK AREA  ");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 6, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("  BORROWER WORK CASE  ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 115, -1, -1));
 
         tblBorrowerWorkCase.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -88,6 +93,8 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblBorrowerWorkCase);
 
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 188, 667, 128));
+
         btnViewDetails.setBackground(new java.awt.Color(0, 0, 0));
         btnViewDetails.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         btnViewDetails.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,6 +105,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewDetailsActionPerformed(evt);
             }
         });
+        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 360, 312, 50));
 
         btnBorrowerAssignToMe.setBackground(new java.awt.Color(0, 0, 0));
         btnBorrowerAssignToMe.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -109,6 +117,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnBorrowerAssignToMeActionPerformed(evt);
             }
         });
+        add(btnBorrowerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 360, 337, 50));
 
         btnViewHelpingHandsRevenue.setBackground(new java.awt.Color(0, 0, 0));
         btnViewHelpingHandsRevenue.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -120,51 +129,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewHelpingHandsRevenueActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(btnViewHelpingHandsRevenue, javax.swing.GroupLayout.PREFERRED_SIZE, 667, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(116, 116, 116)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(94, 94, 94)
-                            .addComponent(jLabel3))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnBorrowerAssignToMe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addContainerGap(117, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(508, Short.MAX_VALUE)
-                .addComponent(btnViewHelpingHandsRevenue, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(332, 332, 332))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel3)
-                    .addGap(60, 60, 60)
-                    .addComponent(jLabel1)
-                    .addGap(37, 37, 37)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(44, 44, 44)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnBorrowerAssignToMe, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(491, Short.MAX_VALUE)))
-        );
+        add(btnViewHelpingHandsRevenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 508, 667, 72));
     }// </editor-fold>//GEN-END:initComponents
 
     
@@ -260,10 +225,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnViewHelpingHandsRevenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHelpingHandsRevenueActionPerformed
         // TODO add your handling code here:
-        HelpingHandsRevenueCollectionJPanel krcjp = new HelpingHandsRevenueCollectionJPanel(this.userProcessContainer, this.business);
-        userProcessContainer.add("KivaRevenueCollectionJPanel", krcjp);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+       
     }//GEN-LAST:event_btnViewHelpingHandsRevenueActionPerformed
 
 

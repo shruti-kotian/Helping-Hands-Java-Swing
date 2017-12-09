@@ -7,36 +7,34 @@ package Business.WorkQueue;
 
 import Business.Loan.Loan;
 import Business.Person.Borrower;
-import Business.Loan.LoanCase;
-
 
 /**
  *
  * @author Shrutik
  */
-public class NewLoanCaseWorkRequest extends WorkRequest{
-    
-    private Borrower borrower ;
-    private Loan loan ;
-    private Status status ;
+public class NewLoanCaseWorkRequest extends WorkRequest {
+
+    private Borrower borrower;
+    private Loan loan;
+    private Status status;
 
     @Override
     public String getNameOfRelevantOrg() {
         return borrower.getName();
     }
-    
-    public enum Status{
+
+    public enum Status {
         NewLoanCase("New Loan Case"),
         RepresentativeApproved("Representative Approved"),
-        RepresentativeRejected("Representative Rejected"),        
+        RepresentativeRejected("Representative Rejected"),
         TrusteeApproved("Trustee Approved"),
         TrusteeRejected("Trustee Rejected"),
-        Complete("Complete") ;
-        
-        private String value ;
-        
-        Status(String value){
-            this.value = value ;
+        Complete("Complete");
+
+        private String value;
+
+        Status(String value) {
+            this.value = value;
         }
 
         public String getValue() {
@@ -46,16 +44,13 @@ public class NewLoanCaseWorkRequest extends WorkRequest{
         public void setValue(String value) {
             this.value = value;
         }
-        
-        
-    }    
+
+    }
 
     public NewLoanCaseWorkRequest() {
         super();
-        status = NewLoanCaseWorkRequest.Status.NewLoanCase ;
+        status = NewLoanCaseWorkRequest.Status.NewLoanCase;
     }
-    
-    
 
     public Borrower getBorrower() {
         return borrower;
@@ -81,11 +76,10 @@ public class NewLoanCaseWorkRequest extends WorkRequest{
     public void setLoan(Loan loan) {
         this.loan = loan;
     }
-    
+
     @Override
-    public String toString ()
-    {
+    public String toString() {
         return borrower.getName();
     }
-    
+
 }
