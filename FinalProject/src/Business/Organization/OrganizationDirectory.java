@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package Business.Organization;
+
 
 import Business.Organization.Organization.Type;
 import java.util.ArrayList;
@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author shwetatatiya
  */
 public class OrganizationDirectory {
+    
     private ArrayList<Organization> organizationList;
 
     public OrganizationDirectory() {
@@ -33,10 +34,18 @@ public class OrganizationDirectory {
             organization = new RepresentativeOrganization("Representative Organization", Type.Representative);
             organizationList.add(organization);
         }
+        else if (type.getValue().equals(Type.Lender.getValue())){
+            organization = new LenderOrganization("Lender Organization", Type.Lender);
+            organizationList.add(organization);
+        }
         else if (type.getValue().equals(Type.Borrower.getValue())){
             organization = new BorrowerOrganization("Borrower Organization", Type.Borrower);
             organizationList.add(organization);
-        }       
+        }
+        else if (type.getValue().equals(Type.FieldPartner.getValue())){
+            organization = new FieldPartnerOrganization("FieldPartner Organization", Type.FieldPartner);
+            organizationList.add(organization);
+        }   
         return organization;
     }
 }

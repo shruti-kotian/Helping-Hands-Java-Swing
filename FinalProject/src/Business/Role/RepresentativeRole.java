@@ -14,12 +14,14 @@ import Business.UserAccount.UserAccount;
 import UserInterface.RepresentativeRole.RepresentativeWorkAreaJPanel;
 import javax.swing.JPanel;
 
+
 /**
  *
  * @author shwetatatiya
  */
 public class RepresentativeRole extends Role{
-      @Override
+
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         Employee employee = null ;
         for(Person person : organization.getPersonDirectory().getPersonList()){
@@ -34,4 +36,5 @@ public class RepresentativeRole extends Role{
     public RepresentativeRole() {
        super(Role.RoleType.Representative);
     }
+    
 }

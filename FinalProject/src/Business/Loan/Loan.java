@@ -6,31 +6,32 @@
 package Business.Loan;
 
 import Business.Person.Borrower;
+import Business.Person.FieldPartnerContact;
 import java.util.ArrayList;
 import java.util.Date;
-
-
 
 /**
  *
  * @author shwetatatiya
  */
 public class Loan {
-   
+    
+    
+     private ArrayList<LendingInstance> lendingInstanceList ;
+    private ArrayList<RepaymentInstance> repaymentInstanceList ;
     private LoanCase loanCase ;
     private Borrower borrower ;
+    private FieldPartnerContact fieldPartnerContact ;
     private LoanStatus loanStatus ;
-    private ArrayList<LendingInstance> lendingInstanceList ;
-    private ArrayList<RepaymentInstance> repaymentInstanceList ;
 
 
     
     public enum LoanStatus {
         FundingNeeded("Funding Needed"),
-        PartlyFunded("Partly Funded"),
-        FullyFunded("FullyFunded. Waiting for Repayment"),
+        PartlyFunded("PartlyFunded"),
+        FullyFunded("FullyFunded. Awaiting Repayment"),
         PartlyRepayed("Partly Repayed"),
-        FullyRepayed("Fully Repayed");
+        FullyRepayed("FullyRepayed");
         
         private String value ;
         
@@ -51,7 +52,7 @@ public class Loan {
     public Loan() {
         lendingInstanceList = new ArrayList<>() ;
         repaymentInstanceList = new ArrayList<>();
-        loanStatus = LoanStatus.FundingNeeded ;
+        loanStatus = LoanStatus.FundingRequired ;
     }
 
     public ArrayList<LendingInstance> getLendingInstanceList() {
@@ -62,6 +63,38 @@ public class Loan {
         this.lendingInstanceList = lendingInstanceList;
     }
 
+    public LoanCase getLoanCase() {
+        return loanCase;
+    }
+
+    public void setLoanCase(LoanCase loanCase) {
+        this.loanCase = loanCase;
+    }
+
+    public Borrower getBorrower() {
+        return borrower;
+    }
+
+    public void setBorrower(Borrower borrower) {
+        this.borrower = borrower;
+    }
+
+    public FieldPartnerContact getFieldPartnerContact() {
+        return fieldPartnerContact;
+    }
+
+    public void setFieldPartnerContact(FieldPartnerContact fieldPartnerContact) {
+        this.fieldPartnerContact = fieldPartnerContact;
+    }
+
+    public LoanStatus getLoanStatus() {
+        return loanStatus;
+    }
+
+    public void setLoanStatus(LoanStatus loanStatus) {
+        this.loanStatus = loanStatus;
+    }
+
     public ArrayList<RepaymentInstance> getRepaymentInstanceList() {
         return repaymentInstanceList;
     }
@@ -69,7 +102,6 @@ public class Loan {
     public void setRepaymentInstanceList(ArrayList<RepaymentInstance> repaymentInstanceList) {
         this.repaymentInstanceList = repaymentInstanceList;
     }
-
     
     public void addLendingInstance(LendingInstance lendingInstance) {
         this.getLendingInstanceList().add(lendingInstance) ;
@@ -93,7 +125,7 @@ public class Loan {
         }else if(this.totalLentAmount() > this.totalRepayedAmount()){
             this.setLoanStatus(LoanStatus.PartlyRepayed);
         }
-    }  
+    }    
     
     public void sendAmountAndNotification(int amt, Date date){
         
@@ -118,32 +150,10 @@ public class Loan {
         
     }
     
-    public LoanCase getLoanCase() {
-        return loanCase;
+    @Override
+    public String toString(){
+        return borrower.getName();
     }
-
-    public void setLoanCase(LoanCase loanCase) {
-        this.loanCase = loanCase;
-    }
-
-    public Borrower getBorrower() {
-        return borrower;
-    }
-
-    public void setBorrower(Borrower borrower) {
-        this.borrower = borrower;
-    }
-
-  
-
-    public LoanStatus getLoanStatus() {
-        return loanStatus;
-    }
-
-    public void setLoanStatus(LoanStatus loanStatus) {
-        this.loanStatus = loanStatus;
-    }
-
     
     public int totalLentAmount(){
         int total = 0;
@@ -159,16 +169,7 @@ public class Loan {
             total = total + repaymentInstance.getRepaymentAmount();
         }
         return total ;
-    }    
-     
+    }  
     
-
-    
-    @Override
-    public String toString(){
-        return borrower.getName();
-    }
-    
-     
     
 }

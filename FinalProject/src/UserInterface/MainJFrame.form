@@ -72,7 +72,6 @@
                                               <Component id="btnlogin" max="32767" attributes="0"/>
                                               <Component id="btnlogout" max="32767" attributes="0"/>
                                               <Component id="btnSignUp" max="32767" attributes="0"/>
-                                              <Component id="jLabel6" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="txtpassword" min="-2" pref="217" max="-2" attributes="0"/>
                                       </Group>
@@ -119,17 +118,8 @@
                       <Component id="btnSignUp" min="-2" pref="61" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jLabel3" min="-2" pref="191" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace type="separate" pref="97" max="32767" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="191" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -273,17 +263,6 @@
             <Component class="javax.swing.JLabel" name="jLabel3">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true" thickness="6">
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>

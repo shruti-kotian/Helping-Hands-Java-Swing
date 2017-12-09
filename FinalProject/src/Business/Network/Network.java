@@ -4,20 +4,21 @@
  * and open the template in the editor.
  */
 package Business.Network;
-
 import Business.Enterprise.EnterpriseDirectory;
+
 
 /**
  *
  * @author shwetatatiya
  */
 public class Network {
+ 
+    private String networkName ;
+    private EnterpriseDirectory enterpriseDirectory ;
 
-    private String networkName;
-    private EnterpriseDirectory enterpriseDirectory;
-
+    
     public Network() {
-        enterpriseDirectory = new EnterpriseDirectory();
+    enterpriseDirectory = new EnterpriseDirectory() ;
     }
 
     public String getNetworkName() {
@@ -27,17 +28,21 @@ public class Network {
     public void setNetworkName(String networkName) {
         this.networkName = networkName;
     }
+            
 
     public EnterpriseDirectory getEnterpriseDirectory() {
         return enterpriseDirectory;
     }
-
+    
     @Override
-    public String toString() {
-        return networkName;
+    public String toString(){
+        return networkName ;
     }
 
     public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
         this.enterpriseDirectory = enterpriseDirectory;
     }
+    
+    
+    
 }

@@ -9,12 +9,19 @@ package Business.WorkQueue;
  *
  * @author Shrutik
  */
-public class RepaymentNotificationWorkRequest extends WorkRequest{
+public class RepaymentNotificationWorkRequest extends WorkRequest {
 
     @Override
-    public String getNameOfRelevantOrg() {return null;};
+    public String getNameOfRelevantOrg() {
+        return null;
+    }
+
+    ;
 
     @Override
-    public String getStatus() {return null;};
-    
+    public String getStatus() {
+        return null;
+    }
+;
+
 }

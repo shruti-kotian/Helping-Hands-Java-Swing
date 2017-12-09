@@ -98,6 +98,7 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         txtBorrowerYearlyIncome = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBorrowerName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -299,7 +300,7 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
 
             borrower.setYearlyIncome(income);
             borrower.setEmailId(emailId.trim());
-            borrower.setContactNo(phoneNo.trim());
+            borrower.setPhoneNo(phoneNo.trim());
             borrower.setOccupation(occupation);
 
             Enterprise enterprise = (Enterprise) enterpriseComboBox1.getSelectedItem();
