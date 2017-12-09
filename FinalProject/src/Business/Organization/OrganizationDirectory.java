@@ -42,7 +42,10 @@ public class OrganizationDirectory {
             organization = new BorrowerOrganization("Borrower Organization", Type.Borrower);
             organizationList.add(organization);
         }
-            
+        else if (type.getValue().equals(Type.FieldPartner.getValue())){
+            organization = new FieldPartnerOrganization("FieldPartner Organization", Type.FieldPartner);
+            organizationList.add(organization);
+        }   
         return organization;
     }
 }

@@ -22,9 +22,9 @@ public class EnterpriseDirectory {
     
     // Add enterprise
     public Enterprise createAndAddEnterprise(String name){
-        HelpingHandsEnterprise kivaEnterprise = new HelpingHandsEnterprise(name, Enterprise.EnterpriseType.HelpingHands);
-        enterpriseList.add(kivaEnterprise);
-        return kivaEnterprise;
+        HelpingHandsEnterprise helpingHandsEnterprise = new HelpingHandsEnterprise(name, Enterprise.EnterpriseType.HelpingHands);
+        enterpriseList.add(helpingHandsEnterprise);
+        return helpingHandsEnterprise;
     }
     
     public ArrayList<Enterprise> getEnterpriseList() {

@@ -6,6 +6,7 @@
 package Business.Loan;
 
 import Business.Person.Borrower;
+import Business.Person.FieldPartnerContact;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -16,20 +17,21 @@ import java.util.Date;
 public class Loan {
     
     
+     private ArrayList<LendingInstance> lendingInstanceList ;
+    private ArrayList<RepaymentInstance> repaymentInstanceList ;
     private LoanCase loanCase ;
     private Borrower borrower ;
+    private FieldPartnerContact fieldPartnerContact ;
     private LoanStatus loanStatus ;
-    private ArrayList<LendingInstance> lendingInstanceList ;
-    private ArrayList<RepaymentInstance> repaymentInstanceList ;
 
 
     
     public enum LoanStatus {
-        FundingNeeded("Funding Needed"),
-        PartlyFunded("Partly Funded"),
-        FullyFunded("FullyFunded. Waiting for Repayment"),
+        FundingRequired("Funding Needed"),
+        PartlyFunded("PartlyFunded"),
+        FullyFunded("FullyFunded. Awaiting Repayment"),
         PartlyRepayed("Partly Repayed"),
-        FullyRepayed("Fully Repayed");
+        FullyRepayed("FullyRepayed");
         
         private String value ;
         
@@ -50,7 +52,7 @@ public class Loan {
     public Loan() {
         lendingInstanceList = new ArrayList<>() ;
         repaymentInstanceList = new ArrayList<>();
-        loanStatus = LoanStatus.FundingNeeded ;
+        loanStatus = LoanStatus.FundingRequired ;
     }
 
     public ArrayList<LendingInstance> getLendingInstanceList() {
@@ -77,7 +79,13 @@ public class Loan {
         this.borrower = borrower;
     }
 
-    
+    public FieldPartnerContact getFieldPartnerContact() {
+        return fieldPartnerContact;
+    }
+
+    public void setFieldPartnerContact(FieldPartnerContact fieldPartnerContact) {
+        this.fieldPartnerContact = fieldPartnerContact;
+    }
 
     public LoanStatus getLoanStatus() {
         return loanStatus;
@@ -100,7 +108,7 @@ public class Loan {
         if(this.totalLentAmount() == this.getLoanCase().getLoanAmount()){
             this.setLoanStatus(LoanStatus.FullyFunded);
         }else if(this.totalLentAmount() == 0){
-            this.setLoanStatus(LoanStatus.FundingNeeded);
+            this.setLoanStatus(LoanStatus.FundingRequired);
         }else if(this.totalLentAmount() < this.getLoanCase().getLoanAmount()){
             this.setLoanStatus(LoanStatus.PartlyFunded);
         }
@@ -161,8 +169,7 @@ public class Loan {
             total = total + repaymentInstance.getRepaymentAmount();
         }
         return total ;
-    }    
-    
+    }  
     
     
 }

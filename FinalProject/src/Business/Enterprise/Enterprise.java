@@ -6,10 +6,13 @@
 package Business.Enterprise;
 import Business.Organization.RepresentativeOrganization;
 import Business.Organization.BorrowerOrganization;
+import Business.Organization.FieldPartnerOrganization;
 import Business.Organization.LenderOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.TrusteeOrganization;
+import Business.Person.FieldPartnerContact;
+
 
 
 /**
@@ -110,7 +113,19 @@ public abstract class Enterprise extends Organization{
         return null;
         
     }
+    public FieldPartnerOrganization getFieldPartnerFromContact(FieldPartnerContact fieldPartnerContact) {
+        
+        for(Organization organization : organizationDirectory.getOrganizationList()){
+            if(organization instanceof FieldPartnerOrganization){
+                if(organization.isMember(fieldPartnerContact)){
+                    FieldPartnerOrganization fieldPartnerOrg = (FieldPartnerOrganization) organization;
+                    return fieldPartnerOrg;
+                };
+            }
+        }
+        return null;
     
+    }
     
     
 
