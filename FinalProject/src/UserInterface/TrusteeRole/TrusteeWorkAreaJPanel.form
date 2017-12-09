@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="cc" red="cc" type="rgb"/>
     </Property>
   </Properties>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -18,8 +27,72 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="false"/>
+=======
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+              <Component id="btnViewHelpingHandsRevenue" min="-2" pref="667" max="-2" attributes="0"/>
+              <EmptySpace pref="128" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" alignment="0" pref="667" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnViewDetails" min="-2" pref="312" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnBorrowerAssignToMe" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="508" max="32767" attributes="0"/>
+              <Component id="btnViewHelpingHandsRevenue" min="-2" pref="72" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="332" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="128" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnBorrowerAssignToMe" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="btnViewDetails" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="491" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+>>>>>>> master
+=======
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+>>>>>>> master
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -39,11 +112,20 @@
           </Border>
         </Property>
       </Properties>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="210" y="6" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -62,21 +144,39 @@
           </Border>
         </Property>
       </Properties>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="116" y="115" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="116" y="188" width="667" height="128"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -122,11 +222,20 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewDetailsActionPerformed"/>
       </Events>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="116" y="360" width="312" height="50"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
     </Component>
     <Component class="javax.swing.JButton" name="btnBorrowerAssignToMe">
       <Properties>
@@ -151,11 +260,20 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBorrowerAssignToMeActionPerformed"/>
       </Events>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="446" y="360" width="337" height="50"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
     </Component>
     <Component class="javax.swing.JButton" name="btnViewHelpingHandsRevenue">
       <Properties>
@@ -180,11 +298,20 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewHelpingHandsRevenueActionPerformed"/>
       </Events>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="105" y="508" width="667" height="72"/>
         </Constraint>
       </Constraints>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+=======
+>>>>>>> master
     </Component>
   </SubComponents>
 </Form>
