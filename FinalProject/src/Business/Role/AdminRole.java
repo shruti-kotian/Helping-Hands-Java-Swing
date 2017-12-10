@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -28,34 +27,3 @@ public class AdminRole extends Role {
     }
 
 }
-=======
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package Business.Role;
-
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
-import UserInterface.AdministrativeRole.AdminWorkAreaJPanel;
-import javax.swing.JPanel;
-
-/**
- *
- * @author shwetatatiya
- */
-public class AdminRole extends Role {
-
-    @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new AdminWorkAreaJPanel(userProcessContainer, enterprise);
-    }
-
-    public AdminRole() {
-        super(Role.RoleType.Admin);
-    }
-
-}
->>>>>>> af34ed33afe02d02fcfff7c38a087698480dbbfc
