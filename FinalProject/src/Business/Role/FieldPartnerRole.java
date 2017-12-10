@@ -12,6 +12,7 @@ import Business.Organization.Organization;
 import Business.Person.FieldPartnerContact;
 import Business.Person.Person;
 import Business.UserAccount.UserAccount;
+import UserInterface.FieldPartnerRole.FieldPartnerWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**
