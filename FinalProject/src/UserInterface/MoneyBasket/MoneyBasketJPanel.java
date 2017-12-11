@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MoneyBasket;
+package UserInterface.MoneyBasket;
 
 import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Finance.MoneyBasket;
@@ -145,11 +145,11 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
             }
         });
         tblBasketItems.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                tblBasketItemsInputMethodTextChanged(evt);
-            }
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
                 tblBasketItemsCaretPositionChanged(evt);
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                tblBasketItemsInputMethodTextChanged(evt);
             }
         });
         jScrollPane1.setViewportView(tblBasketItems);
