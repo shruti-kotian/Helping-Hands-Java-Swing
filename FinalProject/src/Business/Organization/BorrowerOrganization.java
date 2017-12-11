@@ -5,6 +5,7 @@
  */
 package Business.Organization;
 
+import Business.Organization.Organization.Type;
 import Business.Role.BorrowerRole;
 import Business.Role.Role;
 import java.util.ArrayList;

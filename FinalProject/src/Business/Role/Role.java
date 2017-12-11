@@ -57,5 +57,4 @@ public abstract class Role {
         this.roleType = roleType;
     }
     
-    
 }

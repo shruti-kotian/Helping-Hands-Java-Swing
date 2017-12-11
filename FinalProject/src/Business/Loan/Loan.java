@@ -17,7 +17,7 @@ import java.util.Date;
 public class Loan {
     
     
-     private ArrayList<LendingInstance> lendingInstanceList ;
+    private ArrayList<LendingInstance> lendingInstanceList ;
     private ArrayList<RepaymentInstance> repaymentInstanceList ;
     private LoanCase loanCase ;
     private Borrower borrower ;
@@ -52,7 +52,7 @@ public class Loan {
     public Loan() {
         lendingInstanceList = new ArrayList<>() ;
         repaymentInstanceList = new ArrayList<>();
-        loanStatus = LoanStatus.FundingRequired ;
+        loanStatus = LoanStatus.FundingNeeded ;
     }
 
     public ArrayList<LendingInstance> getLendingInstanceList() {
