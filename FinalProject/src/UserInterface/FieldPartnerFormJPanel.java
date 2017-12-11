@@ -75,6 +75,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fieldPartnerLegalStatusButtonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -164,6 +165,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 655, -1, -1));
 
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton1);
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setText("NGO IN USA");
         jRadioButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
@@ -174,6 +176,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 643, -1, -1));
 
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton2);
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Bank");
         jRadioButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
@@ -184,11 +187,13 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 643, -1, -1));
 
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton3);
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("LLC");
         jRadioButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 673, -1, -1));
 
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton4);
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("Non-Bank Financial Institution");
         jRadioButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
@@ -199,6 +204,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 673, -1, -1));
 
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton5);
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("CO-OPERATIVE");
         jRadioButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
@@ -500,6 +506,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnFieldPartnerSignUp;
     private javax.swing.JComboBox enterpriseComboBox;
+    private javax.swing.ButtonGroup fieldPartnerLegalStatusButtonGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
