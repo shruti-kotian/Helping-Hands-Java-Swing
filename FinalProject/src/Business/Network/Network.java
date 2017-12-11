@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -47,53 +46,3 @@ public class Network {
     
     
 }
-=======
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Business.Network;
-import Business.Enterprise.EnterpriseDirectory;
-
-
-/**
- *
- * @author shwetatatiya
- */
-public class Network {
- 
-    private String networkName ;
-    private EnterpriseDirectory enterpriseDirectory ;
-
-    
-    public Network() {
-    enterpriseDirectory = new EnterpriseDirectory() ;
-    }
-
-    public String getNetworkName() {
-        return networkName;
-    }
-
-    public void setNetworkName(String networkName) {
-        this.networkName = networkName;
-    }
-            
-
-    public EnterpriseDirectory getEnterpriseDirectory() {
-        return enterpriseDirectory;
-    }
-    
-    @Override
-    public String toString(){
-        return networkName ;
-    }
-
-    public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
-        this.enterpriseDirectory = enterpriseDirectory;
-    }
-    
-    
-    
-}
->>>>>>> af34ed33afe02d02fcfff7c38a087698480dbbfc
