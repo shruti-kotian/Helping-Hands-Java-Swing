@@ -12,11 +12,12 @@ import Business.Employee.Employee;
  * @author shwetatatiya
  */
 public class LoanCase {
-    private String caseDetails ;
+    
+    private String caseDescripton ;
     private String speciality ;
     private Employee specialityAdder ;
     private int loanAmount ;
-    private int loanDuration ;
+    private int loanLength ;
     private int installment ;
     private String repaymentStartMonth ;
     private String repaymentStartYear;
@@ -24,7 +25,8 @@ public class LoanCase {
     
     
     public enum Category {
-       Health("Health");
+        Health("Health");
+        
         
         private String value ;
         
@@ -59,14 +61,13 @@ public class LoanCase {
      
     }
 
-    public String getCaseDetails() {
-        return caseDetails;
+    public String getCaseDescripton() {
+        return caseDescripton;
     }
 
-    public void setCaseDetails(String caseDetails) {
-        this.caseDetails = caseDetails;
+    public void setCaseDescripton(String caseDescripton) {
+        this.caseDescripton = caseDescripton;
     }
-
 
     public String getSpeciality() {
         return speciality;
@@ -84,15 +85,13 @@ public class LoanCase {
         this.specialityAdder = specialityAdder;
     }
 
-    public int getLoanDuration() {
-        return loanDuration;
+    public int getLoanLength() {
+        return loanLength;
     }
 
-    public void setLoanDuration(int loanDuration) {
-        this.loanDuration = loanDuration;
+    public void setLoanLength(int loanLength) {
+        this.loanLength = loanLength;
     }
-
-  
 
     public int getInstallment() {
         return installment;
@@ -127,5 +126,8 @@ public class LoanCase {
     public void setLoanAmount(int loanAmount) {
         this.loanAmount = loanAmount;
     }
+    
+    
+    
     
 }

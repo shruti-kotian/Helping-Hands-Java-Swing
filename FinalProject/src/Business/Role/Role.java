@@ -1,6 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package Business.Role;
@@ -16,6 +15,7 @@ import javax.swing.JPanel;
  * @author shwetatatiya
  */
 public abstract class Role {
+    
     private RoleType roleType ;
     
     public enum RoleType{
@@ -23,9 +23,9 @@ public abstract class Role {
         Trustee("Trustee"),
         Lender("Lender"),
         Borrower("Borrower"),
-        FieldPartner("FieldPartner"),
         Admin("Admin"),
-        SystemAdmin("SystemAdmin");
+        SystemAdmin("SystemAdmin"),
+        FieldPartner("FieldPartner");
         
         private String value;
         private RoleType(String value){

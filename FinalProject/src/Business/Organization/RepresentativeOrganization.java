@@ -13,7 +13,8 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class RepresentativeOrganization extends Organization{
+public class RepresentativeOrganization extends InternalOrganization{
+
     public RepresentativeOrganization(String name, Type type) {
         super(name, type);
     }
@@ -24,4 +25,5 @@ public class RepresentativeOrganization extends Organization{
         roleList.add(new RepresentativeRole()) ;
         return roleList ;
     }
+    
 }

@@ -12,15 +12,16 @@ import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Organization.Organization;
 import Business.Person.Person;
 import Business.UserAccount.UserAccount;
-import UserInterface.TrusteeRole.TrusteeWorkAreaJPanel;
 import javax.swing.JPanel;
+import UserInterface.TrusteeRole.TrusteeWorkAreaJPanel;
 
 /**
  *
  * @author shwetatatiya
  */
 public class TrusteeRole extends Role{
-     @Override
+
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         Employee employee = null ;
         for(Person person : organization.getPersonDirectory().getPersonList()){
@@ -37,3 +38,4 @@ public class TrusteeRole extends Role{
     }
     
 }
+

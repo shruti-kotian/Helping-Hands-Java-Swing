@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,9 +16,9 @@ import java.util.ArrayList;
  *
  * @author shwetatatiya
  */
-public class HelpingHandsEnterprise extends Enterprise {
-
-   private LoanDirectory loanDirectory ;
+public class HelpingHandsEnterprise extends Enterprise{
+    
+    private LoanDirectory loanDirectory ;
 
     public HelpingHandsEnterprise(String name, EnterpriseType enterpriseType) {
         super(name, enterpriseType);
@@ -53,4 +54,6 @@ public class HelpingHandsEnterprise extends Enterprise {
         return null ;
     } 
 
+
+    
 }

@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author shwetatatiya
  */
 public class PersonDirectory {
+    
     private ArrayList<Person> personList ;
 
     public PersonDirectory() {
@@ -37,4 +38,5 @@ public class PersonDirectory {
     public void addPerson(Person person){
         personList.add(person);
     }
+    
 }
