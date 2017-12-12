@@ -9,6 +9,7 @@ import Business.Employee.Employee;
 import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Organization.TrusteeOrganization;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.NewFieldPartnerWorkRequest;
 import Business.WorkQueue.NewLoanCaseWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -38,6 +39,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount ;
         this.trustee = trustee ;
         
+        populateFieldPartnerWorkTable();
         populateBorrowerWorkTable();
         
     }
@@ -59,6 +61,11 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
         btnViewDetails = new javax.swing.JButton();
         btnBorrowerAssignToMe = new javax.swing.JButton();
         btnViewHelpingHandsRevenue = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblFieldPartnerWorkCase = new javax.swing.JTable();
+        btnViewFieldPartnerDetails = new javax.swing.JButton();
+        btnFieldPartnerAssignToMe = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -117,7 +124,7 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnBorrowerAssignToMeActionPerformed(evt);
             }
         });
-        add(btnBorrowerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 360, 337, 50));
+        add(btnBorrowerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 337, 50));
 
         btnViewHelpingHandsRevenue.setBackground(new java.awt.Color(0, 0, 0));
         btnViewHelpingHandsRevenue.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
@@ -129,9 +136,99 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewHelpingHandsRevenueActionPerformed(evt);
             }
         });
-        add(btnViewHelpingHandsRevenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 508, 667, 72));
+        add(btnViewHelpingHandsRevenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 820, 667, 72));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("  FIELD PARTNER WORK CASE  ");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, -1));
+
+        tblFieldPartnerWorkCase.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Organization Name", "Analyst Name", "Risk Rating", "Status", "Analyst", "Trustee"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(tblFieldPartnerWorkCase);
+
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 667, 126));
+
+        btnViewFieldPartnerDetails.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewFieldPartnerDetails.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        btnViewFieldPartnerDetails.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewFieldPartnerDetails.setText("VIEW DETAILS >>");
+        btnViewFieldPartnerDetails.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        btnViewFieldPartnerDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewFieldPartnerDetailsActionPerformed(evt);
+            }
+        });
+        add(btnViewFieldPartnerDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, 301, 58));
+
+        btnFieldPartnerAssignToMe.setBackground(new java.awt.Color(0, 0, 0));
+        btnFieldPartnerAssignToMe.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        btnFieldPartnerAssignToMe.setForeground(new java.awt.Color(255, 255, 255));
+        btnFieldPartnerAssignToMe.setText("ASSIGN TO ME >>");
+        btnFieldPartnerAssignToMe.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        btnFieldPartnerAssignToMe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFieldPartnerAssignToMeActionPerformed(evt);
+            }
+        });
+        add(btnFieldPartnerAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 700, 348, 58));
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    public void populateFieldPartnerWorkTable()
+    {
+        DefaultTableModel model = (DefaultTableModel) tblFieldPartnerWorkCase.getModel();
+        model.setRowCount(0);
+        
+        DefaultTableModel modelina = (DefaultTableModel) tblFieldPartnerWorkCase.getModel();
+        model.setRowCount(0);
+         
+        TrusteeOrganization trusteeOrg = business.getTrusteeOrganization();
+         
+        for(WorkRequest workRequest : trusteeOrg.getWorkQueue().getWorkRequestList())
+        {
+            if(workRequest instanceof NewFieldPartnerWorkRequest)
+            {
+                NewFieldPartnerWorkRequest nfpwr = (NewFieldPartnerWorkRequest)workRequest;                
+                if(!nfpwr.getStatus().equals(NewFieldPartnerWorkRequest.Status.Complete.getValue())){
+                      
+                
+               
+                Object row [] = new Object[6];
+                row[0] = nfpwr;
+                row[1] = nfpwr.getRepresentative().getName();
+                row[2] = nfpwr.getPerformanceInformation().getRiskRating();
+                row[3] = nfpwr.getStatus();
+                row[4] = nfpwr.getRepresentative().getName();
+                if(nfpwr.getTrustee() != null)
+                row[5] = nfpwr.getTrustee().getName();
+                else
+                row[5] = "";                 
+                model.addRow(row); 
+             
+            }}
+                
+        }
+        
+         
+         
+        
+    }
     
     public void populateBorrowerWorkTable()
     {
@@ -225,17 +322,74 @@ public class TrusteeWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnViewHelpingHandsRevenueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHelpingHandsRevenueActionPerformed
         // TODO add your handling code here:
+        HelpingHandsRevenueCollectionJPanel hhrcjp = new HelpingHandsRevenueCollectionJPanel(this.userProcessContainer, this.business);
+        userProcessContainer.add("HelpingHandsRevenueCollectionJPanel", hhrcjp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
        
     }//GEN-LAST:event_btnViewHelpingHandsRevenueActionPerformed
+
+    private void btnViewFieldPartnerDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFieldPartnerDetailsActionPerformed
+        // TODO add your handling code here:
+
+        DefaultTableModel model = (DefaultTableModel) tblFieldPartnerWorkCase.getModel();
+        int selectedRow = tblFieldPartnerWorkCase.getSelectedRow();
+        if(selectedRow < 0)
+        {
+            JOptionPane.showMessageDialog(null, "Please select a row first","Information",  JOptionPane.INFORMATION_MESSAGE);
+            return ;
+        }
+        else
+        {
+            NewFieldPartnerWorkRequest nfpwr = (NewFieldPartnerWorkRequest)tblFieldPartnerWorkCase.getValueAt(selectedRow, 0);
+            if(nfpwr.getTrustee() != trustee){
+                JOptionPane.showMessageDialog(null, "Please assign to yourself first", "Information", JOptionPane.INFORMATION_MESSAGE);
+                return ;
+            }
+
+            TrusteeViewFieldPartnerJPanel trusteeViewFieldPartnerJPanel = new TrusteeViewFieldPartnerJPanel(userProcessContainer,business,nfpwr);
+            userProcessContainer.add("trusteeViewFieldPartnerJPanel",trusteeViewFieldPartnerJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+
+    }//GEN-LAST:event_btnViewFieldPartnerDetailsActionPerformed
+
+    private void btnFieldPartnerAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFieldPartnerAssignToMeActionPerformed
+        // TODO add your handling code here:
+
+        DefaultTableModel model = (DefaultTableModel) tblFieldPartnerWorkCase.getModel();
+        int selectedRow = tblFieldPartnerWorkCase.getSelectedRow();
+        if(selectedRow < 0){
+            JOptionPane.showMessageDialog(null,  "Please select a row first","Information", JOptionPane.INFORMATION_MESSAGE);
+            return ;
+        }
+        else
+        {
+            NewFieldPartnerWorkRequest nfpwr = (NewFieldPartnerWorkRequest)tblFieldPartnerWorkCase.getValueAt(selectedRow, 0);
+            if(nfpwr.getTrustee() != null){
+                JOptionPane.showMessageDialog(null, "Trustee already assigned", "Information", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+            nfpwr.setTrustee(trustee);
+        }
+        JOptionPane.showMessageDialog(null,"Work request assigned", "Information", JOptionPane.INFORMATION_MESSAGE);
+        populateFieldPartnerWorkTable();
+    }//GEN-LAST:event_btnFieldPartnerAssignToMeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrowerAssignToMe;
+    private javax.swing.JButton btnFieldPartnerAssignToMe;
     private javax.swing.JButton btnViewDetails;
+    private javax.swing.JButton btnViewFieldPartnerDetails;
     private javax.swing.JButton btnViewHelpingHandsRevenue;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tblBorrowerWorkCase;
+    private javax.swing.JTable tblFieldPartnerWorkCase;
     // End of variables declaration//GEN-END:variables
 }
