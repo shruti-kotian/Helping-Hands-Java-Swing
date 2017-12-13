@@ -98,7 +98,7 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         txtBorrowerYearlyIncome = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBorrowerName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
@@ -168,9 +168,8 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 600, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +177,7 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 600, 268, 60));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 810, 190, 60));
 
         jLabel13.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -215,9 +214,8 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
         });
         add(networkComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 693, 281, -1));
 
-        btnSignUp1.setBackground(new java.awt.Color(0, 0, 0));
+        btnSignUp1.setBackground(new java.awt.Color(153, 153, 153));
         btnSignUp1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnSignUp1.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUp1.setText("SIGN UP");
         btnSignUp1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnSignUp1.addActionListener(new java.awt.event.ActionListener() {
@@ -225,10 +223,10 @@ public class BorrowerSignUpJPanel extends javax.swing.JPanel {
                 btnSignUp1ActionPerformed(evt);
             }
         });
-        add(btnSignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 693, 268, 58));
+        add(btnSignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 810, 268, 58));
 
         enterpriseComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(enterpriseComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 743, 281, -1));
+        add(enterpriseComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 750, 281, -1));
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));

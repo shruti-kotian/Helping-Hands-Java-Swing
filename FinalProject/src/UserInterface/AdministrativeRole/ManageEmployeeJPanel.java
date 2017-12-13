@@ -85,8 +85,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         nameJTextField = new javax.swing.JTextField();
         organizationEmpJComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -123,9 +124,8 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 232, 527, 115));
 
-        addJButton.setBackground(new java.awt.Color(0, 0, 0));
+        addJButton.setBackground(new java.awt.Color(153, 153, 153));
         addJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        addJButton.setForeground(new java.awt.Color(255, 255, 255));
         addJButton.setText(" CREATE EMPLOYEE >> ");
         addJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +133,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 581, 320, 59));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 320, 59));
 
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -149,9 +149,8 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 160, -1, 40));
 
-        backJButton.setBackground(new java.awt.Color(0, 0, 0));
+        backJButton.setBackground(new java.awt.Color(153, 153, 153));
         backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< BACK");
         backJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +158,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 39, 230, 59));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, 170, 59));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -178,6 +177,12 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel3.setText(" ORGANIZATION - ");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 436, -1, 33));
+
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("MANAGE EMPLOYEE");
+        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -209,6 +214,7 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationEmpJComboBox;

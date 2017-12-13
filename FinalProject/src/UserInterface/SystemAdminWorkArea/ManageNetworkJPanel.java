@@ -59,8 +59,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         submitJButton = new javax.swing.JButton();
         nameJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -102,8 +103,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, 43));
 
+        submitJButton.setBackground(new java.awt.Color(153, 153, 153));
         submitJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        submitJButton.setForeground(new java.awt.Color(255, 255, 255));
+        submitJButton.setForeground(new java.awt.Color(51, 0, 51));
         submitJButton.setText(" SUBMIT >>  ");
         submitJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,14 +113,14 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 submitJButtonActionPerformed(evt);
             }
         });
-        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 499, 220, 55));
+        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 220, 55));
 
         nameJTextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 405, 43));
 
-        backJButton.setBackground(new java.awt.Color(0, 0, 0));
+        backJButton.setBackground(new java.awt.Color(153, 153, 153));
         backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(255, 255, 255));
+        backJButton.setForeground(new java.awt.Color(51, 0, 51));
         backJButton.setText("<< BACK");
         backJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +128,13 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 227, 55));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 180, 55));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("MANAGE NETWORK");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
@@ -152,6 +160,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JTable networkJTable;

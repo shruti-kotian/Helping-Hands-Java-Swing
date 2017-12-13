@@ -121,7 +121,7 @@ public class AddBorrowersDetailsJPanel extends javax.swing.JPanel {
         txtRepaymentStartYear = new javax.swing.JTextField();
         txtLoanAmount = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -137,7 +137,7 @@ public class AddBorrowersDetailsJPanel extends javax.swing.JPanel {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText(" BORROWER DETAILS ");
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(547, 63, -1, -1));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -240,9 +240,9 @@ public class AddBorrowersDetailsJPanel extends javax.swing.JPanel {
         jLabel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 614, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -250,11 +250,11 @@ public class AddBorrowersDetailsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 192, 54));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 760, 150, 54));
 
-        btnSubmitToRepresentative.setBackground(new java.awt.Color(0, 0, 0));
+        btnSubmitToRepresentative.setBackground(new java.awt.Color(153, 153, 153));
         btnSubmitToRepresentative.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnSubmitToRepresentative.setForeground(new java.awt.Color(255, 255, 255));
+        btnSubmitToRepresentative.setForeground(new java.awt.Color(51, 0, 51));
         btnSubmitToRepresentative.setText("SUBMIT TO REPRESENTATIVE>> ");
         btnSubmitToRepresentative.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnSubmitToRepresentative.addActionListener(new java.awt.event.ActionListener() {
@@ -262,7 +262,7 @@ public class AddBorrowersDetailsJPanel extends javax.swing.JPanel {
                 btnSubmitToRepresentativeActionPerformed(evt);
             }
         });
-        add(btnSubmitToRepresentative, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 730, 410, 54));
+        add(btnSubmitToRepresentative, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 760, 460, 54));
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));

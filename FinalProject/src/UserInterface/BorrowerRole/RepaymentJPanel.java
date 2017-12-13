@@ -58,10 +58,9 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         btnPay = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         lblPercent = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setForeground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1011, 0, -1, -1));
@@ -107,11 +106,11 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("  $ ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 382, -1, 49));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 382, 60, 49));
 
-        btnPay.setBackground(new java.awt.Color(0, 0, 0));
+        btnPay.setBackground(new java.awt.Color(153, 153, 153));
         btnPay.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnPay.setForeground(new java.awt.Color(255, 255, 255));
+        btnPay.setForeground(new java.awt.Color(51, 0, 51));
         btnPay.setText("  PAY NOW >>  ");
         btnPay.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnPay.addActionListener(new java.awt.event.ActionListener() {
@@ -121,9 +120,9 @@ public class RepaymentJPanel extends javax.swing.JPanel {
         });
         add(btnPay, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 258, 272, 53));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText("<< BACK  ");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -131,16 +130,13 @@ public class RepaymentJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 26, 182, 58));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 650, 182, 58));
 
         lblPercent.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblPercent.setForeground(new java.awt.Color(255, 255, 255));
         lblPercent.setText("  LOAN REPAYMENT PERCENTAGE  ");
         lblPercent.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         add(lblPercent, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 569, -1, -1));
-
-        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(952, 34, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -215,7 +211,6 @@ public class RepaymentJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblPercent;
     private javax.swing.JTextField txtAmount;

@@ -36,6 +36,7 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer ;
         this.business = enterprise ;
         this.fieldPartnerContact = fieldPartnerContact ;
+        
     }
 
     /**
@@ -50,14 +51,14 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
         btnCreateBorrower = new javax.swing.JButton();
         btnViewMyBorrower = new javax.swing.JButton();
         btnCreateBorrowerAccount = new javax.swing.JButton();
-        lblRisk = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCreateBorrower.setBackground(new java.awt.Color(0, 102, 102));
+        btnCreateBorrower.setBackground(new java.awt.Color(153, 153, 153));
         btnCreateBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnCreateBorrower.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateBorrower.setForeground(new java.awt.Color(51, 0, 51));
         btnCreateBorrower.setText("  CREATE BORROWER LOAN CASE >>  ");
         btnCreateBorrower.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnCreateBorrower.addActionListener(new java.awt.event.ActionListener() {
@@ -65,11 +66,11 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
                 btnCreateBorrowerActionPerformed(evt);
             }
         });
-        add(btnCreateBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 240, -1, 61));
+        add(btnCreateBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, 61));
 
-        btnViewMyBorrower.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewMyBorrower.setBackground(new java.awt.Color(153, 153, 153));
         btnViewMyBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnViewMyBorrower.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewMyBorrower.setForeground(new java.awt.Color(51, 0, 51));
         btnViewMyBorrower.setText("VIEW MY BORROWERS >>");
         btnViewMyBorrower.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnViewMyBorrower.addActionListener(new java.awt.event.ActionListener() {
@@ -77,11 +78,11 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewMyBorrowerActionPerformed(evt);
             }
         });
-        add(btnViewMyBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 331, 467, 58));
+        add(btnViewMyBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 467, 58));
 
-        btnCreateBorrowerAccount.setBackground(new java.awt.Color(0, 0, 0));
+        btnCreateBorrowerAccount.setBackground(new java.awt.Color(153, 153, 153));
         btnCreateBorrowerAccount.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnCreateBorrowerAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateBorrowerAccount.setForeground(new java.awt.Color(51, 0, 51));
         btnCreateBorrowerAccount.setText("CREATE BORROWER ACCOUNT >>");
         btnCreateBorrowerAccount.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnCreateBorrowerAccount.addActionListener(new java.awt.event.ActionListener() {
@@ -89,13 +90,13 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
                 btnCreateBorrowerAccountActionPerformed(evt);
             }
         });
-        add(btnCreateBorrowerAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 425, 467, 61));
+        add(btnCreateBorrowerAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 467, 61));
 
-        lblRisk.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        lblRisk.setForeground(new java.awt.Color(255, 255, 255));
-        lblRisk.setText(" RISK RATING ");
-        lblRisk.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(lblRisk, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 538, -1, 45));
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("FIELD PARTNER WORK AREA");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateBorrowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBorrowerActionPerformed
@@ -128,6 +129,6 @@ public class FieldPartnerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateBorrower;
     private javax.swing.JButton btnCreateBorrowerAccount;
     private javax.swing.JButton btnViewMyBorrower;
-    private javax.swing.JLabel lblRisk;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

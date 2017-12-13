@@ -25,7 +25,9 @@ public class LoanCase {
     
     
     public enum Category {
-        Health("Health");
+        Women("Women"), Agriculture("Agriculture"), Education("Education"), Health("Health"),
+        SingleParent("Single Parent"), SocialEnterprise("Social Enterprise"), RetailBusiness("Retail Business"),
+        Food("Food"), Arts("Arts"), WaterAndSanitation("Water & Sanitation"), ConflictZone("Conflict Zones"), Men("Men");
         
         
         private String value ;

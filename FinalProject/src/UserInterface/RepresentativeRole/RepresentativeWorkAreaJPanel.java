@@ -11,6 +11,7 @@ import Business.Organization.Organization;
 import Business.Organization.RepresentativeOrganization;
 import Business.Organization.TrusteeOrganization;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.NewFieldPartnerWorkRequest;
 import Business.WorkQueue.NewLoanCaseWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -56,7 +57,7 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
         
         Object[] row = new Object[5] ;
         for(WorkRequest workRequest : repOrganization.getWorkQueue().getWorkRequestList()){
-           if(!(workRequest.getStatus().equals(NewLoanCaseWorkRequest.Status.Complete.getValue()))){
+           if(!(workRequest.getStatus().equals(NewLoanCaseWorkRequest.Status.Complete.getValue()))  || (workRequest.getStatus().equals(NewFieldPartnerWorkRequest.Status.Complete.getValue()))){
             
             row[0] = workRequest ;
             row[1] = workRequest.getMessage() ;
@@ -86,8 +87,9 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
         tblRepOrgWorkQueue = new javax.swing.JTable();
         btnAssign = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblRepOrgWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
@@ -110,9 +112,9 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 139, 703, 223));
 
-        btnAssign.setBackground(new java.awt.Color(0, 0, 0));
+        btnAssign.setBackground(new java.awt.Color(153, 153, 153));
         btnAssign.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnAssign.setForeground(new java.awt.Color(255, 255, 255));
+        btnAssign.setForeground(new java.awt.Color(51, 0, 51));
         btnAssign.setText(" ASSIGN TO ME >> ");
         btnAssign.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
@@ -122,9 +124,9 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 395, 343, 65));
 
-        btnProcess.setBackground(new java.awt.Color(0, 0, 0));
+        btnProcess.setBackground(new java.awt.Color(153, 153, 153));
         btnProcess.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnProcess.setForeground(new java.awt.Color(255, 255, 255));
+        btnProcess.setForeground(new java.awt.Color(51, 0, 51));
         btnProcess.setText(" PROCESS >> ");
         btnProcess.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
@@ -133,6 +135,12 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnProcess, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 395, 342, 65));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("REPRESENTATIVE WORK AREA");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
@@ -171,7 +179,17 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please assign to yourself first", "Information", JOptionPane.INFORMATION_MESSAGE);
             return ;
         }
-        if(workRequest instanceof NewLoanCaseWorkRequest){
+        //checks if the work request is for field partner or borrower
+        
+        if(workRequest instanceof NewFieldPartnerWorkRequest){
+            AnalyseFieldPartnerJPanel analyseFieldPartnerJPanel = 
+                    new AnalyseFieldPartnerJPanel(userProcessContainer, (NewFieldPartnerWorkRequest) workRequest, 
+                                                  trusteeOrganization, representative);
+            userProcessContainer.add("analyseFieldPartnerJPanel",analyseFieldPartnerJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+        else if(workRequest instanceof NewLoanCaseWorkRequest){
             RepresentativeLoanCaseJPanel analyseLoanCaseJPanel =
             new RepresentativeLoanCaseJPanel(userProcessContainer, business, (NewLoanCaseWorkRequest) workRequest,
                 trusteeOrganization, representative);
@@ -185,6 +203,7 @@ public class RepresentativeWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssign;
     private javax.swing.JButton btnProcess;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblRepOrgWorkQueue;
     // End of variables declaration//GEN-END:variables

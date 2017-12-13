@@ -68,14 +68,14 @@ public class ViewMyBorrowersJPanel extends javax.swing.JPanel {
         tblMyBorrowers = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("  MY BORROWERS  ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 66, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
 
         tblMyBorrowers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,11 +95,11 @@ public class ViewMyBorrowersJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblMyBorrowers);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 177, 681, 268));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 681, 268));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class ViewMyBorrowersJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 502, 445, 69));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 480, 445, 69));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

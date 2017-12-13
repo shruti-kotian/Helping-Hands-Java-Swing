@@ -130,7 +130,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1129, 0, -1, -1));
 
@@ -164,9 +164,9 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 402, 503, 111));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText("<< BACK ");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -174,7 +174,7 @@ public class LoanCaseStatusJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 6, 160, 53));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 160, 53));
 
         lblStatus.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblStatus.setForeground(new java.awt.Color(255, 255, 255));

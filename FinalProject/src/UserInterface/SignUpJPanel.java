@@ -39,12 +39,13 @@ public class SignUpJPanel extends javax.swing.JPanel {
         btnSignUpBorrower = new javax.swing.JButton();
         btnSignUpLender = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnBecomeFieldPartner = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnSignUpBorrower.setBackground(new java.awt.Color(153, 153, 153));
         btnSignUpBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnSignUpBorrower.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUpBorrower.setText("SIGN UP AS A BORROWER >>");
         btnSignUpBorrower.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnSignUpBorrower.addActionListener(new java.awt.event.ActionListener() {
@@ -52,10 +53,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 btnSignUpBorrowerActionPerformed(evt);
             }
         });
-        add(btnSignUpBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 480, 90));
+        add(btnSignUpBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 480, 90));
 
+        btnSignUpLender.setBackground(new java.awt.Color(153, 153, 153));
         btnSignUpLender.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnSignUpLender.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUpLender.setText("SIGN UP AS A LENDER >>");
         btnSignUpLender.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnSignUpLender.addActionListener(new java.awt.event.ActionListener() {
@@ -63,13 +64,24 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 btnSignUpLenderActionPerformed(evt);
             }
         });
-        add(btnSignUpLender, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 480, 90));
+        add(btnSignUpLender, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 480, 90));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("  SIGN UP FOR HELPING HANDS");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 30, 610, -1));
+
+        btnBecomeFieldPartner.setBackground(new java.awt.Color(153, 153, 153));
+        btnBecomeFieldPartner.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        btnBecomeFieldPartner.setText("BECOME A FIELD PARTNER >>");
+        btnBecomeFieldPartner.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
+        btnBecomeFieldPartner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBecomeFieldPartnerActionPerformed(evt);
+            }
+        });
+        add(btnBecomeFieldPartner, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, 480, 100));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSignUpBorrowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpBorrowerActionPerformed
@@ -88,8 +100,17 @@ public class SignUpJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnSignUpLenderActionPerformed
 
+    private void btnBecomeFieldPartnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBecomeFieldPartnerActionPerformed
+        // TODO add your handling code here:
+        FieldPartnerFormJPanel fieldPartnerFormJPanel = new FieldPartnerFormJPanel(userProcessContainer, system);
+        userProcessContainer.add("fieldPartnerFormJPanel", fieldPartnerFormJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnBecomeFieldPartnerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBecomeFieldPartner;
     private javax.swing.JButton btnSignUpBorrower;
     private javax.swing.JButton btnSignUpLender;
     private javax.swing.JLabel jLabel1;

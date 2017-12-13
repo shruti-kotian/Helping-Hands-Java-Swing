@@ -32,11 +32,6 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
 
    private JPanel userProcessContainer ;
     private EcoSystem system ;
-    /**
-     * Creates new form BorrowerFormJPanel
-     */
-    
-
     FieldPartnerFormJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer ;
@@ -75,6 +70,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fieldPartnerLegalStatusButtonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -118,53 +114,54 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         enterpriseComboBox = new javax.swing.JComboBox();
         txtFieldPartnerImpactArea = new javax.swing.JTextField();
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel1.setForeground(new java.awt.Color(153, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
+        jPanel1.setForeground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("HELPING HANDS PARTNERSHIP APPLICATION ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(" ORGANIZATION NAME ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 230, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 230, 30));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText(" ORGANIZATION WEBSITE ");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText(" HEADQUARTERS ADDRESS ");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText(" PRIMARY COUNTRY ");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText(" ORGANIZATION INFORMATION ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 586, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText(" LEGAL STATUS ");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 655, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, -1, -1));
 
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton1);
         jRadioButton1.setText("NGO IN USA");
         jRadioButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -172,9 +169,10 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 643, -1, -1));
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 580, -1, -1));
 
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton2);
         jRadioButton2.setText("Bank");
         jRadioButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -182,14 +180,16 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 643, -1, -1));
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 580, -1, -1));
 
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton3);
         jRadioButton3.setText("LLC");
         jRadioButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 673, -1, -1));
+        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, -1, -1));
 
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton4);
         jRadioButton4.setText("Non-Bank Financial Institution");
         jRadioButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -197,82 +197,82 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 jRadioButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 673, -1, -1));
+        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, -1, -1));
 
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton5);
         jRadioButton5.setText("CO-OPERATIVE");
         jRadioButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 703, -1, -1));
+        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 640, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText(" IMPACT AREA ");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 767, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 710, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("REFERENCE PERSON (IF ANY) ");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 811, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 750, -1, -1));
 
         txtFieldPartnerOrganizationName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerOrganizationName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 341, 30));
+        jPanel1.add(txtFieldPartnerOrganizationName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 341, 30));
 
         txtFieldPartnerorganizationWebsite.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerorganizationWebsite, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 350, 30));
+        jPanel1.add(txtFieldPartnerorganizationWebsite, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 350, 30));
 
         txtFieldPartnerPrimaryCountryOperation.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerPrimaryCountryOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 350, 30));
+        jPanel1.add(txtFieldPartnerPrimaryCountryOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 350, 30));
 
         txtReferencePerson.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtReferencePerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 810, 290, 30));
+        jPanel1.add(txtReferencePerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 750, 290, 30));
 
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText(" CONTACT PERSON DETAILS ");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText(" NAME ");
         jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText(" JOB TITLE ");
         jLabel12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 230, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText(" EMAIL ");
         jLabel13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, -1, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 280, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText(" PHONE ");
         jLabel14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, -1, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, -1, -1));
 
         txtFieldPartnerContactPersonName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerContactPersonName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 240, 188, -1));
+        jPanel1.add(txtFieldPartnerContactPersonName, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 188, -1));
 
         txtFieldPartnerContactPersonJobTitle.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerContactPersonJobTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 290, 188, -1));
+        jPanel1.add(txtFieldPartnerContactPersonJobTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 230, 188, -1));
 
         txtFieldPartnerContactPersonEmailId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerContactPersonEmailId, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 340, 188, -1));
+        jPanel1.add(txtFieldPartnerContactPersonEmailId, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 280, 188, -1));
 
         txtFieldPartnerContactPersonPhoneNo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
-        jPanel1.add(txtFieldPartnerContactPersonPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 390, 188, -1));
+        jPanel1.add(txtFieldPartnerContactPersonPhoneNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 330, 188, -1));
 
-        btnFieldPartnerSignUp.setBackground(new java.awt.Color(0, 0, 0));
+        btnFieldPartnerSignUp.setBackground(new java.awt.Color(153, 153, 153));
         btnFieldPartnerSignUp.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnFieldPartnerSignUp.setForeground(new java.awt.Color(255, 255, 255));
         btnFieldPartnerSignUp.setText("SUBMIT >>");
         btnFieldPartnerSignUp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnFieldPartnerSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -280,18 +280,17 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 btnFieldPartnerSignUpActionPerformed(evt);
             }
         });
-        jPanel1.add(btnFieldPartnerSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 972, 250, 66));
+        jPanel1.add(btnFieldPartnerSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 910, 250, 66));
 
         txtFieldPartnerHeadquartersAddress.setColumns(20);
         txtFieldPartnerHeadquartersAddress.setRows(5);
         txtFieldPartnerHeadquartersAddress.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jScrollPane2.setViewportView(txtFieldPartnerHeadquartersAddress);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 341, -1));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 341, -1));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -299,39 +298,39 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 972, 190, 66));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 910, 190, 66));
 
         jLabel15.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText(" MISSION STATEMENT ");
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
 
         txtFieldPartnerMissionStatement.setColumns(20);
         txtFieldPartnerMissionStatement.setRows(5);
         txtFieldPartnerMissionStatement.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         jScrollPane3.setViewportView(txtFieldPartnerMissionStatement);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 341, -1));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 341, -1));
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(919, 0, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText(" OF OPERATION ");
         jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText(" REGION/NETWORK ");
         jLabel18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 869, -1, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 810, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText(" ENTERPRISE ");
         jLabel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 918, -1, -1));
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 860, -1, -1));
 
         networkComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         networkComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -339,10 +338,10 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 networkComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(networkComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 870, 274, -1));
+        jPanel1.add(networkComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 810, 274, -1));
 
         enterpriseComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(enterpriseComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 910, 274, -1));
+        jPanel1.add(enterpriseComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 850, 274, -1));
 
         txtFieldPartnerImpactArea.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         txtFieldPartnerImpactArea.addActionListener(new java.awt.event.ActionListener() {
@@ -350,27 +349,17 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
                 txtFieldPartnerImpactAreaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtFieldPartnerImpactArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 760, 290, 40));
+        jPanel1.add(txtFieldPartnerImpactArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 700, 290, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1231, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1295, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1038, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1068, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -459,7 +448,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
             fieldPartnerContact.setEmail(email.trim());
             fieldPartnerContact.setPhone(phone.trim());
 
-            // Create Work Request and send to Analyst Orgnization work Queue
+            // Create Work Request and send to Representative Orgnization work Queue
 
             NewFieldPartnerWorkRequest fieldPartnerWorkRequest = new NewFieldPartnerWorkRequest(generalInformation, performanceInformation, fieldPartnerContact);
             fieldPartnerWorkRequest.setMessage("Application for a new Field Partner");
@@ -500,6 +489,7 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnFieldPartnerSignUp;
     private javax.swing.JComboBox enterpriseComboBox;
+    private javax.swing.ButtonGroup fieldPartnerLegalStatusButtonGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

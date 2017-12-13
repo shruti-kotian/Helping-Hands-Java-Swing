@@ -26,7 +26,7 @@ public class NewFieldPartnerWorkRequest extends WorkRequest{
     
     public enum Status{
         NewFieldPartner("New Field Partner"),
-        AnalystRated("Analyst Rated"),
+        RepresentativeRated("Representative Rated"),
         TrusteeApproved("Trustee Approved"),
         TrusteeRejected("Trustee Rejected"),
         Complete("Complete") ;

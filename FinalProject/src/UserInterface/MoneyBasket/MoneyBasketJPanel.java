@@ -9,6 +9,7 @@ import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Finance.MoneyBasket;
 import Business.Loan.LendingInstance;
 import Business.Loan.Loan;
+import Business.Person.Borrower;
 import Business.Person.Lender;
 import java.awt.CardLayout;
 import java.text.DateFormat;
@@ -47,10 +48,11 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
         for(LendingInstance lendingInstance : moneyBasket.getLendingInstanceList()){
             Object[] row = new Object[3];
             row[0] = business.getLoanFromLoanCase(lendingInstance.getLoanCase());
-            row[1] = lendingInstance ;
+            row[1] = lendingInstance ; 
+            row[2] = lender.getAccountManagement().getAvailableCredit();
             model.addRow(row);
-        }
         
+        }
     }
         
         public void populateTxtTotal(){
@@ -85,17 +87,17 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
         tblBasketItems = new javax.swing.JTable();
         txtTotal = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("  BASKET  ");
+        jLabel2.setText("  MONEY BASKET  ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,9 +111,9 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 344, -1, -1));
 
-        btnCheckout.setBackground(new java.awt.Color(0, 0, 0));
+        btnCheckout.setBackground(new java.awt.Color(153, 153, 153));
         btnCheckout.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnCheckout.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckout.setForeground(new java.awt.Color(51, 0, 51));
         btnCheckout.setText("  CHECKOUT >>  ");
         btnCheckout.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnCheckout.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +121,7 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
                 btnCheckoutActionPerformed(evt);
             }
         });
-        add(btnCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 500, 203, 67));
+        add(btnCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 203, 67));
 
         tblBasketItems.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,23 +147,23 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
             }
         });
         tblBasketItems.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-                tblBasketItemsCaretPositionChanged(evt);
-            }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
                 tblBasketItemsInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+                tblBasketItemsCaretPositionChanged(evt);
             }
         });
         jScrollPane1.setViewportView(tblBasketItems);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, 144));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, 144));
 
         txtTotal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 4, true));
         add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 344, 288, 53));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -169,16 +171,15 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 180, 67));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, 180, 67));
 
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("  WOULD YOU LIKE TO MAKE A DONATION  ");
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 437, -1, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Helping Hands Sticlers/dollar sign art.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1445, 550, 160, 400));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(659, 443, 177, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Helping Hands Sticlers/dollar sign art.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 730, 820));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
@@ -194,7 +195,7 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
             }
         }
         // Check if lender has enough creadit to give loan
-        int total = Integer.parseInt(txtTotal.getText());
+      int total = Integer.parseInt(txtTotal.getText());
         if(total > lender.getAccountManagement().getAvailableCredit()){
             JOptionPane.showMessageDialog(null, "You don't have sufficient funds in your Helping Hands account", "Information", JOptionPane.INFORMATION_MESSAGE);
             return;
@@ -238,11 +239,11 @@ public class MoneyBasketJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCheckout;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblBasketItems;
     private javax.swing.JTextField txtTotal;

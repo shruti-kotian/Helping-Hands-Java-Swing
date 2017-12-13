@@ -88,8 +88,9 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         btnSignUp = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -179,9 +180,8 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 195, -1, -1));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -189,11 +189,10 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 626, 248, 66));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 630, 200, 66));
 
-        btnSignUp.setBackground(new java.awt.Color(0, 0, 0));
+        btnSignUp.setBackground(new java.awt.Color(153, 153, 153));
         btnSignUp.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUp.setText("SIGN UP");
         btnSignUp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +200,10 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
                 btnSignUpActionPerformed(evt);
             }
         });
-        add(btnSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 626, 274, 66));
+        add(btnSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 630, 274, 66));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Helping Hands Sticlers/Lending.png"))); // NOI18N
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkComboBoxActionPerformed
@@ -285,6 +287,7 @@ public class LenderSignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

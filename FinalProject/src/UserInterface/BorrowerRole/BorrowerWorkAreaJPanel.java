@@ -70,7 +70,7 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         lblname = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
@@ -79,9 +79,9 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
-        btnViewLoancaseStatus.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewLoancaseStatus.setBackground(new java.awt.Color(153, 153, 153));
         btnViewLoancaseStatus.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnViewLoancaseStatus.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewLoancaseStatus.setForeground(new java.awt.Color(51, 0, 51));
         btnViewLoancaseStatus.setText("VIEW LOAN CASE STATUS >>");
         btnViewLoancaseStatus.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnViewLoancaseStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -89,11 +89,11 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewLoancaseStatusActionPerformed(evt);
             }
         });
-        add(btnViewLoancaseStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(339, 166, 320, 67));
+        add(btnViewLoancaseStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 320, 67));
 
-        btnRepayment.setBackground(new java.awt.Color(0, 0, 0));
+        btnRepayment.setBackground(new java.awt.Color(153, 153, 153));
         btnRepayment.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnRepayment.setForeground(new java.awt.Color(255, 255, 255));
+        btnRepayment.setForeground(new java.awt.Color(51, 0, 51));
         btnRepayment.setText("REPAYMENT >> ");
         btnRepayment.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnRepayment.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +101,7 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
                 btnRepaymentActionPerformed(evt);
             }
         });
-        add(btnRepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 320, 61));
+        add(btnRepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 320, 61));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,7 +112,8 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
         creditComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(creditComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 182, -1));
 
-        btnAddCredit.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddCredit.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddCredit.setForeground(new java.awt.Color(51, 0, 51));
         btnAddCredit.setText("ADD >>");
         btnAddCredit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         btnAddCredit.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +136,7 @@ public class BorrowerWorkAreaJPanel extends javax.swing.JPanel {
         lblname.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblname.setForeground(new java.awt.Color(255, 255, 255));
         lblname.setText("name");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewLoancaseStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLoancaseStatusActionPerformed

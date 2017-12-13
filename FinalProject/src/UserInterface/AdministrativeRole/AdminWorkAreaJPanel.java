@@ -41,19 +41,20 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnAssign = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
+        setForeground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(" MY WORK AREA - ADMINISTRATIVE ROLE ");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 52, 550, 59));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 550, 59));
 
-        userJButton.setBackground(new java.awt.Color(0, 0, 0));
+        userJButton.setBackground(new java.awt.Color(153, 153, 153));
         userJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        userJButton.setForeground(new java.awt.Color(255, 255, 255));
         userJButton.setText("MANAGE USER >>");
         userJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         userJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -63,9 +64,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 398, 486, 55));
 
-        manageEmployeeJButton.setBackground(new java.awt.Color(0, 0, 0));
+        manageEmployeeJButton.setBackground(new java.awt.Color(153, 153, 153));
         manageEmployeeJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        manageEmployeeJButton.setForeground(new java.awt.Color(255, 255, 255));
         manageEmployeeJButton.setText("MANAGE EMPLOYEE >>");
         manageEmployeeJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -75,9 +75,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 324, 486, 56));
 
-        manageOrganizationJButton.setBackground(new java.awt.Color(0, 0, 0));
+        manageOrganizationJButton.setBackground(new java.awt.Color(153, 153, 153));
         manageOrganizationJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        manageOrganizationJButton.setForeground(new java.awt.Color(255, 255, 255));
         manageOrganizationJButton.setText(" MANAGE ORGNANIZATION >> ");
         manageOrganizationJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -91,14 +90,25 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseLabel.setText(" ENTERPRISE -");
         enterpriseLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 142, 211, 46));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 211, 46));
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(255, 255, 255));
         valueLabel.setText("<value>");
         valueLabel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(559, 154, 130, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 130, -1));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 0, -1, -1));
+
+        btnAssign.setBackground(new java.awt.Color(153, 153, 153));
+        btnAssign.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        btnAssign.setText("ASSIGN FP CONTACT >>");
+        btnAssign.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        btnAssign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAssignActionPerformed(evt);
+            }
+        });
+        add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 490, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
@@ -127,12 +137,22 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+
+    private void btnAssignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignActionPerformed
+        // TODO add your handling code here:
+        UserInterface.AdministrativeRole.AssignContactToFieldPartnerJPanel assignContactToFieldPartnerJPanel;
+          assignContactToFieldPartnerJPanel = new UserInterface.AdministrativeRole.AssignContactToFieldPartnerJPanel(userProcessContainer, enterprise);
+        userProcessContainer.add("assignContactToFieldPartnerJPanel", assignContactToFieldPartnerJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnAssignActionPerformed
     
  
     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAssign;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

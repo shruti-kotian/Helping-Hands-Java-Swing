@@ -10,10 +10,10 @@ package Business.FieldPartner;
  * @author shwetatatiya
  */
 public class PerformanceInformation {
-     private String riskRating ;
+    private String riskRating ;
     private int tieUpDate ;
     private int totalLoans ;
-    private float delinquencyRate ;
+    private float delinquencyRate;
 
     public PerformanceInformation() {
     }

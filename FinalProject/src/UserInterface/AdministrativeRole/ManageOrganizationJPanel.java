@@ -71,8 +71,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -109,9 +110,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 184, 480, 92));
 
-        addJButton.setBackground(new java.awt.Color(0, 0, 0));
+        addJButton.setBackground(new java.awt.Color(153, 153, 153));
         addJButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        addJButton.setForeground(new java.awt.Color(255, 255, 255));
+        addJButton.setForeground(new java.awt.Color(51, 0, 51));
         addJButton.setText("ADD ORGANIZATION >> ");
         addJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +120,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(586, 512, 268, 51));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 268, 51));
 
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 360, 177, -1));
@@ -130,9 +131,9 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 347, -1, 46));
 
-        backJButton.setBackground(new java.awt.Color(0, 0, 0));
+        backJButton.setBackground(new java.awt.Color(153, 153, 153));
         backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(255, 255, 255));
+        backJButton.setForeground(new java.awt.Color(51, 0, 51));
         backJButton.setText("<< BACK");
         backJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +141,13 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 27, 206, 37));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 140, 50));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("MANAGE ORGANIZATION");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -161,6 +168,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     private javax.swing.JButton addJButton;
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTable organizationJTable;

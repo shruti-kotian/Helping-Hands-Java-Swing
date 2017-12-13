@@ -17,6 +17,7 @@ import Business.Finance.MoneyBasket;
 import Business.Loan.LendingInstance;
 import Business.Loan.LoanCase.Category;
 import Business.Person.Lender;
+import UserInterface.MoneyBasket.MoneyBasketJPanel;
 import java.awt.CardLayout;
 
 /**
@@ -47,6 +48,7 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         populateCreditComboBox();
         populateAvailableCredit();
         populateOutstanding();
+        lblname.setText(lender.getName()); 
     }
     
     public void populateCreditComboBox(){
@@ -116,14 +118,11 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         btnAddCredit = new javax.swing.JButton();
         lblname = new javax.swing.JLabel();
-        lblcountry = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtCurrentBalance = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        txtOutstanding = new javax.swing.JTextField();
         creditComboBox = new javax.swing.JComboBox();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(903, 0, -1, -1));
 
@@ -170,9 +169,9 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 252, 808, 194));
 
-        btnAdd.setBackground(new java.awt.Color(0, 0, 0));
+        btnAdd.setBackground(new java.awt.Color(153, 153, 153));
         btnAdd.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setForeground(new java.awt.Color(51, 0, 51));
         btnAdd.setText("ADD BORROWER >>");
         btnAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -182,9 +181,9 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 490, 361, 48));
 
-        btnView.setBackground(new java.awt.Color(0, 0, 0));
+        btnView.setBackground(new java.awt.Color(153, 153, 153));
         btnView.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnView.setForeground(new java.awt.Color(255, 255, 255));
+        btnView.setForeground(new java.awt.Color(51, 0, 51));
         btnView.setText("VIEW LOAN CASE >>");
         btnView.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -194,9 +193,9 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 490, 400, 48));
 
-        btnProceed.setBackground(new java.awt.Color(0, 0, 0));
+        btnProceed.setBackground(new java.awt.Color(153, 153, 153));
         btnProceed.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnProceed.setForeground(new java.awt.Color(255, 255, 255));
+        btnProceed.setForeground(new java.awt.Color(51, 0, 51));
         btnProceed.setText("PROCEED TO CHECKOUT >>");
         btnProceed.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnProceed.addActionListener(new java.awt.event.ActionListener() {
@@ -221,8 +220,8 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 663, -1, -1));
 
-        btnAddCredit.setBackground(new java.awt.Color(0, 0, 0));
-        btnAddCredit.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddCredit.setBackground(new java.awt.Color(153, 153, 153));
+        btnAddCredit.setForeground(new java.awt.Color(51, 0, 51));
         btnAddCredit.setText("ADD >>");
         btnAddCredit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         btnAddCredit.addActionListener(new java.awt.event.ActionListener() {
@@ -235,12 +234,7 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         lblname.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         lblname.setForeground(new java.awt.Color(255, 255, 255));
         lblname.setText("NAME");
-        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 49, -1, -1));
-
-        lblcountry.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        lblcountry.setForeground(new java.awt.Color(255, 255, 255));
-        lblcountry.setText("COUNTRY");
-        add(lblcountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 91, -1, -1));
+        add(lblname, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -250,15 +244,6 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
 
         txtCurrentBalance.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         add(txtCurrentBalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 728, 314, 34));
-
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("OUTSTANDING LOANS");
-        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 869, -1, 24));
-
-        txtOutstanding.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        add(txtOutstanding, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 930, 210, -1));
 
         creditComboBox.setForeground(new java.awt.Color(255, 255, 255));
         creditComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -358,10 +343,10 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
         
             
         
-//           MoneyBasketJPanel moneyBasket = new MoneyBasketJPanel(userProcessContainer, business, lender);
-//           userProcessContainer.add("MoneyBasket", moneyBasket);
-//           CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//           layout.next(userProcessContainer);
+           MoneyBasketJPanel moneyBasket = new MoneyBasketJPanel(userProcessContainer, business, lender);
+           userProcessContainer.add("MoneyBasket", moneyBasket);
+           CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+           layout.next(userProcessContainer);
         
         
         // Create a basket object
@@ -399,13 +384,10 @@ public class LenderWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblcountry;
     private javax.swing.JLabel lblname;
     private javax.swing.JTable tblLoanCases;
     private javax.swing.JTextField txtCurrentBalance;
-    private javax.swing.JTextField txtOutstanding;
     // End of variables declaration//GEN-END:variables
 
 

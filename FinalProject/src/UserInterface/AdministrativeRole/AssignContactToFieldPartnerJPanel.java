@@ -63,8 +63,9 @@ public class AssignContactToFieldPartnerJPanel extends javax.swing.JPanel {
         tblWorkRequests = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         btnAssignFP = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblWorkRequests.setModel(new javax.swing.table.DefaultTableModel(
@@ -85,11 +86,10 @@ public class AssignContactToFieldPartnerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblWorkRequests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 565, 211));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 565, 211));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -97,11 +97,10 @@ public class AssignContactToFieldPartnerJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 335, 243, 51));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 243, 51));
 
-        btnAssignFP.setBackground(new java.awt.Color(0, 0, 0));
+        btnAssignFP.setBackground(new java.awt.Color(153, 153, 153));
         btnAssignFP.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnAssignFP.setForeground(new java.awt.Color(255, 255, 255));
         btnAssignFP.setText("CREATE FIELD PARTNER >>");
         btnAssignFP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnAssignFP.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +108,13 @@ public class AssignContactToFieldPartnerJPanel extends javax.swing.JPanel {
                 btnAssignFPActionPerformed(evt);
             }
         });
-        add(btnAssignFP, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 337, 304, 51));
+        add(btnAssignFP, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 304, 51));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("ASSIGN FIELD PARTNER CONTACT");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -145,6 +150,7 @@ public class AssignContactToFieldPartnerJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssignFP;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblWorkRequests;
     // End of variables declaration//GEN-END:variables

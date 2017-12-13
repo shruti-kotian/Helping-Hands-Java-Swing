@@ -91,17 +91,18 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree = new javax.swing.JTree();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         manageNetworkJButton = new javax.swing.JButton();
         manageEnterpriseJButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jSelectedLabel = new javax.swing.JLabel();
         manageEnterpriseAdminJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
             public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
@@ -110,39 +111,16 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTree);
 
-        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 505, Short.MAX_VALUE)
-                .addGap(57, 57, 57)
-                .addComponent(jLabel2)
-                .addGap(41, 41, 41))
-        );
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 67, -1, 707));
 
         jSplitPane.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 0, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageNetworkJButton.setBackground(new java.awt.Color(0, 0, 0));
+        manageNetworkJButton.setBackground(new java.awt.Color(153, 153, 153));
         manageNetworkJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        manageNetworkJButton.setForeground(new java.awt.Color(255, 255, 255));
+        manageNetworkJButton.setForeground(new java.awt.Color(51, 0, 51));
         manageNetworkJButton.setText("  MANAGE NETWORK >>  ");
         manageNetworkJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         manageNetworkJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -150,11 +128,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageNetworkJButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(manageNetworkJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 170, 494, 75));
+        jPanel2.add(manageNetworkJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 494, 75));
 
-        manageEnterpriseJButton.setBackground(new java.awt.Color(0, 0, 0));
+        manageEnterpriseJButton.setBackground(new java.awt.Color(153, 153, 153));
         manageEnterpriseJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        manageEnterpriseJButton.setForeground(new java.awt.Color(255, 255, 255));
+        manageEnterpriseJButton.setForeground(new java.awt.Color(51, 0, 51));
         manageEnterpriseJButton.setText("  MANAGE ENTERPRISE >>  ");
         manageEnterpriseJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         manageEnterpriseJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -162,21 +140,21 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageEnterpriseJButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(manageEnterpriseJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 281, 494, 74));
+        jPanel2.add(manageEnterpriseJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 494, 74));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Selected Node:");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 63, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
 
         jSelectedLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jSelectedLabel.setForeground(new java.awt.Color(255, 255, 255));
         jSelectedLabel.setText("<View Selected Node>");
-        jPanel2.add(jSelectedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 63, -1, -1));
+        jPanel2.add(jSelectedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, -1, -1));
 
-        manageEnterpriseAdminJButton.setBackground(new java.awt.Color(0, 0, 0));
+        manageEnterpriseAdminJButton.setBackground(new java.awt.Color(153, 153, 153));
         manageEnterpriseAdminJButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
-        manageEnterpriseAdminJButton.setForeground(new java.awt.Color(255, 255, 255));
+        manageEnterpriseAdminJButton.setForeground(new java.awt.Color(51, 0, 51));
         manageEnterpriseAdminJButton.setText("  MANAGE ENTERPRISE ADMIN >>");
         manageEnterpriseAdminJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         manageEnterpriseAdminJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +162,13 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageEnterpriseAdminJButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(manageEnterpriseAdminJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 390, 494, 85));
+        jPanel2.add(manageEnterpriseAdminJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 494, 85));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("SYSTEM ADMIN WORK AREA");
+        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
 
         jSplitPane.setRightComponent(jPanel2);
 

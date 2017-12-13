@@ -71,8 +71,11 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        lblFieldPartner = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(102, 0, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtStory.setEditable(false);
@@ -81,53 +84,53 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         txtStory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
         jScrollPane1.setViewportView(txtStory);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 83, 370, 234));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 370, 234));
 
         lblLength.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblLength.setForeground(new java.awt.Color(255, 255, 255));
         lblLength.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblLength.setText("label");
-        add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 83, 123, 24));
+        add(lblLength, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, 123, 24));
 
         lblBorrower.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblBorrower.setForeground(new java.awt.Color(255, 255, 255));
         lblBorrower.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBorrower.setText("label");
-        add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 113, 123, 24));
+        add(lblBorrower, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 240, 123, 24));
 
         lblCategory.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblCategory.setForeground(new java.awt.Color(255, 255, 255));
         lblCategory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCategory.setText("label");
-        add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 143, 123, 24));
+        add(lblCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 270, 123, 24));
 
         lblMonthlyInstallment.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblMonthlyInstallment.setForeground(new java.awt.Color(255, 255, 255));
         lblMonthlyInstallment.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMonthlyInstallment.setText("label");
-        add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 173, 123, 24));
+        add(lblMonthlyInstallment, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 300, 123, 24));
 
         lblStartMonth.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblStartMonth.setForeground(new java.awt.Color(255, 255, 255));
         lblStartMonth.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartMonth.setText("label");
-        add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 203, 123, 24));
+        add(lblStartMonth, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 330, 123, 24));
 
         lblStartYear.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblStartYear.setForeground(new java.awt.Color(255, 255, 255));
         lblStartYear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblStartYear.setText("label");
-        add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(728, 233, 123, 24));
+        add(lblStartYear, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, 123, 24));
 
         lblAmount.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblAmount.setForeground(new java.awt.Color(255, 255, 255));
         lblAmount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAmount.setText("label");
-        add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 123, 24));
+        add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 123, 24));
 
-        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setForeground(new java.awt.Color(51, 0, 51));
         btnBack.setText(" << BACK ");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -135,70 +138,89 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 481, 193, 69));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 520, 193, 69));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("LOAN LENGTH ");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 83, 191, 24));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 191, 24));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("BORROWER ");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 113, 191, 24));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 191, 24));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel5.setText("CATEGORY ");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 143, 191, 24));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 191, 24));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setText(" REPAYMENT MONTHLY INSTALLEMNT ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 173, -1, 24));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, -1, 24));
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel7.setText("REPAYMENT START MONTH ");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 203, 292, 24));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 292, 24));
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("REPAYMENT START YEAR ");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 233, 292, 24));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 292, 24));
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel17.setText("LOAN AMOUNT ");
         jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 292, 24));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, 292, 24));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("LOAN CASE DETAILS -");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 6, 250, 36));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 250, 36));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("STORY");
         jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 54, 68, 24));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 68, 24));
+
+        jLabel15.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel15.setText("FIELD PARTNER CONTACT ");
+        jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, -1, -1));
+
+        lblFieldPartner.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblFieldPartner.setForeground(new java.awt.Color(255, 255, 255));
+        lblFieldPartner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFieldPartner.setText("label");
+        add(lblFieldPartner, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 440, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("VIEW LOAN CASE");
+        jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -207,7 +229,6 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
         int length = userProcessContainer.getComponentCount();
         RepresentativeLoanCaseJPanel awajp = (RepresentativeLoanCaseJPanel) userProcessContainer.getComponent(length - 1);
         awajp.populateScreenData();
-        awajp.populateTblBorrowerHistory();
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
@@ -217,6 +238,7 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -225,10 +247,12 @@ public class ViewLoanCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAmount;
     private javax.swing.JLabel lblBorrower;
     private javax.swing.JLabel lblCategory;
+    private javax.swing.JLabel lblFieldPartner;
     private javax.swing.JLabel lblLength;
     private javax.swing.JLabel lblMonthlyInstallment;
     private javax.swing.JLabel lblStartMonth;
