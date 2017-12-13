@@ -39,6 +39,7 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
     }
 
     public void populateScreenData(){
+<<<<<<< HEAD
     lblAddress.setText(fpo.getGeneralInformation().getAddress());
     lblCountryOfOperation.setText(fpo.getGeneralInformation().getCountryOfOperation());
     lblEmail.setText(fpc.getEmail());
@@ -52,6 +53,24 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
     lblRiskRating.setText(fpo.getPerformanceInformation().getRiskRating());
     lblTitle.setText(fpc.getJobTitle());
     lblWebsite.setText(fpo.getGeneralInformation().getWebsite());        
+=======
+lblAddress.setText(fpo.getGeneralInformation().getAddress());
+lblCountryOfOperation.setText(fpo.getGeneralInformation().getCountryOfOperation());
+ lblEmail.setText(fpc.getEmail());
+ lblImpactArea.setText(fpo.getGeneralInformation().getImpactArea());
+ lblLegalStatus.setText(fpo.getGeneralInformation().getLegalStatus());
+  lblMission.setText(fpo.getGeneralInformation().getMissionStatement());
+   lblName.setText(fpc.getName());
+  lblOrgName.setText(fpo.getGeneralInformation().getOrgName());
+   lblPhone.setText(fpc.getPhone());
+   
+   if(fpo.getGeneralInformation().getRefPerson() != null)
+   lblRefPerson.setText(fpo.getGeneralInformation().getRefPerson().getName());
+   
+    lblRiskRating.setText(fpo.getPerformanceInformation().getRiskRating());
+    lblTitle.setText(fpc.getJobTitle());
+   lblWebsite.setText(fpo.getGeneralInformation().getWebsite());        
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,130 +98,253 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
         lblMission = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         lblLegalStatus = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel21 = new javax.swing.JLabel();
         lblRiskRating = new javax.swing.JLabel();
+=======
+        lblImpactArea = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        lblRiskRating = new javax.swing.JLabel();
+        lblRefPerson = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         btnBack = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
         lblPhone = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 0, 102));
+=======
+
+        setBackground(new java.awt.Color(204, 204, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText(" GENERAL INFORMATION - ");
         jLabel27.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+=======
+        add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 93, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblOrgName.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblOrgName.setForeground(new java.awt.Color(255, 255, 255));
         lblOrgName.setText("jLabel2");
+<<<<<<< HEAD
         add(lblOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 348, 22));
+=======
+        add(lblOrgName, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 174, 348, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblWebsite.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblWebsite.setForeground(new java.awt.Color(255, 255, 255));
         lblWebsite.setText("jLabel2");
+<<<<<<< HEAD
         add(lblWebsite, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 332, 22));
+=======
+        add(lblWebsite, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 228, 332, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblCountryOfOperation.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblCountryOfOperation.setForeground(new java.awt.Color(255, 255, 255));
         lblCountryOfOperation.setText("jLabel2");
+<<<<<<< HEAD
         add(lblCountryOfOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 261, 22));
+=======
+        add(lblCountryOfOperation, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 284, 261, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText(" ORGANIZATION NAME ");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+=======
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 275, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText(" ORGANIZATION WEBSITE ");
         jLabel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+=======
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 323, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblAddress.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblAddress.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress.setText("jLabel2");
+<<<<<<< HEAD
         add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 190, 22));
+=======
+        add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 382, 512, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText(" PRIMARY COUNTRY OF OPERATION ");
         jLabel17.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+=======
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 385, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText(" HEADQUARTERS ADDRESS ");
         jLabel18.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+=======
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 442, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel30.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("CONTACT INFORMATION -");
         jLabel30.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, -1, 40));
+=======
+        add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(789, 216, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel24.setText("NAME ");
         jLabel24.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 116, -1));
+=======
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(789, 275, 116, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel25.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText(" JOB TITLE ");
         jLabel25.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 240, -1, -1));
+=======
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(791, 321, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel31.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText(" EMAIL ");
         jLabel31.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 280, -1, -1));
+=======
+        add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(791, 385, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel32.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("PHONE ");
         jLabel32.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 330, -1, -1));
+=======
+        add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(793, 444, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblMission.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblMission.setForeground(new java.awt.Color(255, 255, 255));
         lblMission.setText("jLabel2");
+<<<<<<< HEAD
         add(lblMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 512, 22));
+=======
+        add(lblMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 526, 512, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("MISSION STATEMENT");
         jLabel19.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
+=======
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 595, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblLegalStatus.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblLegalStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblLegalStatus.setText("jLabel2");
+<<<<<<< HEAD
         add(lblLegalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 952, 22));
+=======
+        add(lblLegalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 621, 952, 22));
+
+        lblImpactArea.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblImpactArea.setForeground(new java.awt.Color(255, 255, 255));
+        lblImpactArea.setText("jLabel2");
+        add(lblImpactArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 661, 952, 22));
+
+        jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("ORGANIZATIONAL INFORMATION - ");
+        jLabel20.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 672, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel21.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("LEGAL STATUS");
         jLabel21.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
+=======
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 728, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblRiskRating.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblRiskRating.setForeground(new java.awt.Color(255, 255, 255));
         lblRiskRating.setText("jLabel2");
+<<<<<<< HEAD
         add(lblRiskRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 620, 990, 22));
 
         btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         btnBack.setForeground(new java.awt.Color(51, 0, 51));
+=======
+        add(lblRiskRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 751, 990, 22));
+
+        lblRefPerson.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblRefPerson.setForeground(new java.awt.Color(255, 255, 255));
+        lblRefPerson.setText("jLabel2");
+        add(lblRefPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 711, 784, 22));
+
+        jLabel22.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("IMPACT AREA ");
+        jLabel22.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 776, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("HELPING HANDS REFERENCE PERSON (IF ANY) ");
+        jLabel23.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 824, -1, -1));
+
+        btnBack.setBackground(new java.awt.Color(0, 0, 0));
+        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         btnBack.setText("<< BACK");
         btnBack.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -210,12 +352,17 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 720, 210, 62));
+=======
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(518, 791, 210, 62));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel29.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("RISK RATING ");
         jLabel29.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, -1, -1));
 
         lblName.setForeground(new java.awt.Color(255, 255, 255));
@@ -239,6 +386,21 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
         jLabel2.setText("VIEW FIELD PARTNER");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+=======
+        add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 872, -1, -1));
+
+        lblName.setText("jLabel2");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 177, 248, 22));
+
+        lblTitle.setText("jLabel2");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 217, 248, 22));
+
+        lblEmail.setText("jLabel2");
+        add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 276, 248, 22));
+
+        lblPhone.setText("jLabel2");
+        add(lblPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(992, 333, 248, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -247,6 +409,10 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
         int length = userProcessContainer.getComponentCount();
         RepresentativeLoanCaseJPanel rlcjp = (RepresentativeLoanCaseJPanel) userProcessContainer.getComponent(length-1);
         rlcjp.populateScreenData();
+<<<<<<< HEAD
+=======
+        rlcjp.populateTblBorrowerHistory();
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
@@ -260,8 +426,15 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
+=======
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
@@ -272,11 +445,19 @@ public class ViewFieldPartnerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCountryOfOperation;
     private javax.swing.JLabel lblEmail;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel lblImpactArea;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel lblLegalStatus;
     private javax.swing.JLabel lblMission;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblOrgName;
     private javax.swing.JLabel lblPhone;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel lblRefPerson;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel lblRiskRating;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblWebsite;

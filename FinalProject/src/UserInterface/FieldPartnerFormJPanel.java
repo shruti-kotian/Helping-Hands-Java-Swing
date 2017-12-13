@@ -20,6 +20,7 @@ import Business.Person.Person;
 import Business.WorkQueue.NewFieldPartnerWorkRequest;
 import java.awt.CardLayout;
 import java.util.Enumeration;
+
 import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -160,8 +161,13 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, -1, -1));
 
+<<<<<<< HEAD
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         fieldPartnerLegalStatusButtonGroup.add(jRadioButton1);
+=======
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jRadioButton1.setText("NGO IN USA");
         jRadioButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -171,8 +177,13 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 580, -1, -1));
 
+<<<<<<< HEAD
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         fieldPartnerLegalStatusButtonGroup.add(jRadioButton2);
+=======
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jRadioButton2.setText("Bank");
         jRadioButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -182,14 +193,24 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 580, -1, -1));
 
+<<<<<<< HEAD
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         fieldPartnerLegalStatusButtonGroup.add(jRadioButton3);
+=======
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton3);
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jRadioButton3.setText("LLC");
         jRadioButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, -1, -1));
 
+<<<<<<< HEAD
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         fieldPartnerLegalStatusButtonGroup.add(jRadioButton4);
+=======
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton4);
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jRadioButton4.setText("Non-Bank Financial Institution");
         jRadioButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -199,8 +220,13 @@ public class FieldPartnerFormJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, -1, -1));
 
+<<<<<<< HEAD
         jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
         fieldPartnerLegalStatusButtonGroup.add(jRadioButton5);
+=======
+        fieldPartnerLegalStatusButtonGroup.add(jRadioButton5);
+        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jRadioButton5.setText("CO-OPERATIVE");
         jRadioButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 640, -1, -1));

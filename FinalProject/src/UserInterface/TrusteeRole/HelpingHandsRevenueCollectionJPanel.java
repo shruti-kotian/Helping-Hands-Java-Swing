@@ -9,6 +9,7 @@ import Business.Enterprise.HelpingHandsEnterprise;
 import Business.Loan.Loan;
 import Business.Loan.LoanCase.Category;
 import java.awt.CardLayout;
+<<<<<<< HEAD
 import java.awt.Color;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
@@ -19,6 +20,9 @@ import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
+=======
+import javax.swing.JPanel;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
 /**
  *
@@ -55,7 +59,11 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
+<<<<<<< HEAD
         setBackground(new java.awt.Color(102, 0, 102));
+=======
+        setBackground(new java.awt.Color(204, 204, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
@@ -70,9 +78,15 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 147, -1, -1));
 
+<<<<<<< HEAD
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 0, 51));
+=======
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jButton1.setText("  PIE CHART FOR MOST FINANCED/UNDERFINANCED CATEGORIES >>  ");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,10 +96,17 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 218, -1, 96));
 
+<<<<<<< HEAD
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 0, 51));
         jButton2.setText("BAR CHART FOR BORROWER TO LENDER RATIO >>");
+=======
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("BAR CHART FOR BORROWER MALE TO FEMALE RATIO >>");
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,9 +115,14 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 341, 639, 75));
 
+<<<<<<< HEAD
         jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 0, 51));
+=======
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jButton4.setText("<< BACK");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -104,12 +130,17 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 103, 44));
+=======
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 565, 103, 44));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
   
+<<<<<<< HEAD
         int Women = 0;
         int agriculture = 0;
         int Education = 0;
@@ -185,6 +216,37 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
        ChartFrame frame = new ChartFrame("Pie Chart",chart);
        frame.setVisible(true);
        frame.setSize(450,500);
+=======
+        int Health = 0;
+
+        for(Loan loan : business.getLoanDirectory().getLoanList())
+            {
+            if(loan.getLoanCase().getCategory() == Category.Health){
+                Health = Health + loan.totalLentAmount();
+            }   
+        }
+
+        //       DefaultPieDataset pie = new DefaultPieDataset();
+        //       pie.setValue("Agriculture",new Integer (agriculture));
+        //       pie.setValue("Arts", new Integer (Arts));
+        //       pie.setValue("ConflictZone", new Integer (ConflictZone));
+        //       pie.setValue("Education",new Integer (Education));
+        //       pie.setValue("Food",new Integer (Food));
+        //       pie.setValue("Health",new Integer (Health));
+        //       pie.setValue("Men",new Integer (Men));
+        //       pie.setValue("RetailBusiness",new Integer (RetailBusiness));
+        //       pie.setValue("SingleParent",new Integer (SingleParent));
+        //       pie.setValue("SocialEnterprise",new Integer (SocialEnterprise));
+        //       pie.setValue("WaterAndSanitation",new Integer (WaterAndSanitation));
+        //       pie.setValue("Women",new Integer (Women));
+
+        //
+        //       JFreeChart chart = ChartFactory.createPieChart("Pie Chart",pie, true, true, true);
+        //       PiePlot P = (PiePlot)chart.getPlot();
+        //       ChartFrame frame = new ChartFrame("Pie Chart",chart);
+        //       frame.setVisible(true);
+        //       frame.setSize(450,500);
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -193,6 +255,7 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
         int borrower = business.getBorrowerOrganization().getPersonDirectory().getPersonList().size();
         int lender = business.getLenderOrganization().getPersonDirectory().getPersonList().size();
 
+<<<<<<< HEAD
                 DefaultCategoryDataset dataset = new DefaultCategoryDataset();
                 dataset.setValue(new Integer(borrower), "Values", "borrower");
                dataset.setValue(new Integer(lender), "Values", "lender");
@@ -204,6 +267,19 @@ public class HelpingHandsRevenueCollectionJPanel extends javax.swing.JPanel {
                ChartFrame frame = new ChartFrame("bar chart for student",chart);
                frame.setVisible(true);
                frame.setSize(450, 350);
+=======
+        //        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        //        dataset.setValue(new Integer(borrower), "Values", "borrower");
+        //       dataset.setValue(new Integer(lender), "Values", "lender");
+        //
+        //
+        //       JFreeChart chart  = ChartFactory.createBarChart("borrower To lender", "Role","Values", dataset,PlotOrientation.VERTICAL,false,true,false);
+        //       CategoryPlot p = chart.getCategoryPlot();
+        //       p.setRangeGridlinePaint(Color.black);
+        //       ChartFrame frame = new ChartFrame("bar chart for student",chart);
+        //       frame.setVisible(true);
+        //       frame.setSize(450, 350);
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
     }//GEN-LAST:event_jButton2ActionPerformed
 

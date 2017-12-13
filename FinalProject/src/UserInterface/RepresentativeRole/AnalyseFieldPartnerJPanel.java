@@ -59,6 +59,13 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
     lblName.setText(fieldPartnerContact.getName());
     lblOrgName.setText(generalDetails.getOrgName());
     lblPhone.setText(fieldPartnerContact.getPhone());
+<<<<<<< HEAD
+=======
+    
+    if(generalDetails.getRefPerson() != null)
+    {lblRefPerson.setText(generalDetails.getRefPerson().getName());}
+    
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     lblWebsite.setText(generalDetails.getWebsite());        
         
     }   
@@ -72,7 +79,13 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblLegalStatus = new javax.swing.JLabel();
+<<<<<<< HEAD
         lblImpactArea = new javax.swing.JLabel();
+=======
+        jLabel8 = new javax.swing.JLabel();
+        lblImpactArea = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         txtRiskRating = new javax.swing.JTextField();
         jButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -97,22 +110,46 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
         lblMission = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel10 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         btnSendToTrustee = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 0, 102));
+=======
+        lblLegalStatus1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        lblImpactArea1 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        lblRefPerson = new javax.swing.JLabel();
+        txtRiskRating1 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        btnSendToTrustee = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(204, 204, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblLegalStatus.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblLegalStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblLegalStatus.setText("jLabel2");
+<<<<<<< HEAD
         add(lblLegalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 710, 461, 22));
+=======
+        add(lblLegalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 625, 461, 22));
+
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("IMPACT AREA ");
+        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 668, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblImpactArea.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblImpactArea.setForeground(new java.awt.Color(255, 255, 255));
         lblImpactArea.setText("jLabel2");
+<<<<<<< HEAD
         add(lblImpactArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 750, 469, 22));
 
         txtRiskRating.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -122,6 +159,23 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
         jButton.setBackground(new java.awt.Color(153, 153, 153));
         jButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jButton.setForeground(new java.awt.Color(51, 0, 51));
+=======
+        add(lblImpactArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 673, 469, 22));
+
+        jLabel26.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("RISK RATING ");
+        jLabel26.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 785, -1, -1));
+
+        txtRiskRating.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        txtRiskRating.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        add(txtRiskRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 785, 151, -1));
+
+        jButton.setBackground(new java.awt.Color(0, 0, 0));
+        jButton.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jButton.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         jButton.setText(" << BACK ");
         jButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         jButton.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +183,11 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
                 jButtonActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         add(jButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 890, 160, 63));
+=======
+        add(jButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 720, 219, 63));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,7 +242,11 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("MISSION STATEMENT");
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+=======
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 487, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         lblOrgName.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblOrgName.setForeground(new java.awt.Color(255, 255, 255));
@@ -241,35 +303,84 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
         lblMission.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblMission.setForeground(new java.awt.Color(255, 255, 255));
         lblMission.setText("jLabel2");
+<<<<<<< HEAD
         add(lblMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 512, 22));
+=======
+        add(lblMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 523, 512, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("ORGANIZATIONAL INFORMATION - ");
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 640, -1, -1));
+=======
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 564, -1, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("LEGAL STATUS");
         jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 700, -1, -1));
+=======
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 620, -1, -1));
+
+        lblLegalStatus1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblLegalStatus1.setForeground(new java.awt.Color(255, 255, 255));
+        lblLegalStatus1.setText("jLabel2");
+        add(lblLegalStatus1, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 625, 461, 22));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("IMPACT AREA ");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 750, -1, -1));
+=======
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 668, -1, -1));
+
+        lblImpactArea1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblImpactArea1.setForeground(new java.awt.Color(255, 255, 255));
+        lblImpactArea1.setText("jLabel2");
+        add(lblImpactArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 673, 469, 22));
+
+        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("HELPING HANDS REFERENCE PERSON (IF ANY) ");
+        jLabel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 720, -1, -1));
+
+        lblRefPerson.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        lblRefPerson.setForeground(new java.awt.Color(255, 255, 255));
+        lblRefPerson.setText("jLabel2");
+        add(lblRefPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 730, 108, 22));
+
+        txtRiskRating1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        txtRiskRating1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        add(txtRiskRating1, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 785, 151, -1));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
 
         jLabel29.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("RISK RATING ");
         jLabel29.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
+<<<<<<< HEAD
         add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 800, -1, -1));
 
         btnSendToTrustee.setBackground(new java.awt.Color(153, 153, 153));
         btnSendToTrustee.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         btnSendToTrustee.setForeground(new java.awt.Color(51, 0, 51));
+=======
+        add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 785, -1, -1));
+
+        btnSendToTrustee.setBackground(new java.awt.Color(0, 0, 0));
+        btnSendToTrustee.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        btnSendToTrustee.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
         btnSendToTrustee.setText(" SEND TO TRUSTEE ORGANIZATION >> ");
         btnSendToTrustee.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
         btnSendToTrustee.addActionListener(new java.awt.event.ActionListener() {
@@ -277,6 +388,7 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
                 btnSendToTrusteeActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         add(btnSendToTrustee, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 890, 405, 63));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
@@ -284,6 +396,9 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
         jLabel2.setText("ANALYSE FIELD PARTNER");
         jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+=======
+        add(btnSendToTrustee, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 720, 405, 63));
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
@@ -330,7 +445,12 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel2;
+=======
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel26;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -339,17 +459,35 @@ public class AnalyseFieldPartnerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+<<<<<<< HEAD
+=======
+    private javax.swing.JLabel jLabel8;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblCountryOfOperation;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblImpactArea;
+<<<<<<< HEAD
     private javax.swing.JLabel lblJobTitle;
     private javax.swing.JLabel lblLegalStatus;
+=======
+    private javax.swing.JLabel lblImpactArea1;
+    private javax.swing.JLabel lblJobTitle;
+    private javax.swing.JLabel lblLegalStatus;
+    private javax.swing.JLabel lblLegalStatus1;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     private javax.swing.JLabel lblMission;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblOrgName;
     private javax.swing.JLabel lblPhone;
+<<<<<<< HEAD
     private javax.swing.JLabel lblWebsite;
     private javax.swing.JTextField txtRiskRating;
+=======
+    private javax.swing.JLabel lblRefPerson;
+    private javax.swing.JLabel lblWebsite;
+    private javax.swing.JTextField txtRiskRating;
+    private javax.swing.JTextField txtRiskRating1;
+>>>>>>> 9f88221fa9a78811a4d9781a72be3543a6cb363c
     // End of variables declaration//GEN-END:variables
 }
